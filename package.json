@@ -12,8 +12,11 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@libsql/client": "^0.15.10",
     "@mui/material": "^7.2.0",
     "@mui/x-data-grid": "^8.8.0",
+    "dotenv": "^17.2.0",
+    "drizzle-orm": "^0.44.3",
     "next": "15.4.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
@@ -21,6 +24,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.28.0",
     "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
     "@eslint/eslintrc": "^3",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -30,10 +34,12 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^4.7.0",
+    "drizzle-kit": "^0.31.4",
     "eslint": "^9",
     "eslint-config-next": "15.4.2",
     "jest-environment-jsdom": "^30.0.4",
     "jsdom": "^26.1.0",
+    "msw": "^2.10.4",
     "ts-node": "^10.9.2",
     "typescript": "^5",
     "vite-tsconfig-paths": "^5.1.4",

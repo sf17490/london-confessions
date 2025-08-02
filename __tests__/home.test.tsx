@@ -1,14 +1,17 @@
-import { render, screen } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import { describe, it, expect } from 'vitest'
-import Home from "../app/page"
-import React from "react"
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import { describe, it, expect } from "vitest";
+import Home from "../app/page";
+import React from "react";
+import { server } from "./mocks/node";
+import { dummyConfessionTimesWithChurches } from "./dummyData/dummyData";
 
+beforeAll(() => server.listen()); //Stubbed responses from db
 
-describe('HelloWorldPage', () => {
-  it('renders an h1 with "London Confessions"', () => {
-    render(<Home />)
-    const heading = screen.getByRole('heading', { name: /London Confessions/i })
-    expect(heading).toBeInTheDocument()
-  })
-})
+describe("Home page", () => {
+  it('renders an h1 with "London Confessions"', async () => {
+    render(<Home />);
+    const heading = await screen.findByTestId("chiefHeading");
+    expect(heading).toHaveTextContent("London Confessions");
+  });
+});

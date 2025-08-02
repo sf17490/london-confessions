@@ -1,51 +1,33 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
+import {
+  ConfessionTimeWithChurches,
+  matchChurchesToConfessionTimes,
+} from "./helpers";
+import RenderDailyData from "./components/renderDailyData";
+import HeadingBar from "./components/headingBar";
 
 export default function Home() {
+  const [confessionData, setConfessionData] = useState<
+    ConfessionTimeWithChurches[]
+  >([]);
+  useEffect(() => {
+    matchChurchesToConfessionTimes().then((result) => {
+      setConfessionData(result);
+    });
+  }, []);
   return (
     <div>
-      <div style={{ textAlign: "center" }}>
-        <h1>London Confessions</h1>
-        <b >21 - 28 July 2025</b>
-      </div>
-
-      {/* {byParish()} */}
-      {byTime()}
+      <HeadingBar />
+      <RenderDailyData confessionData={confessionData} />
+      {/* {byTimeTemplate()} */}
     </div>
   );
 }
 
-function byParish() {
+function byTimeTemplate() {
   return (
     <div>
-      <h2>Brompton Oratory</h2>
-      <p>Weekdays 12:00-12:30 and 17:30-18:00</p>
-      <p>Saturdays 10:00-12:45 and 15:00-18:00</p>
-      <p>Sundays after each Mass, and 18:00-18:50</p>
-      <h2>Most Precious Blood, Borough Market</h2>
-      <p>Tuesday-Friday: 12:30-13:00</p>
-      <p>Saturday: 10:00-10:25</p>
-      <h2>St Patrick's, Soho</h2>
-      <p>Weekdays 12:00-12:40</p>
-      <p>Saturdays 17:30-18:00</p>
-      <h2>St Mary Moorfield's, Liverpool Street</h2>
-      <p>Weekdays 12:30pm</p>
-      <h2>Westminster Cathedral</h2>
-      <p>Weekdays 11:30-12:30, 16:30-17:30</p>
-      <p>Satuday 11:30-12:30, 17:00-18:00</p>
-      <p>Sunday 10:30-12:30, 17:00-18:30</p>
-    </div>
-  );
-}
-
-function byTime() {
-  return (
-    <div>
-      <div style={{ textAlign: "center" }}>
-        <b>
-          <u>Mon</u> / Tues / Weds / Thurs / Fri / Sat / Sun
-        </b>
-      </div>
-
       <h2>11:30</h2>
       <a href="https://westminstercathedral.org.uk/">Westminster Cathedral</a>
       {/* <p>Westminster Cathedral</p> */}
@@ -72,7 +54,9 @@ function byTime() {
       <h2>17:00</h2>
       <p>Westminster Cathedral</p>
       <h2>17:30</h2>
-      <p>Brompton Oratory, Knightsbridge ⚠️</p>
+      <p>
+        ⚠️ Brompton Oratory, Knightsbridge ⚠️ <a href=""> May be disrupted</a>
+      </p>
       <p>Notre Dame de France (French), Leicester Square</p>
       <p>St Anselm and St Cæcilia, Holborn</p>
       <h2>17:40</h2>
