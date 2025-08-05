@@ -59,3 +59,50 @@ To delete all the data (but keep the structure) in the church table:
 ```sql
 DELETE FROM Church;
 ```
+
+# Update for live table:
+
+Live table was created with following commands:
+
+```sql
+CREATE TABLE Church (
+    Id INTEGER PRIMARY KEY,
+    Name TEXT,
+    Address TEXT,
+    Website TEXT
+);
+
+CREATE TABLE ConfessionTime (
+    Id INTEGER PRIMARY KEY,
+    StartTime TEXT,
+    EndTime TEXT,
+    DayOfWeek TEXT
+);
+
+CREATE TABLE ChurchConfession (
+    ChurchId INTEGER,
+    ConfessionTimeId INTEGER,
+    PRIMARY KEY (ChurchId, ConfessionTimeId),
+    FOREIGN KEY (ChurchId) REFERENCES Church(Id),
+    FOREIGN KEY (ConfessionTimeId) REFERENCES ConfessionTime(Id)
+);
+
+INSERT INTO ConfessionTime (StartTime, EndTime, DayOfWeek)
+VALUES ('11:30', '12:30', 'Monday');
+
+INSERT INTO Church (Name, Address, Website)
+VALUES ('Westminster Cathedral', 'Victoria SW1P 1LT', 'https://westminstercathedral.org.uk/');
+
+INSERT INTO ChurchConfession (ChurchId, ConfessionTimeId)
+VALUES (1, 1);
+
+SELECT * FROM Church;
+SELECT * FROM ConfessionTime;
+SELECT * FROM ChurchConfession;
+```
+
+May need to ignore end times as they vary so much.
+e.g. St Patrick's soho does 12-12:40 on weekdays. Most churches do 12-12:30.
+Some churches don't say when confession ends, e.g. st mary moorfields just says confessions at 12:30
+
+May also need to improve the query in

@@ -1,25 +1,4 @@
-import { ChurchByConfessionTimeId } from "./api/churchesByConfessionTime/route";
-
-type DayOfWeek =
-  | "Monday"
-  | "Tuesday"
-  | "Wednesday"
-  | "Thursday"
-  | "Friday"
-  | "Saturday"
-  | "Sunday";
-
-type ConfessionTimeEntry = {
-  id: number;
-  startTime: string;
-  endTime: string;
-  dayOfWeek: DayOfWeek;
-};
-
-export type ConfessionTimeWithChurches = {
-  confessionTime: string;
-  churches: ChurchByConfessionTimeId[];
-};
+import { ChurchByConfessionTimeId, ConfessionTimeEntry } from "./types";
 
 //This function must be bad practice...
 function getApiUrl(path: string) {
@@ -36,6 +15,10 @@ export async function matchChurchesToConfessionTimes() {
   const confessionTimes = await fetch(getApiUrl("/api/confessionTimes"));
   const confessionTimesJson: ConfessionTimeEntry[] =
     await confessionTimes.json();
+  //sort by time
+  console.log(confessionTimesJson);
+  confessionTimesJson.sort((a, b) => a.startTime.localeCompare(b.startTime)); //Ensure the fetches are mocked so that we can test this.
+  //The above line ensures that confession times are returned from earliest to latest.
   const matched = await Promise.all(
     confessionTimesJson.map(async (confessionTimeJson) => {
       const url = `/api/churchesByConfessionTime?confessionTimeId=${confessionTimeJson.id.toString()}`;

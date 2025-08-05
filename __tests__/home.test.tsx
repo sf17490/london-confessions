@@ -4,7 +4,6 @@ import { describe, it, expect } from "vitest";
 import Home from "../app/page";
 import React from "react";
 import { server } from "./mocks/node";
-import { dummyConfessionTimesWithChurches } from "./dummyData/dummyData";
 
 beforeAll(() => server.listen()); //Stubbed responses from db
 

@@ -1,4 +1,4 @@
-import { ConfessionTimeWithChurches } from "@/app/helpers";
+import { ConfessionTimeWithChurches } from "@/app/types";
 
 export const dummyChurchData = {
   address: "Victoria",

@@ -1,5 +1,5 @@
-import { ChurchData } from "../api/churchesByConfessionTime/route";
 import React from "react";
+import { ChurchData } from "../types";
 
 function RenderChurchEntry({ churchData }: { churchData: ChurchData }) {
   return (

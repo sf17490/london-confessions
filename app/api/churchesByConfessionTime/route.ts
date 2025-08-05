@@ -21,18 +21,3 @@ export async function GET(request: Request) {
 
   return NextResponse.json(res);
 }
-
-export type ChurchData = {
-  address: string;
-  id: number;
-  name: string;
-  website: string;
-};
-
-export type ChurchByConfessionTimeId = {
-  Church: ChurchData;
-  ChurchConfession: {
-    churchId: number;
-    confessionTimeId: number;
-  };
-};

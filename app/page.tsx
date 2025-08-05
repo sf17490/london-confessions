@@ -1,11 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import {
-  ConfessionTimeWithChurches,
   matchChurchesToConfessionTimes,
 } from "./helpers";
 import RenderDailyData from "./components/renderDailyData";
 import HeadingBar from "./components/headingBar";
+import { ConfessionTimeWithChurches } from "./types";
 
 export default function Home() {
   const [confessionData, setConfessionData] = useState<

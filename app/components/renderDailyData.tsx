@@ -1,6 +1,6 @@
-import { ConfessionTimeWithChurches } from "../helpers";
 import React from "react";
 import RenderChurchEntry from "./renderChurchEntry";
+import { ConfessionTimeWithChurches } from "../types";
 
 function RenderDailyData({
   confessionData,
