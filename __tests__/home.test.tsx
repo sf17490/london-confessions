@@ -26,7 +26,7 @@ describe("Home page", () => {
       },
     ]);
 
-    const result = await matchChurchesToConfessionTimes();
+    const result = await matchChurchesToConfessionTimes("Monday");
 
     expect(result).toEqual([
       {

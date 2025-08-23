@@ -7,17 +7,15 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const requestedDayOfWeek = searchParams.get("dayOfWeek");
 
-  const res1 = await db.select().from(confessionTimesTable);
-
-  let res2;
+  let response;
   if (requestedDayOfWeek) {
-    res2 = await db
+    response = await db
       .select()
       .from(confessionTimesTable)
       .where(eq(confessionTimesTable.dayOfWeek, requestedDayOfWeek));
   } else {
-    res2 = await db.select().from(confessionTimesTable);
+    response = await db.select().from(confessionTimesTable);
   }
 
-  return NextResponse.json(res2);
+  return NextResponse.json(response);
 }

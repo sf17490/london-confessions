@@ -1,13 +1,5 @@
 import React from "react";
-
-export type DayOfWeek =
-  | "Monday"
-  | "Tuesday"
-  | "Wednesday"
-  | "Thursday"
-  | "Friday"
-  | "Saturday"
-  | "Sunday";
+import { DayOfWeek } from "../types";
 
 function StaticData({ dayOfWeek }: { dayOfWeek: DayOfWeek }) {
   switch (dayOfWeek) {
