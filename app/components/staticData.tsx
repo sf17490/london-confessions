@@ -126,7 +126,8 @@ function WednesdayChurches() {
       {stMaryMoorfields}
       {farmStreet}
       {stPatricksSoho}
-      {/*corpus christi special*/}
+      <h2>12:35</h2>
+      {corpusChristi}
       <h2>13:20</h2>
       {stEtheldredras}
 
@@ -166,7 +167,8 @@ function ThursdayChurches() {
       {stMaryMoorfields}
       {farmStreet}
       {stPatricksSoho}
-      {/*corpus christi special*/}
+      <h2>12:35</h2>
+      {corpusChristi}
       <h2>13:20</h2>
       {stEtheldredras}
 
@@ -206,7 +208,8 @@ function FridayChurches() {
       {stMaryMoorfields}
       {farmStreet}
       {stPatricksSoho}
-      {/*corpus christi special*/}
+      <h2>12:35</h2>
+      {corpusChristi}
       <h2>13:20</h2>
       {stEtheldredras}
 
