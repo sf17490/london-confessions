@@ -11,12 +11,15 @@ function getApiUrl(path: string) {
   }
 }
 
-export async function matchChurchesToConfessionTimes() {
-  const confessionTimes = await fetch(getApiUrl("/api/confessionTimes"));
+export async function matchChurchesToConfessionTimes(dayOfWeek: String) {
+  const confessionTimes = await fetch(
+    getApiUrl(`/api/confessionTimes?dayOfWeek=${dayOfWeek}`)
+  );
   const confessionTimesJson: ConfessionTimeEntry[] =
     await confessionTimes.json();
-  //sort by time
+  console.log("confession times are...");
   console.log(confessionTimesJson);
+  //sort by time
   confessionTimesJson.sort((a, b) => a.startTime.localeCompare(b.startTime)); //Ensure the fetches are mocked so that we can test this.
   //The above line ensures that confession times are returned from earliest to latest.
   const matched = await Promise.all(
