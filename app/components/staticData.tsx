@@ -8,15 +8,15 @@ function StaticData({ dayOfWeek }: { dayOfWeek: DayOfWeek }) {
     case "Tuesday":
       return tuesdayChurches();
     case "Wednesday":
-      return WednesdayChurches();
+      return wednesdayChurches();
     case "Thursday":
-      return ThursdayChurches();
+      return thursdayChurches();
     case "Friday":
-      return FridayChurches();
+      return fridayChurches();
     case "Saturday":
-      return SaturdayChurches();
+      return saturdayChurches();
     case "Sunday":
-      return SundayChurches();
+      return sundayChurches();
   }
 }
 
@@ -106,7 +106,7 @@ function tuesdayChurches() {
   );
 }
 
-function WednesdayChurches() {
+function wednesdayChurches() {
   return (
     <div>
       <h2>06:45</h2>
@@ -147,7 +147,7 @@ function WednesdayChurches() {
   );
 }
 
-function ThursdayChurches() {
+function thursdayChurches() {
   return (
     <div>
       <h2>06:45</h2>
@@ -188,7 +188,7 @@ function ThursdayChurches() {
   );
 }
 
-function FridayChurches() {
+function fridayChurches() {
   return (
     <div>
       <h2>06:45</h2>
@@ -229,7 +229,7 @@ function FridayChurches() {
   );
 }
 
-function SaturdayChurches() {
+function saturdayChurches() {
   return (
     <div>
       <h2>07:45</h2>
@@ -294,7 +294,7 @@ function SaturdayChurches() {
   );
 }
 
-function SundayChurches() {
+function sundayChurches() {
   return (
     <div>
       <h2>07:45</h2>
