@@ -17,8 +17,6 @@ export async function matchChurchesToConfessionTimes(dayOfWeek: String) {
   );
   const confessionTimesJson: ConfessionTimeEntry[] =
     await confessionTimes.json();
-  console.log("confession times are...");
-  console.log(confessionTimesJson);
   //sort by time
   confessionTimesJson.sort((a, b) => a.startTime.localeCompare(b.startTime)); //Ensure the fetches are mocked so that we can test this.
   //The above line ensures that confession times are returned from earliest to latest.
