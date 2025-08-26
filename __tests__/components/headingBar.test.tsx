@@ -5,10 +5,12 @@ import React from "react";
 import HeadingBar from "../../app/components/headingBar";
 import { DayOfWeek } from "@/app/types";
 
+import styles from "../../app/headingBar.module.css";
+
 describe("The HeadingBar component", () => {
   const mockSetDayOfWeek = vi.fn<(day: DayOfWeek) => void>();
 
-  it("centres all text", async () => {
+  it("centres all text (by using mainDiv class)", async () => {
     render(
       <HeadingBar
         selectedDayOfWeek={"Monday"}
@@ -16,7 +18,7 @@ describe("The HeadingBar component", () => {
       />
     );
     const heading = await screen.findByTestId("centreTextContainer");
-    expect(heading).toHaveAttribute("style", "text-align: center;");
+    expect(heading).toHaveClass(styles.mainDiv);
   });
   it('renders a main heading with "London Confessions"', async () => {
     render(

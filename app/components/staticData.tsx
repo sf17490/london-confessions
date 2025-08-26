@@ -80,13 +80,13 @@ function tuesdayChurches() {
       {farmStreet}
       {stPatricksSoho}
       {westminsterCathedral}
+      {stCharlesBorromeo}
       <h2>12:15</h2>
       {warwickStreet}
       <h2>12:30</h2>
       {stMaryMoorfields}
       {farmStreet}
       {stPatricksSoho}
-      {/*corpus christi special*/}
       <h2>13:20</h2>
       {stEtheldredras}
 
@@ -120,6 +120,8 @@ function wednesdayChurches() {
       {farmStreet}
       {stPatricksSoho}
       {westminsterCathedral}
+      {stCharlesBorromeo}
+
       <h2>12:15</h2>
       {warwickStreet}
       <h2>12:30</h2>
@@ -161,6 +163,8 @@ function thursdayChurches() {
       {farmStreet}
       {stPatricksSoho}
       {westminsterCathedral}
+      {stCharlesBorromeo}
+
       <h2>12:15</h2>
       {warwickStreet}
       <h2>12:30</h2>
@@ -202,6 +206,8 @@ function fridayChurches() {
       {farmStreet}
       {stPatricksSoho}
       {westminsterCathedral}
+      {stCharlesBorromeo}
+
       <h2>12:15</h2>
       {warwickStreet}
       <h2>12:30</h2>
@@ -264,6 +270,8 @@ function saturdayChurches() {
       {bromptonOratory}
       <h2>16:00</h2>
       {bromptonOratory}
+      <h2>16:15</h2>
+      {queenOfHeaven}
       <h2>16:30</h2>
       {bromptonOratory}
       <h2>16:45</h2>
@@ -275,9 +283,12 @@ function saturdayChurches() {
       {spanishPlace}
       {stAnselmAndStCecilia}
       {mountCarmel}
+      {holyApostles}
 
       <h2>17:15</h2>
       {warwickStreet}
+      {ourLadyOfTheRosary}
+
       <h2>17:30</h2>
       {westminsterCathedral}
       {stGeorgesCathedral}
@@ -288,8 +299,10 @@ function saturdayChurches() {
 
       <h2>17:45</h2>
       {farmStreet}
+      {stMarysCadoganStreet}
       <h2>18:00</h2>
       {ukrainianCathedral}
+      {stMarysCadoganStreet}
     </div>
   );
 }
@@ -300,25 +313,20 @@ function sundayChurches() {
       <h2>07:45</h2>
       {farmStreet}
       {ukrainianCathedral}
-
       <h2>08:30</h2>
       {bromptonOratory}
       <h2>09:15</h2>
       {farmStreet}
-
       <h2>09:30</h2>
       {bromptonOratory}
       <h2>09:45</h2>
       {ukrainianCathedral}
-
       <h2>10:00</h2>
       {stGeorgesCathedral}
-
       <h2>10:30</h2>
       {bromptonOratory}
       <h2>10:45</h2>
       {farmStreet}
-
       {westminsterCathedral}
       <h2>11:00</h2>
       {westminsterCathedral}
@@ -326,22 +334,18 @@ function sundayChurches() {
       {westminsterCathedral}
       <h2>11:45</h2>
       {ukrainianCathedral}
-
       <h2>12:00</h2>
       {bromptonOratory}
       {stGeorgesCathedral}
       {westminsterCathedral}
       <h2>12:45</h2>
       {farmStreet}
-
       <h2>16:45</h2>
       {ukrainianCathedral}
-
       <h2>17:00</h2>
       {westminsterCathedral}
       <h2>17:15</h2>
       {farmStreet}
-
       <h2>17:30</h2>
       {westminsterCathedral}
       <h2>18:00</h2>
@@ -451,4 +455,44 @@ const ukrainianCathedral = displayChurch(
   "Ukrainian Catholic Cathedral",
   "https://www.ucc-gb.com/cathedral",
   "Mayfair W1K 5BQ"
+);
+
+const queenOfHeaven = displayChurch(
+  "Our Lady, Queen of Heaven",
+  "https://parish.rcdow.org.uk/queensway/",
+  "Queensway W2 6LT"
+);
+
+const ourLadyOfTheRosary = displayChurch(
+  "Our Lady of the Rosary",
+  "https://parish.rcdow.org.uk/marylebone/mass-times/",
+  "Marylebone NW1 5QT"
+);
+
+const stMarysCadoganStreet = displayChurch(
+  "St Mary's Cadogan Street",
+  "https://www.stmaryscadoganstreet.co.uk/",
+  "Sloane Square SW3 2QP"
+);
+
+const holyApostles = displayChurch(
+  "Holy Apostles",
+  "https://parish.rcdow.org.uk/pimlico/",
+  "Pimlico SW1V 4LY"
+);
+
+const stCharlesBorromeo = displayChurch(
+  "St Charles Borromeo",
+  "https://parish.rcdow.org.uk/oglestreet/",
+  "Fitzrovia W1W 6HS "
+);
+
+//Excluded (and why):
+//https://ssjc.uk/st-theodore/ - Eastern Rite, really close to Westminster Cathedral, not much info
+
+//Suspended over summer
+const mostPreciousBlood = displayChurch(
+  "Most Precious Blood",
+  "https://www.preciousblood.org.uk/",
+  "Borough Market SE1 1TD"
 );

@@ -18,7 +18,7 @@ function HeadingBar({ selectedDayOfWeek, setDayOfWeek }: HeadingBarProps) {
     "Sunday",
   ];
   return (
-    <div data-testid="centreTextContainer" style={{ textAlign: "center" }}>
+    <div data-testid="centreTextContainer" className={styles.mainDiv}>
       <h1 data-testid="chiefHeading">London Confessions</h1>
       <h3 data-testid="subheading">
         Confessionals open in Central London (Zone 1)
