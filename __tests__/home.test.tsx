@@ -43,4 +43,10 @@ describe("Home page", () => {
     const heading = await screen.findByTestId("chiefHeading");
     expect(heading).toHaveTextContent("London Confessions");
   });
+  it("returns a footer", async () => {
+    render(<Home />);
+    const footer = await screen.findByTestId("footing");
+    expect(footer).toHaveTextContent("Last human review");
+    const footerDividingLine = await screen.findByTestId("footingDivider");
+  });
 });

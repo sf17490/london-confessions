@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import HeadingBar from "./components/headingBar";
 import { DayOfWeek } from "./types";
 import StaticData from "./components/staticData";
-import styles from "./headingBar.module.css";
 
 export default function Home() {
   const [dayOfWeek, setDayOfWeek] = useState<DayOfWeek>("Monday");
@@ -15,6 +14,10 @@ export default function Home() {
       <hr />
 
       <StaticData dayOfWeek={dayOfWeek} />
+      <div data-testid="footing">
+        <hr data-testid="footingDivider" />
+        <p>Last human review: 26/08/25</p>
+      </div>
     </div>
   );
 }
