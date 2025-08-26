@@ -23,7 +23,7 @@ function HeadingBar({ selectedDayOfWeek, setDayOfWeek }: HeadingBarProps) {
       <h3 data-testid="subheading">
         Confessionals open in Central London (Zone 1)
       </h3>
-      <b data-testid="date">21 - 28 July 2025</b>
+      {/* <b data-testid="date">21 - 28 July 2025</b> */}
       <p data-testid="dayOfWeekSelectorContainer">
         <b data-testid="dayOfWeekSelector">
           {days.map((day) => (

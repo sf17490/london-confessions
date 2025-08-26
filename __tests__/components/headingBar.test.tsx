@@ -42,16 +42,6 @@ describe("The HeadingBar component", () => {
       /^Confessionals open in Central London \(Zone 1\)$/
     );
   });
-  it('renders a date"', async () => {
-    render(
-      <HeadingBar
-        selectedDayOfWeek={"Monday"}
-        setDayOfWeek={mockSetDayOfWeek}
-      />
-    );
-    const date = await screen.findByTestId("date");
-    expect(date).toHaveTextContent(/^21 - 28 July 2025$/);
-  });
   it('has a dayOfWeek selector"', async () => {
     render(
       <HeadingBar
