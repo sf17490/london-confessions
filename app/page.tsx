@@ -17,9 +17,9 @@ export default function Home() {
       <div>
         <StaticData dayOfWeek={dayOfWeek} />
       </div>
-      <div data-testid="footing">
+      <div data-testid="footing" className={styles.footer}>
         <hr data-testid="footingDivider" />
-        <p>Last human review: 26/08/25</p>
+        <p>Last human review: 26/08/25 </p>
       </div>
     </div>
   );

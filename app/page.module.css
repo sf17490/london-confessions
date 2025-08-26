@@ -4,3 +4,9 @@
     background: white;
     z-index: 1000,
 }
+
+.footer {
+  font-size: 0.8rem;
+  color: #666;
+  /* margin-top: 2rem; */
+}

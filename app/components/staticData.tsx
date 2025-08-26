@@ -25,7 +25,7 @@ export default StaticData;
 function mondayChurches() {
   return (
     <div>
-      <h2>11:30</h2>
+      <h2>11:30 </h2>
       {westminsterCathedral}
       {stsPeterAndPaul}
       <h2>12:00</h2>

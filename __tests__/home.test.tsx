@@ -54,6 +54,7 @@ describe("Home page", () => {
     render(<Home />);
     const footer = await screen.findByTestId("footing");
     expect(footer).toHaveTextContent("Last human review");
+    expect(footer).toHaveClass(styles.footer);
     const footerDividingLine = await screen.findByTestId("footingDivider");
   });
 });
