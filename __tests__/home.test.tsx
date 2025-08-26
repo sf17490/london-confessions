@@ -4,6 +4,7 @@ import { describe, it, expect, vi } from "vitest";
 import Home from "../app/page";
 import React from "react";
 import { server } from "./mocks/node";
+import styles from "../app/page.module.css";
 
 vi.mock("../app/helpers", () => {
   return {
@@ -42,6 +43,12 @@ describe("Home page", () => {
     render(<Home />);
     const heading = await screen.findByTestId("chiefHeading");
     expect(heading).toHaveTextContent("London Confessions");
+  });
+
+  it("puts the headingBar in a sticky container", async () => {
+    render(<Home />);
+    const headingContainer = await screen.findByTestId("headingContainer");
+    expect(headingContainer).toHaveClass(styles.stickyBar);
   });
   it("returns a footer", async () => {
     render(<Home />);
