@@ -29,6 +29,7 @@ describe("The HeadingBar component", () => {
     );
     const heading = await screen.findByTestId("chiefHeading");
     expect(heading).toHaveTextContent(/^London Confessions$/);
+    expect(heading).toHaveClass(styles.heading1);
   });
   it('renders the correct subheading"', async () => {
     render(
@@ -41,6 +42,7 @@ describe("The HeadingBar component", () => {
     expect(subheading).toHaveTextContent(
       /^Confessionals open in Central London \(Zone 1\)$/
     );
+    expect(subheading).toHaveClass(styles.heading2);
   });
   it('has a dayOfWeek selector"', async () => {
     render(

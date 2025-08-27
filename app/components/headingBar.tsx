@@ -19,8 +19,10 @@ function HeadingBar({ selectedDayOfWeek, setDayOfWeek }: HeadingBarProps) {
   ];
   return (
     <div data-testid="centreTextContainer" className={styles.mainDiv}>
-      <h1 data-testid="chiefHeading">London Confessions</h1>
-      <h3 data-testid="subheading">
+      <h1 data-testid="chiefHeading" className={styles.heading1}>
+        London Confessions
+      </h1>
+      <h3 data-testid="subheading" className={styles.heading2}>
         Confessionals open in Central London (Zone 1)
       </h3>
       {/* <b data-testid="date">21 - 28 July 2025</b> */}
