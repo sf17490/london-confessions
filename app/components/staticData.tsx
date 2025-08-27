@@ -1,5 +1,6 @@
 import React from "react";
 import { DayOfWeek } from "../types";
+import styles from "./staticData.module.css";
 
 function StaticData({ dayOfWeek }: { dayOfWeek: DayOfWeek }) {
   switch (dayOfWeek) {
@@ -25,43 +26,33 @@ export default StaticData;
 function mondayChurches() {
   return (
     <div>
-      <h2>11:30 </h2>
-      {westminsterCathedral}
-      {stsPeterAndPaul}
-      <h2>12:00</h2>
-      {bromptonOratory}
-      {stGeorgesCathedral}
-      {stPatricksSoho}
-      {stsPeterAndPaul}
-      {farmStreet}
-      {westminsterCathedral}
-      {spanishPlace}
-      <h2>12:15</h2>
-      {warwickStreet}
-      <h2>12:30</h2>
-      {spanishPlace}
-      {stMaryMoorfields}
-      {stPatricksSoho}
-      {farmStreet}
-      <h2>12:35</h2>
-      {corpusChristi}
-      <h2>13:20</h2>
-      {stEtheldredras}
-      <h2>16:30</h2>
-      {westminsterCathedral}
-      <h2>17:00</h2>
-      {westminsterCathedral}
-      <h2>17:30</h2>
-      {bromptonOratory}
+      {timeSlot("11:30", [westminsterCathedral, stsPeterAndPaul])}
+      {timeSlot("12:00", [
+        bromptonOratory,
+        stGeorgesCathedral,
+        stPatricksSoho,
+        stsPeterAndPaul,
+        farmStreet,
+        westminsterCathedral,
+        spanishPlace,
+      ])}
+      {timeSlot("12:15", [warwickStreet])}
+      {timeSlot("12:30", [
+        spanishPlace,
+        stMaryMoorfields,
+        stPatricksSoho,
+        farmStreet,
+      ])}
+      {timeSlot("12:35", [corpusChristi])}
+      {timeSlot("13:20", [stEtheldredras])}
+      {timeSlot("16:30", [westminsterCathedral])}
+      {timeSlot("17:00", [westminsterCathedral])}
+      {timeSlot("17:30", [bromptonOratory, notreDame, stAnselmAndStCecilia])}
       {/* <p>
         ⚠️ Brompton Oratory, Knightsbridge ⚠️ <a href=""> May be disrupted</a>
       </p> */}
-      {notreDame}
-      {stAnselmAndStCecilia}
-      <h2>17:40</h2>
-      {mountCarmel}
-      <h2>17:45</h2>
-      {ukrainianCathedral}
+      {timeSlot("17:40", [mountCarmel])}
+      {timeSlot("17:45", [ukrainianCathedral])}
     </div>
   );
 }
@@ -69,39 +60,25 @@ function mondayChurches() {
 function tuesdayChurches() {
   return (
     <div>
-      <h2>06:45</h2>
-      {ukrainianCathedral}
-
-      <h2>11:30</h2>
-      {westminsterCathedral}
-      <h2>12:00</h2>
-      {bromptonOratory}
-      {stGeorgesCathedral}
-      {farmStreet}
-      {stPatricksSoho}
-      {westminsterCathedral}
-      {stCharlesBorromeo}
-      <h2>12:15</h2>
-      {warwickStreet}
-      <h2>12:30</h2>
-      {stMaryMoorfields}
-      {farmStreet}
-      {stPatricksSoho}
-      <h2>13:20</h2>
-      {stEtheldredras}
-
-      <h2>16:30</h2>
-      {westminsterCathedral}
-      <h2>17:00</h2>
-      {westminsterCathedral}
-      <h2>17:30</h2>
-      {bromptonOratory}
+      {timeSlot("06:45", [ukrainianCathedral])}
+      {timeSlot("11:30", [westminsterCathedral])}
+      {timeSlot("12:00", [
+        bromptonOratory,
+        stGeorgesCathedral,
+        farmStreet,
+        stPatricksSoho,
+        westminsterCathedral,
+        stCharlesBorromeo,
+      ])}
+      {timeSlot("12:15", [warwickStreet])}
+      {timeSlot("12:30", [stMaryMoorfields, farmStreet, stPatricksSoho])}
+      {timeSlot("13:20", [stEtheldredras])}
+      {timeSlot("16:30", [westminsterCathedral])}
+      {timeSlot("17:00", [westminsterCathedral])}
+      {timeSlot("17:30", [bromptonOratory, stAnselmAndStCecilia])}
       {/*Can't find notre dame */}
-      {stAnselmAndStCecilia}
-      <h2>17:40</h2>
-      {mountCarmel}
-      <h2>18:00</h2>
-      {ukrainianCathedral}
+      {timeSlot("17:40", [mountCarmel])}
+      {timeSlot("18:00", [ukrainianCathedral])}
     </div>
   );
 }
@@ -109,42 +86,25 @@ function tuesdayChurches() {
 function wednesdayChurches() {
   return (
     <div>
-      <h2>06:45</h2>
-      {ukrainianCathedral}
-
-      <h2>11:30</h2>
-      {westminsterCathedral}
-      <h2>12:00</h2>
-      {bromptonOratory}
-      {stGeorgesCathedral}
-      {farmStreet}
-      {stPatricksSoho}
-      {westminsterCathedral}
-      {stCharlesBorromeo}
-
-      <h2>12:15</h2>
-      {warwickStreet}
-      <h2>12:30</h2>
-      {stMaryMoorfields}
-      {farmStreet}
-      {stPatricksSoho}
-      <h2>12:35</h2>
-      {corpusChristi}
-      <h2>13:20</h2>
-      {stEtheldredras}
-
-      <h2>16:30</h2>
-      {westminsterCathedral}
-      <h2>17:00</h2>
-      {westminsterCathedral}
-      <h2>17:30</h2>
-      {bromptonOratory}
+      {timeSlot("06:45", [ukrainianCathedral])}
+      {timeSlot("11:30", [westminsterCathedral])}
+      {timeSlot("12:00", [
+        bromptonOratory,
+        stGeorgesCathedral,
+        farmStreet,
+        stPatricksSoho,
+        westminsterCathedral,
+        stCharlesBorromeo,
+      ])}
+      {timeSlot("12:15", [warwickStreet])}
+      {timeSlot("12:30", [stMaryMoorfields, farmStreet, stPatricksSoho])}
+      {timeSlot("13:20", [stEtheldredras])}
+      {timeSlot("16:30", [westminsterCathedral])}
+      {timeSlot("17:00", [westminsterCathedral])}
+      {timeSlot("17:30", [bromptonOratory, stAnselmAndStCecilia])}
       {/*Can't find notre dame */}
-      {stAnselmAndStCecilia}
-      <h2>17:40</h2>
-      {mountCarmel}
-      <h2>18:00</h2>
-      {ukrainianCathedral}
+      {timeSlot("17:40", [mountCarmel])}
+      {timeSlot("18:00", [ukrainianCathedral])}
     </div>
   );
 }
@@ -152,42 +112,25 @@ function wednesdayChurches() {
 function thursdayChurches() {
   return (
     <div>
-      <h2>06:45</h2>
-      {ukrainianCathedral}
-
-      <h2>11:30</h2>
-      {westminsterCathedral}
-      <h2>12:00</h2>
-      {bromptonOratory}
-      {stGeorgesCathedral}
-      {farmStreet}
-      {stPatricksSoho}
-      {westminsterCathedral}
-      {stCharlesBorromeo}
-
-      <h2>12:15</h2>
-      {warwickStreet}
-      <h2>12:30</h2>
-      {stMaryMoorfields}
-      {farmStreet}
-      {stPatricksSoho}
-      <h2>12:35</h2>
-      {corpusChristi}
-      <h2>13:20</h2>
-      {stEtheldredras}
-
-      <h2>16:30</h2>
-      {westminsterCathedral}
-      <h2>17:00</h2>
-      {westminsterCathedral}
-      <h2>17:30</h2>
-      {bromptonOratory}
+      {timeSlot("06:45", [ukrainianCathedral])}
+      {timeSlot("11:30", [westminsterCathedral])}
+      {timeSlot("12:00", [
+        bromptonOratory,
+        stGeorgesCathedral,
+        farmStreet,
+        stPatricksSoho,
+        westminsterCathedral,
+        stCharlesBorromeo,
+      ])}
+      {timeSlot("12:15", [warwickStreet])}
+      {timeSlot("12:30", [stMaryMoorfields, farmStreet, stPatricksSoho])}
+      {timeSlot("13:20", [stEtheldredras])}
+      {timeSlot("16:30", [westminsterCathedral])}
+      {timeSlot("17:00", [westminsterCathedral])}
+      {timeSlot("17:30", [bromptonOratory, stAnselmAndStCecilia])}
       {/*Can't find notre dame */}
-      {stAnselmAndStCecilia}
-      <h2>17:40</h2>
-      {mountCarmel}
-      <h2>18:00</h2>
-      {ukrainianCathedral}
+      {timeSlot("17:40", [mountCarmel])}
+      {timeSlot("18:00", [ukrainianCathedral])}
     </div>
   );
 }
@@ -195,42 +138,25 @@ function thursdayChurches() {
 function fridayChurches() {
   return (
     <div>
-      <h2>06:45</h2>
-      {ukrainianCathedral}
-
-      <h2>11:30</h2>
-      {westminsterCathedral}
-      <h2>12:00</h2>
-      {bromptonOratory}
-      {stGeorgesCathedral}
-      {farmStreet}
-      {stPatricksSoho}
-      {westminsterCathedral}
-      {stCharlesBorromeo}
-
-      <h2>12:15</h2>
-      {warwickStreet}
-      <h2>12:30</h2>
-      {stMaryMoorfields}
-      {farmStreet}
-      {stPatricksSoho}
-      <h2>12:35</h2>
-      {corpusChristi}
-      <h2>13:20</h2>
-      {stEtheldredras}
-
-      <h2>16:30</h2>
-      {westminsterCathedral}
-      <h2>17:00</h2>
-      {westminsterCathedral}
-      <h2>17:30</h2>
-      {bromptonOratory}
+      {timeSlot("06:45", [ukrainianCathedral])}
+      {timeSlot("11:30", [westminsterCathedral])}
+      {timeSlot("12:00", [
+        bromptonOratory,
+        stGeorgesCathedral,
+        farmStreet,
+        stPatricksSoho,
+        westminsterCathedral,
+        stCharlesBorromeo,
+      ])}
+      {timeSlot("12:15", [warwickStreet])}
+      {timeSlot("12:30", [stMaryMoorfields, farmStreet, stPatricksSoho])}
+      {timeSlot("13:20", [stEtheldredras])}
+      {timeSlot("16:30", [westminsterCathedral])}
+      {timeSlot("17:00", [westminsterCathedral])}
+      {timeSlot("17:30", [bromptonOratory, stAnselmAndStCecilia])}
       {/*Can't find notre dame */}
-      {stAnselmAndStCecilia}
-      <h2>17:40</h2>
-      {mountCarmel}
-      <h2>18:00</h2>
-      {ukrainianCathedral}
+      {timeSlot("17:40", [mountCarmel])}
+      {timeSlot("18:00", [ukrainianCathedral])}
     </div>
   );
 }
@@ -238,71 +164,43 @@ function fridayChurches() {
 function saturdayChurches() {
   return (
     <div>
-      <h2>07:45</h2>
-      {ukrainianCathedral}
-
-      <h2>10:00</h2>
-      {bromptonOratory}
-      {stGeorgesCathedral}
-
-      <h2>10:30</h2>
-      {bromptonOratory}
-      {stGeorgesCathedral}
-      {mountCarmel}
-
-      <h2>11:00</h2>
-      {bromptonOratory}
-      {farmStreet}
-      {mountCarmel}
-
-      <h2>11:30</h2>
-      {bromptonOratory}
-      {farmStreet}
-      {mountCarmel}
-
-      {westminsterCathedral}
-      <h2>12:00</h2>
-      {bromptonOratory}
-      {westminsterCathedral}
-      <h2>15:00</h2>
-      {bromptonOratory}
-      <h2>15:30</h2>
-      {bromptonOratory}
-      <h2>16:00</h2>
-      {bromptonOratory}
-      <h2>16:15</h2>
-      {queenOfHeaven}
-      <h2>16:30</h2>
-      {bromptonOratory}
-      <h2>16:45</h2>
-      {spanishPlace}
-      <h2>17:00</h2>
-      {westminsterCathedral}
-      {stGeorgesCathedral}
-      {bromptonOratory}
-      {spanishPlace}
-      {stAnselmAndStCecilia}
-      {mountCarmel}
-      {holyApostles}
-
-      <h2>17:15</h2>
-      {warwickStreet}
-      {ourLadyOfTheRosary}
-
-      <h2>17:30</h2>
-      {westminsterCathedral}
-      {stGeorgesCathedral}
-      {stPatricksSoho}
-      {bromptonOratory}
-      {stAnselmAndStCecilia}
-      {mountCarmel}
-
-      <h2>17:45</h2>
-      {farmStreet}
-      {stMarysCadoganStreet}
-      <h2>18:00</h2>
-      {ukrainianCathedral}
-      {stMarysCadoganStreet}
+      {timeSlot("07:45", [ukrainianCathedral])}
+      {timeSlot("10:00", [bromptonOratory, stGeorgesCathedral])}
+      {timeSlot("10:30", [bromptonOratory, stGeorgesCathedral, mountCarmel])}
+      {timeSlot("11:00", [bromptonOratory, farmStreet, mountCarmel])}
+      {timeSlot("11:30", [
+        bromptonOratory,
+        farmStreet,
+        mountCarmel,
+        westminsterCathedral,
+      ])}
+      {timeSlot("12:00", [bromptonOratory, westminsterCathedral])}
+      {timeSlot("15:00", [bromptonOratory])}
+      {timeSlot("15:30", [bromptonOratory])}
+      {timeSlot("16:00", [bromptonOratory])}
+      {timeSlot("16:15", [queenOfHeaven])}
+      {timeSlot("16:30", [bromptonOratory])}
+      {timeSlot("16:45", [spanishPlace])}
+      {timeSlot("17:00", [
+        bromptonOratory,
+        westminsterCathedral,
+        stGeorgesCathedral,
+        spanishPlace,
+        stAnselmAndStCecilia,
+        mountCarmel,
+        holyApostles,
+      ])}
+      {timeSlot("17:15", [warwickStreet, ourLadyOfTheRosary])}
+      {timeSlot("17:30", [
+        bromptonOratory,
+        westminsterCathedral,
+        stGeorgesCathedral,
+        stPatricksSoho,
+        stAnselmAndStCecilia,
+        mountCarmel,
+      ])}
+      {timeSlot("17:45", [farmStreet, stMarysCadoganStreet])}
+      {timeSlot("18:00", [ukrainianCathedral, stMarysCadoganStreet])}
     </div>
   );
 }
@@ -310,60 +208,54 @@ function saturdayChurches() {
 function sundayChurches() {
   return (
     <div>
-      <h2>07:45</h2>
-      {farmStreet}
-      {ukrainianCathedral}
-      <h2>08:30</h2>
-      {bromptonOratory}
-      <h2>09:15</h2>
-      {farmStreet}
-      <h2>09:30</h2>
-      {bromptonOratory}
-      <h2>09:45</h2>
-      {ukrainianCathedral}
-      <h2>10:00</h2>
-      {stGeorgesCathedral}
-      <h2>10:30</h2>
-      {bromptonOratory}
-      <h2>10:45</h2>
-      {farmStreet}
-      {westminsterCathedral}
-      <h2>11:00</h2>
-      {westminsterCathedral}
-      <h2>11:30</h2>
-      {westminsterCathedral}
-      <h2>11:45</h2>
-      {ukrainianCathedral}
-      <h2>12:00</h2>
-      {bromptonOratory}
-      {stGeorgesCathedral}
-      {westminsterCathedral}
-      <h2>12:45</h2>
-      {farmStreet}
-      <h2>16:45</h2>
-      {ukrainianCathedral}
-      <h2>17:00</h2>
-      {westminsterCathedral}
-      <h2>17:15</h2>
-      {farmStreet}
-      <h2>17:30</h2>
-      {westminsterCathedral}
-      <h2>18:00</h2>
-      {bromptonOratory}
-      {westminsterCathedral}
-      <h2>18:30</h2>
-      {bromptonOratory}
-      <h2>18:45</h2>
-      {farmStreet}
+      {timeSlot("07:45", [farmStreet, ukrainianCathedral])}
+      {timeSlot("08:30", [bromptonOratory])}
+      {timeSlot("09:15", [farmStreet])}
+      {timeSlot("09:30", [bromptonOratory])}
+      {timeSlot("09:45", [ukrainianCathedral])}
+      {timeSlot("10:00", [stGeorgesCathedral])}
+      {timeSlot("10:30", [bromptonOratory])}
+      {timeSlot("10:45", [farmStreet, westminsterCathedral])}
+      {timeSlot("11:00", [westminsterCathedral])}
+      {timeSlot("11:30", [westminsterCathedral])}
+      {timeSlot("11:45", [ukrainianCathedral])}
+
+      {timeSlot("12:00", [
+        bromptonOratory,
+        stGeorgesCathedral,
+        westminsterCathedral,
+      ])}
+      {timeSlot("12:45", [farmStreet])}
+      {timeSlot("16:45", [ukrainianCathedral])}
+      {timeSlot("17:00", [westminsterCathedral])}
+      {timeSlot("17:15", [farmStreet])}
+      {timeSlot("17:30", [westminsterCathedral])}
+      {timeSlot("18:00", [bromptonOratory, westminsterCathedral])}
+      {timeSlot("18:30", [bromptonOratory])}
+      {timeSlot("18:45", [farmStreet])}
+    </div>
+  );
+}
+
+function timeSlot(time: string, churches: React.JSX.Element[]) {
+  return (
+    <div id={time}>
+      <h2>{time}</h2>
+      {churches}
+      <hr />
     </div>
   );
 }
 
 function displayChurch(name: string, url: string, location: string) {
   return (
-    <p>
-      <a href={url}>{name}</a>, {location}
-    </p>
+    <a href={url} className={styles.churchLink}>
+      <div className={styles.churchName}>{name}</div>
+      <div className={styles.churchLocation}>{location}</div>
+    </a>
+    // <p>
+    //   <a href={url}>{name}</a>, {location}
+    // </p>
   );
 }
 
