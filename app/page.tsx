@@ -10,6 +10,7 @@ export default function Home() {
 
   return (
     <div>
+      <title data-testid="tabTitle">London Catholic Confession Times</title>
       <div data-testid="headingContainer" className={styles.stickyBar}>
         <HeadingBar selectedDayOfWeek={dayOfWeek} setDayOfWeek={setDayOfWeek} />
         <hr />
