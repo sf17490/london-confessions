@@ -249,7 +249,7 @@ function timeSlot(time: string, churches: React.JSX.Element[]) {
 
 function displayChurch(name: string, url: string, location: string) {
   return (
-    <a href={url} className={styles.churchLink}>
+    <a href={url} className={styles.churchLink} key={`${name}-church`}>
       <div className={styles.churchName}>{name}</div>
       <div className={styles.churchLocation}>{location}</div>
     </a>
