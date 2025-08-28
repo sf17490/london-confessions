@@ -2,11 +2,20 @@
 
 TODO:
 
-1. Correct the db schema to have address as a string DONE
-2. Input data into the db directly using the online ui DONE
-3. Input data into the db using the command line tool (the cmd line tool may be easier to hook up to an ai python script)
-4. Set up website to fetch the data from the db DONE
-5. Set up website to fetch the data from the db once/week instead of on every page load (there's no need to fetch on every page load). This might be over-optimising though.
+1. UI improvements:
+
+- Dark mode
+-       🍔🍔🍔🍔🍔🍔🍔🍔Lunchtime shift 🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔 etc
+- Further styling of each card (optional)
+- Add link to code (once open-sourced)
+
+2. AI improvements:
+
+- Work out how to get an AI to read any parish newsletter reliably.
+  Candidates:
+  Brompton oratory (html) - https://www.bromptonoratory.co.uk/weekly-parish-newsletter
+  St George's Cathedral (pdf) - https://www.stgeorgescathedral.org.uk/media/1060/newsletter.pdf
+  St Patrick's Soho (pdf) - https://www.stpatricksoho.org/newsletter
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
