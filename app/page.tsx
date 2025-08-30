@@ -4,9 +4,11 @@ import HeadingBar from "./components/headingBar";
 import { DayOfWeek } from "./types";
 import StaticData from "./components/staticData";
 import styles from "./page.module.css";
+import appraisals from "../ai_pipeline/appraisals.json";
 
 export default function Home() {
   const [dayOfWeek, setDayOfWeek] = useState<DayOfWeek>("Monday");
+  console.log(appraisals);
 
   return (
     <div>
