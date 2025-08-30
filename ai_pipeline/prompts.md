@@ -64,3 +64,7 @@ At Brompton Oratory, I am expecting a confession timetable as follows: Weekdays:
 ### St Patrick's Soho
 
 At St Patrick's Soho, I am expecting a confession timetable as follows: Weekdays: 12-12:40 and Saturdays: 17:30 - 18:00 and nothing on Sunday. Check this is correct according to this pdf only. If I am correct, return a json response like so: { changed: false } If I am incorrect, return a json response like so: { changed: true, reason: "insert max 4 sentences here explaining the change in confession times. Express yourself in an official, public-announcement way. " } If there is insufficient information to determine if I am correct or not, return a json response like so: { changed: "unknown"} Do not elaborate. Communicate entirely using a json response only.
+
+### Our lady of Mount Carmel & St Simon Stock
+
+At Our lady of Mount Carmel & St Simon Stock, I am expecting a confession timetable as follows: Weekdays: 17:40-18:00, Saturdays: 11:30 - 12:15 & 17:00-18:00 and nothing on Sunday. Check this is correct according to this newsletter only. If I am correct, return a json response like so: { changed: false } If I am incorrect, return a json response like so: { changed: true, reason: "insert max 4 sentences here explaining the change in confession times. Express yourself in an official, public-announcement way."} If there is insufficient information to determine if I am correct or not, return a json response like so: {changed: "unknown"} Do not elaborate. Communicate entirely using a json response only.

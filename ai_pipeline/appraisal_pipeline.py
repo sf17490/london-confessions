@@ -2,8 +2,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 from assess_with_ai import get_ai_assessment
-from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt
+from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, st_simon_stock_prompt
 import json
+import time
 
 
 driver = webdriver.Chrome()
@@ -24,10 +25,19 @@ st_georges_newsletter_url = navigate_to_st_georges_newsletter()
 
 def navigate_to_st_patricks_newsletter():
     driver.get("https://www.stpatricksoho.org/newsletter")
+    time.sleep(2)
+
+    # give in to cookies
+    accept_cookies_button = driver.find_element(
+        By.XPATH, '//button[text()="Allow all cookies"]')
+    accept_cookies_button.click()
 
     # Hunch that st pat's newsletter is always the second button
     download_buttons = driver.find_elements(
         By.PARTIAL_LINK_TEXT, "Download")
+
+    print("downloads buttons for st pats")
+    print(download_buttons)
 
     # For some reason the print statements help
     print("Finding st pat's second download button...")
@@ -40,6 +50,29 @@ def navigate_to_st_patricks_newsletter():
 
 st_pats_newsletter_url = navigate_to_st_patricks_newsletter()
 
+
+def navigate_to_st_simon_stock_newsletter():
+    driver.get("https://carmelitechurch.org/newsletter/")
+
+    time.sleep(2)
+    download_buttons = driver.find_elements(
+        By.PARTIAL_LINK_TEXT, "Sunday")
+
+    print("Finding St Simon Stock's most recent newsletter...")
+    most_recent_newsletter_webpage = download_buttons[0]
+    most_recent_newsletter_webpage.click()
+
+    download_button = driver.find_element(
+        By.PARTIAL_LINK_TEXT, "Sunday")
+
+    newsletter_pdf_url = download_button.get_attribute("href")
+    return newsletter_pdf_url
+
+
+st_simon_stock_newsletter_url = navigate_to_st_simon_stock_newsletter()
+print(st_simon_stock_newsletter_url)
+
+
 appraisals_json = [{
     "name": "stGeorges",
     "appraisal": get_ai_assessment(st_georges_cathedral_prompt, st_georges_newsletter_url)
@@ -47,12 +80,15 @@ appraisals_json = [{
     {
     "name": "stPatricks",
     "appraisal": get_ai_assessment(st_patricks_soho_prompt, st_pats_newsletter_url)
+},
+    {
+    "name": "our_lady_of_mount_carmel_and_st_simon_stock",
+    "appraisal": get_ai_assessment(st_simon_stock_prompt, st_simon_stock_newsletter_url)
 }
 ]
 
 print("appraisals json is...")
 print(appraisals_json)
 
-
-with open("appraisals.json", "w") as f:
+with open("ai_pipeline/appraisals.json", "w") as f:
     json.dump(appraisals_json, f, indent=4)

@@ -17,6 +17,12 @@ TODO:
   St George's Cathedral (pdf) - https://www.stgeorgescathedral.org.uk/media/1060/newsletter.pdf
   St Patrick's Soho (pdf) - https://www.stpatricksoho.org/newsletter
 
+  You need these commands to run ai_pipeline stuff:
+
+  pip install python-dotenv
+
+  pip install openai
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
