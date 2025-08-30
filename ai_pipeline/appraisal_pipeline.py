@@ -22,6 +22,9 @@ def navigate_to_st_georges_newsletter():
 
 st_georges_newsletter_url = navigate_to_st_georges_newsletter()
 
+st_georges_assessment = get_ai_assessment(
+    st_georges_cathedral_prompt, st_georges_newsletter_url)
+
 
 def navigate_to_st_patricks_newsletter():
     driver.get("https://www.stpatricksoho.org/newsletter")
@@ -50,6 +53,9 @@ def navigate_to_st_patricks_newsletter():
 
 st_pats_newsletter_url = navigate_to_st_patricks_newsletter()
 
+st_pats_assessment = get_ai_assessment(
+    st_patricks_soho_prompt, st_pats_newsletter_url)
+
 
 def navigate_to_st_simon_stock_newsletter():
     driver.get("https://carmelitechurch.org/newsletter/")
@@ -70,25 +76,25 @@ def navigate_to_st_simon_stock_newsletter():
 
 
 st_simon_stock_newsletter_url = navigate_to_st_simon_stock_newsletter()
-print(st_simon_stock_newsletter_url)
+st_simon_stock_assessment = get_ai_assessment(
+    st_simon_stock_prompt, st_simon_stock_newsletter_url)
 
 
-appraisals_json = [{
+appraisals = [{
     "name": "stGeorges",
-    "appraisal": get_ai_assessment(st_georges_cathedral_prompt, st_georges_newsletter_url)
+    "appraisal": json.loads(st_georges_assessment)
 },
     {
     "name": "stPatricks",
-    "appraisal": get_ai_assessment(st_patricks_soho_prompt, st_pats_newsletter_url)
+    "appraisal": json.loads(st_pats_assessment)
 },
     {
     "name": "our_lady_of_mount_carmel_and_st_simon_stock",
-    "appraisal": get_ai_assessment(st_simon_stock_prompt, st_simon_stock_newsletter_url)
+    "appraisal": json.loads(st_simon_stock_assessment)
 }
 ]
 
-print("appraisals json is...")
-print(appraisals_json)
+appraisals_json = json.dumps(appraisals, indent=2, ensure_ascii=False)
 
 with open("ai_pipeline/appraisals.json", "w") as f:
-    json.dump(appraisals_json, f, indent=4)
+    f.write(appraisals_json)
