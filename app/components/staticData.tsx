@@ -254,7 +254,7 @@ function displayChurch(name: string, url: string, location: string) {
   const disruptedFlag = name === appraisals[1].name ? true : false;
   const disruptionReason = appraisals[1].appraisal.reason;
   return (
-    <div>
+    <div key={name}>
       {disruptedFlag ? (
         <DisplayDodgyChurchEntry
           {...{ name, url, location, disruptionReason }}
