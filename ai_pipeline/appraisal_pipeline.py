@@ -85,7 +85,7 @@ appraisals = [{
     "appraisal": json.loads(st_georges_assessment)
 },
     {
-    "name": "stPatricks",
+    "name": "St Patrick's",
     "appraisal": json.loads(st_pats_assessment)
 },
     {

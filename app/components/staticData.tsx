@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { DayOfWeek } from "../types";
 import styles from "./staticData.module.css";
+import appraisals from "../../ai_pipeline/appraisals.json";
 
 function StaticData({ dayOfWeek }: { dayOfWeek: DayOfWeek }) {
   switch (dayOfWeek) {
@@ -250,14 +251,41 @@ function timeSlot(time: string, churches: React.JSX.Element[]) {
 }
 
 function displayChurch(name: string, url: string, location: string) {
+  const maybeDisruptedFlag = appraisals[1].name === name ? true : false;
   return (
-    <a href={url} className={styles.churchLink} key={`${name}-church`}>
-      <div className={styles.churchName}>{name}</div>
-      <div className={styles.churchLocation}>{location}</div>
-    </a>
+    <div>
+      <a href={url} className={styles.churchLink} key={`${name}-church`}>
+        <div className={styles.churchName}>{name}</div>
+        <div className={styles.churchLocation}>{location}</div>
+      </a>
+      {maybeDisruptedFlag ? (
+        <ShowMore disruptionReason={appraisals[1].appraisal.reason} />
+      ) : (
+        ""
+      )}
+    </div>
     // <p>
     //   <a href={url}>{name}</a>, {location}
     // </p>
+  );
+}
+
+export function ShowMore({ disruptionReason }: { disruptionReason: string }) {
+  const [showDescription, setShowDescription] = useState(false);
+  return (
+    <div key="blah">
+      <button
+        data-testid="showMoreButton"
+        onClick={() => setShowDescription(!showDescription)}
+      >
+        Show more{" "}
+      </button>
+      {showDescription ? (
+        <p data-testid="description">{disruptionReason}</p>
+      ) : (
+        ""
+      )}
+    </div>
   );
 }
 
