@@ -251,22 +251,71 @@ function timeSlot(time: string, churches: React.JSX.Element[]) {
 }
 
 function displayChurch(name: string, url: string, location: string) {
-  const maybeDisruptedFlag = appraisals[1].name === name ? true : false;
+  const disruptedFlag = name === appraisals[1].name ? true : false;
+  const disruptionReason = appraisals[1].appraisal.reason;
+  return (
+    <div>
+      {disruptedFlag ? (
+        <DisplayDodgyChurchEntry
+          {...{ name, url, location, disruptionReason }}
+        />
+      ) : (
+        <DisplayChurchEntry {...{ name, url, location }} />
+      )}
+    </div>
+  );
+}
+
+export type DisplayDodgyChurchEntryProps = {
+  name: string;
+  url: string;
+  location: string;
+  disruptionReason: string;
+};
+function DisplayDodgyChurchEntry({
+  name,
+  url,
+  location,
+  disruptionReason,
+}: DisplayDodgyChurchEntryProps) {
   return (
     <div>
       <a href={url} className={styles.churchLink} key={`${name}-church`}>
         <div className={styles.churchName}>{name}</div>
         <div className={styles.churchLocation}>{location}</div>
       </a>
-      {maybeDisruptedFlag ? (
-        <ShowMore disruptionReason={appraisals[1].appraisal.reason} />
-      ) : (
-        ""
-      )}
+
+      <ShowMore disruptionReason={disruptionReason} />
     </div>
-    // <p>
-    //   <a href={url}>{name}</a>, {location}
-    // </p>
+  );
+}
+
+export type DisplayChurchEntryProps = {
+  name: string;
+  url: string;
+  location: string;
+};
+
+export function DisplayChurchEntry({
+  name,
+  url,
+  location,
+}: DisplayChurchEntryProps) {
+  return (
+    <div>
+      <a
+        data-testid="linkToChurchWebsite"
+        href={url}
+        key={`${name}-church`}
+        className={styles.churchLink}
+      />
+      <div data-testid="churchName" className={styles.churchName}>
+        {name}
+      </div>
+      <div data-testid="churchLocation" className={styles.churchLocation}>
+        {location}
+      </div>
+    </div>
   );
 }
 
