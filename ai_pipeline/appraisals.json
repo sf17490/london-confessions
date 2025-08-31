@@ -3,21 +3,24 @@
     "name": "St George's Cathedral",
     "appraisal": {
       "changed": true,
-      "reason": "According to the newsletter, Saturday confessions are scheduled from 10:00–11:00 and 17:00–17:50. The weekday (12:00–12:20) and Sunday (10:00–10:30 and 12:00–12:30) times remain as stated. Please note the Saturday evening session does not extend to 18:00."
-    }
+      "reason": "According to the newsletter, Saturday afternoon confessions conclude at 5:50pm, not 6:00pm. The correct Saturday schedule is 10:00–11:00 and 5:00–5:50pm. Weekday (12:00–12:20) and Sunday (10:00–10:30 and 12:00–12:30) times are correct. Please refer to the published timetable in this newsletter for confirmation."
+    },
+    "newsletterUrl": "https://www.stgeorgescathedral.org.uk/media/1060/newsletter.pdf"
   },
   {
     "name": "St Patrick's",
     "appraisal": {
       "changed": true,
-      "reason": "According to this newsletter, Confession is Monday to Friday from 12:15pm to 12:40pm, not 12:00pm to 12:40pm. On Saturdays it is from 5:30pm to 5:55pm, not until 6:00pm. There is no Confession listed on Sundays."
-    }
+      "reason": "According to the newsletter, Confession is Monday to Friday from 12:15pm to 12:40pm and on Saturday from 5:30pm to 5:55pm. There is no Confession scheduled on Sundays. The weekday start time is 12:15pm, not 12:00pm, and Saturday concludes at 5:55pm, not 6:00pm."
+    },
+    "newsletterUrl": "https://cdn.prod.website-files.com/604cd9b97ea6bcb8e1d06a8b/689effab0520b64b2d167750_Sunday%2017th%20August%20-%2020th%20Sunday%20in%20Ordinary%20Time.pdf"
   },
   {
     "name": "Our Lady of Mount Carmel & St Simon Stock",
     "appraisal": {
       "changed": true,
-      "reason": "According to this newsletter, weekday confessions are Mon–Fri from 5:40 p.m. to 6:00 p.m. Saturday confessions are 11:30 a.m.–12:15 p.m. and 5:00–5:50 p.m., not until 6:00 p.m. There are no scheduled confessions on Sundays."
-    }
+      "reason": "Per this newsletter, Confessions are Monday to Friday 5.40 p.m.-6.00 p.m., and Saturday 11.30 a.m.-12.15 p.m. and 5.00 p.m.-5.50 p.m. There are no Sunday confessions listed. Please note the Saturday afternoon session ends at 5.50 p.m., not 6.00 p.m."
+    },
+    "newsletterUrl": "https://carmelitechurch.org/wp-content/uploads/2025/08/Sunday-31st-August-2025.pdf"
   }
 ]

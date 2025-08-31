@@ -81,16 +81,19 @@ st_simon_stock_assessment = get_ai_assessment(
 
 
 appraisals = [{
-    "name": "stGeorges",
-    "appraisal": json.loads(st_georges_assessment)
+    "name": "St George's Cathedral",
+    "appraisal": json.loads(st_georges_assessment),
+    "newsletterUrl": st_georges_newsletter_url
 },
     {
     "name": "St Patrick's",
-    "appraisal": json.loads(st_pats_assessment)
+    "appraisal": json.loads(st_pats_assessment),
+    "newsletterUrl": st_pats_newsletter_url
 },
     {
-    "name": "our_lady_of_mount_carmel_and_st_simon_stock",
-    "appraisal": json.loads(st_simon_stock_assessment)
+    "name": "Our Lady of Mount Carmel & St Simon Stock",
+    "appraisal": json.loads(st_simon_stock_assessment),
+    "newsletterUrl": st_simon_stock_newsletter_url
 }
 ]
 
