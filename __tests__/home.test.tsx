@@ -36,10 +36,6 @@ describe("Home page", () => {
       },
     ]);
   });
-  it('sets the correct tab title"', async () => {
-    render(<Home />);
-    expect(document.title).toBe("London Catholic Confession Times");
-  });
 
   it('renders an h1 with "London Confessions"', async () => {
     (matchChurchesToConfessionTimes as jest.Mock).mockResolvedValue(

@@ -251,8 +251,14 @@ function timeSlot(time: string, churches: React.JSX.Element[]) {
 }
 
 function displayChurch(name: string, url: string, location: string) {
-  const disruptedFlag = name === appraisals[1].name ? true : false;
-  const disruptionReason = appraisals[1].appraisal.reason;
+  const churchAppraisal = appraisals.find(
+    (appraisal) => appraisal.name === name
+  );
+  console.log(churchAppraisal);
+  const disruptedFlag = churchAppraisal ? true : false;
+  const disruptionReason = churchAppraisal
+    ? churchAppraisal.appraisal.reason
+    : "";
   return (
     <div key={name}>
       {disruptedFlag ? (

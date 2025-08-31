@@ -9,8 +9,7 @@ export default function Home() {
   const [dayOfWeek, setDayOfWeek] = useState<DayOfWeek>("Monday");
 
   return (
-    <div>
-      <title data-testid="tabTitle">London Catholic Confession Times</title>
+    <>
       <div data-testid="headingContainer" className={styles.stickyBar}>
         <HeadingBar selectedDayOfWeek={dayOfWeek} setDayOfWeek={setDayOfWeek} />
         <hr />
@@ -22,6 +21,6 @@ export default function Home() {
         <hr data-testid="footingDivider" />
         <p>Last human review: 26/08/25 </p>
       </div>
-    </div>
+    </>
   );
 }
