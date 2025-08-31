@@ -272,19 +272,27 @@ export type DisplayDodgyChurchEntryProps = {
   location: string;
   disruptionReason: string;
 };
-function DisplayDodgyChurchEntry({
+export function DisplayDodgyChurchEntry({
   name,
   url,
   location,
   disruptionReason,
 }: DisplayDodgyChurchEntryProps) {
   return (
-    <div>
-      <a href={url} className={styles.churchLink} key={`${name}-church`}>
-        <div className={styles.churchName}>{name}</div>
-        <div className={styles.churchLocation}>{location}</div>
+    <div data-testid="disruptionContainer" className={styles.disruptedNotice}>
+      <a
+        data-testid="linkToChurchWebsite"
+        href={url}
+        className={styles.churchLink}
+        key={`${name}-church`}
+      >
+        <div data-testid="churchName" className={styles.churchName}>
+          {name}
+        </div>
+        <div data-testid="churchLocation" className={styles.churchLocation}>
+          {location}
+        </div>
       </a>
-
       <ShowMore disruptionReason={disruptionReason} />
     </div>
   );
@@ -322,13 +330,19 @@ export function DisplayChurchEntry({
 export function ShowMore({ disruptionReason }: { disruptionReason: string }) {
   const [showDescription, setShowDescription] = useState(false);
   return (
-    <div key="blah">
-      <button
-        data-testid="showMoreButton"
-        onClick={() => setShowDescription(!showDescription)}
-      >
-        Show more{" "}
-      </button>
+    <div>
+      <div data-testid="disruptionRow" className={styles.disruptionRow}>
+        <div data-testid="disruptionWarning">
+          {" "}
+          ⚠️ Maybe disrupted this week!
+        </div>
+        <button
+          data-testid="showMoreButton"
+          onClick={() => setShowDescription(!showDescription)}
+        >
+          Show more{" "}
+        </button>
+      </div>
       {showDescription ? (
         <p data-testid="description">{disruptionReason}</p>
       ) : (
