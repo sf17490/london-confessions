@@ -250,20 +250,29 @@ function timeSlot(time: string, churches: React.JSX.Element[]) {
   );
 }
 
-function displayChurch(name: string, url: string, location: string) {
-  const churchAppraisal = appraisals.find(
-    (appraisal) => appraisal.name === name
+function getDisruptionDetails(churchName: string) {
+  const churchIsDisrupted = appraisals.find(
+    (appraisal) => appraisal.name === churchName
   );
-  console.log(churchAppraisal);
-  const disruptedFlag = churchAppraisal ? true : false;
-  const disruptionReason = churchAppraisal
-    ? churchAppraisal.appraisal.reason
-    : "";
+
+  if (churchIsDisrupted) {
+    return {
+      disruptionReason: churchIsDisrupted.appraisal.reason,
+      newsletterUrl: churchIsDisrupted.newsletterUrl,
+    };
+  } else {
+    return "";
+  }
+}
+
+function displayChurch(name: string, url: string, location: string) {
+  const maybeDisruptionDetails = getDisruptionDetails(name);
+
   return (
     <div key={name}>
-      {disruptedFlag ? (
+      {maybeDisruptionDetails ? (
         <DisplayDodgyChurchEntry
-          {...{ name, url, location, disruptionReason }}
+          {...{ name, url, location, showMoreDetails: maybeDisruptionDetails }}
         />
       ) : (
         <DisplayChurchEntry {...{ name, url, location }} />
@@ -276,13 +285,13 @@ export type DisplayDodgyChurchEntryProps = {
   name: string;
   url: string;
   location: string;
-  disruptionReason: string;
+  showMoreDetails: ShowMoreProps;
 };
 export function DisplayDodgyChurchEntry({
   name,
   url,
   location,
-  disruptionReason,
+  showMoreDetails,
 }: DisplayDodgyChurchEntryProps) {
   return (
     <div data-testid="disruptionContainer" className={styles.disruptedNotice}>
@@ -299,7 +308,7 @@ export function DisplayDodgyChurchEntry({
           {location}
         </div>
       </a>
-      <ShowMore disruptionReason={disruptionReason} />
+      <ShowMore {...showMoreDetails} />
     </div>
   );
 }
@@ -333,7 +342,12 @@ export function DisplayChurchEntry({
   );
 }
 
-export function ShowMore({ disruptionReason }: { disruptionReason: string }) {
+export type ShowMoreProps = {
+  disruptionReason: string;
+  newsletterUrl: string;
+};
+
+export function ShowMore({ disruptionReason, newsletterUrl }: ShowMoreProps) {
   const [showDescription, setShowDescription] = useState(false);
   return (
     <div>
@@ -350,11 +364,22 @@ export function ShowMore({ disruptionReason }: { disruptionReason: string }) {
         </button>
       </div>
       {showDescription ? (
-        <p data-testid="description">{disruptionReason}</p>
+        <div>
+          <p data-testid="description">{disruptionReason}</p>
+          {displayNewsletter(newsletterUrl)}
+        </div>
       ) : (
         ""
       )}
     </div>
+  );
+}
+
+function displayNewsletter(newsletterUrl: string) {
+  return (
+    <p data-testid="newsletterUrl">
+      See newsletter <a href={newsletterUrl}>here</a>.
+    </p>
   );
 }
 

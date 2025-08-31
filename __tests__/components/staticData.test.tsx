@@ -9,28 +9,34 @@ import {
 } from "../../app/components/staticData";
 import styles from "../../app/components/staticData.module.css";
 
+const dummyShowMoreProps = {
+  disruptionReason: "someReason",
+  newsletterUrl: "someUrl",
+};
 describe("The showMore function", () => {
   it("should put the disruption notice and show more button on the same row", () => {
-    render(<ShowMore disruptionReason="someReason" />);
+    render(<ShowMore {...dummyShowMoreProps} />);
 
     const disruptionRow = screen.queryByTestId("disruptionRow");
     expect(disruptionRow).toHaveClass(styles.disruptionRow);
   });
   it("should display a 'Show more' button", () => {
-    render(<ShowMore disruptionReason="someReason" />);
+    render(<ShowMore {...dummyShowMoreProps} />);
 
     const showMoreButton = screen.getByTestId("showMoreButton");
     expect(showMoreButton).toHaveTextContent(/^Show more$/);
   });
 
-  it("should display a description paragraph when I click 'Show more'", () => {
-    render(<ShowMore disruptionReason="someReason" />);
+  it("should display a description paragraph & newsletter url when I click 'Show more'", () => {
+    render(<ShowMore {...dummyShowMoreProps} />);
 
     expect(screen.queryByTestId("description")).not.toBeInTheDocument();
+    expect(screen.queryByTestId("newsletterUrl")).not.toBeInTheDocument();
 
     const showMoreButton = screen.getByTestId("showMoreButton");
     fireEvent.click(showMoreButton);
     expect(screen.getByTestId("description")).toBeInTheDocument();
+    expect(screen.getByTestId("newsletterUrl")).toBeInTheDocument();
   });
 });
 
@@ -73,7 +79,7 @@ describe("The DisplayDodgyChurchEntry function", () => {
     name: "someChurch",
     url: "someurl",
     location: "somePlace",
-    disruptionReason: "someReason",
+    showMoreDetails: dummyShowMoreProps,
   };
 
   it("should link to the church website", () => {
