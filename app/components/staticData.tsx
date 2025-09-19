@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { DayOfWeek } from "../types";
 import styles from "./staticData.module.css";
 import appraisals from "../../ai_pipeline/appraisals.json";
+import { getDisruptionDetails } from "../helpers";
 
 function StaticData({ dayOfWeek }: { dayOfWeek: DayOfWeek }) {
   switch (dayOfWeek) {
@@ -250,23 +251,8 @@ function timeSlot(time: string, churches: React.JSX.Element[]) {
   );
 }
 
-function getDisruptionDetails(churchName: string) {
-  const churchIsDisrupted = appraisals.find(
-    (appraisal) => appraisal.name === churchName
-  );
-
-  if (churchIsDisrupted) {
-    return {
-      disruptionReason: churchIsDisrupted.appraisal.reason,
-      newsletterUrl: churchIsDisrupted.newsletterUrl,
-    };
-  } else {
-    return "";
-  }
-}
-
 function displayChurch(name: string, url: string, location: string) {
-  const maybeDisruptionDetails = getDisruptionDetails(name);
+  const maybeDisruptionDetails = getDisruptionDetails(name, appraisals);
 
   return (
     <div key={name}>

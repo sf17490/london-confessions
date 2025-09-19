@@ -1,0 +1,24 @@
+[
+  {
+    "name": "St George's Cathedral",
+    "appraisal": {
+      "changed": "unknown"
+    },
+    "newsletterUrl": "https://www.stgeorgescathedral.org.uk/media/1060/newsletter.pdf"
+  },
+  {
+    "name": "St Patrick's",
+    "appraisal": {
+      "changed": "true",
+      "reason": "Per this newsletter, weekday Confessions are 12:15pm–12:40pm, not 12:00pm–12:40pm. Saturday Confessions are 5:30pm–5:55pm, not until 6:00pm. No Confessions are listed for Sunday."
+    },
+    "newsletterUrl": "https://cdn.prod.website-files.com/604cd9b97ea6bcb8e1d06a8b/68c3e01901de551b2c3b4789_Sunday%2014th%20September%20-%20Exhaltation%20of%20Holy%20Cross.pdf"
+  },
+  {
+    "name": "Our Lady of Mount Carmel & St Simon Stock",
+    "appraisal": {
+      "changed": "false"
+    },
+    "newsletterUrl": "https://carmelitechurch.org/wp-content/uploads/2025/09/Sunday-14th-September-2025.pdf"
+  }
+]

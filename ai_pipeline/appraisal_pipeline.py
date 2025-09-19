@@ -79,6 +79,14 @@ st_simon_stock_newsletter_url = navigate_to_st_simon_stock_newsletter()
 st_simon_stock_assessment = get_ai_assessment(
     st_simon_stock_prompt, st_simon_stock_newsletter_url)
 
+# Need to replace these assessments with placeholders when they are invalid json
+print("st georges assessment is:")
+print(st_georges_assessment)
+print("st pats assessment is:")
+print(st_pats_assessment)
+print("st simon stock assessment is...")
+print(st_simon_stock_assessment)
+
 
 appraisals = [{
     "name": "St George's Cathedral",

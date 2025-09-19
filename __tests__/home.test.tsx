@@ -6,13 +6,13 @@ import React from "react";
 import { server } from "./mocks/node";
 import styles from "../app/page.module.css";
 
-vi.mock("../app/helpers", () => {
+vi.mock("../app/dbHelpers", () => {
   return {
     matchChurchesToConfessionTimes: vi.fn(),
   };
 });
 
-import { matchChurchesToConfessionTimes } from "../app/helpers";
+import { matchChurchesToConfessionTimes } from "../app/dbHelpers";
 import { dummyConfessionTimesWithChurches } from "./dummyData/dummyData";
 
 beforeAll(() => server.listen()); //Stubbed responses from db
@@ -57,5 +57,16 @@ describe("Home page", () => {
     expect(footer).toHaveTextContent("Last human review");
     expect(footer).toHaveClass(styles.footer);
     const footerDividingLine = await screen.findByTestId("footingDivider");
+  });
+
+  it("tells the user that the site is managed by AI", async () => {
+    render(<Home />);
+    const aiInfo = await screen.findByTestId("aiInfo");
+    expect(aiInfo).toHaveTextContent(
+      "THIS WEBSITE IS RUN BY ARTIFICIAL INTELLIGENCE"
+    );
+    const codeLink = await screen.findByTestId("codeLink");
+    expect(codeLink).toHaveTextContent("(Proof)");
+    expect(codeLink).toHaveAttribute("href", "CHANGEME");
   });
 });

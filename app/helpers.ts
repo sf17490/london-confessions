@@ -1,36 +1,30 @@
-import { ChurchByConfessionTimeId, ConfessionTimeEntry } from "./types";
+import appraisals from "../ai_pipeline/appraisals.json";
 
-//This function must be bad practice...
-function getApiUrl(path: string) {
-  if (process.env.NODE_ENV === "test") {
-    // Node.js (test or SSR)
-    return `http://localhost:3000${path}`;
+type ChangeStatus = "true" | "false" | "unknown";
+
+export type appraisal = {
+  name: string;
+  appraisal: {
+    changed: string; //true/false/unknown. Figure out a way to make this "ChangeStatus"
+    reason?: string;
+  };
+  newsletterUrl: string;
+};
+
+export function getDisruptionDetails(
+  churchName: string,
+  appraisalsJson: appraisal[]
+) {
+  const maybeChurchDisruptedDetails = appraisalsJson.find(
+    (entry) => entry.name === churchName && entry.appraisal.changed !== "false"
+  );
+
+  if (maybeChurchDisruptedDetails) {
+    return {
+      disruptionReason: maybeChurchDisruptedDetails.appraisal.reason,
+      newsletterUrl: maybeChurchDisruptedDetails.newsletterUrl,
+    };
   } else {
-    // Browser
-    return path;
+    return "";
   }
-}
-
-export async function matchChurchesToConfessionTimes(dayOfWeek: String) {
-  const confessionTimes = await fetch(
-    getApiUrl(`/api/confessionTimes?dayOfWeek=${dayOfWeek}`)
-  );
-  const confessionTimesJson: ConfessionTimeEntry[] =
-    await confessionTimes.json();
-  //sort by time
-  confessionTimesJson.sort((a, b) => a.startTime.localeCompare(b.startTime)); //Ensure the fetches are mocked so that we can test this.
-  //The above line ensures that confession times are returned from earliest to latest.
-  const matched = await Promise.all(
-    confessionTimesJson.map(async (confessionTimeJson) => {
-      const url = `/api/churchesByConfessionTime?confessionTimeId=${confessionTimeJson.id.toString()}`;
-      const churches = await fetch(getApiUrl(url));
-      const churchesData: ChurchByConfessionTimeId[] = await churches.json();
-      const result = {
-        confessionTime: confessionTimeJson.startTime,
-        churches: churchesData,
-      };
-      return result;
-    })
-  );
-  return matched;
 }
