@@ -7,6 +7,7 @@ I set an AI loose in the streets of London with the instruction to "Do Catholic 
 Frontend options:
 
 ![option 1](image.png)
+![ai set loose](image-1.png)
 
 TODO:
 
