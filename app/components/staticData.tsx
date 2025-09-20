@@ -32,7 +32,6 @@ export default StaticData;
 function mondayChurches() {
   return (
     <div>
-      🍔🍔🍔🍔🍔🍔🍔🍔Lunchtime shift 🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔
       {timeSlot("11:30", [westminsterCathedral, stsPeterAndPaul])}
       {timeSlot("12:00", [
         bromptonOratory,
@@ -52,13 +51,9 @@ function mondayChurches() {
       ])}
       {timeSlot("12:35", [corpusChristi])}
       {timeSlot("13:20", [stEtheldredras])}
-      🌆🌆🌆🌆🌆🌆🌆🌆🌆Evening Shift 🌆🌆🌆🌆🌆🌆🌆🌆🌆
       {timeSlot("16:30", [westminsterCathedral])}
       {timeSlot("17:00", [westminsterCathedral])}
       {timeSlot("17:30", [bromptonOratory, notreDame, stAnselmAndStCecilia])}
-      {/* <p>
-        ⚠️ Brompton Oratory, Knightsbridge ⚠️ <a href=""> May be disrupted</a>
-      </p> */}
       {timeSlot("17:40", [mountCarmel])}
       {timeSlot("17:45", [ukrainianCathedral])}
     </div>
