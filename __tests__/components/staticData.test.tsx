@@ -6,8 +6,6 @@ import {
   ShowMore,
   DisplayChurchEntry,
   DisplayDodgyChurchEntry,
-  DisruptedOrUnknownChurchEntry,
-  DisruptedOrUnknownChurchEntryProps,
 } from "../../app/components/staticData";
 import styles from "../../app/components/staticData.module.css";
 
