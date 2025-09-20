@@ -1,5 +1,3 @@
-import appraisals from "../ai_pipeline/appraisals.json";
-
 type ChangeStatus = "true" | "false" | "unknown";
 
 export type appraisal = {
@@ -25,6 +23,9 @@ export function getDisruptionDetails(
       newsletterUrl: maybeChurchDisruptedDetails.newsletterUrl,
     };
   } else {
-    return "";
+    return {
+      disruptionReason: "",
+      newsletterUrl: "",
+    };
   }
 }

@@ -3,6 +3,10 @@ import { DayOfWeek } from "../types";
 import styles from "./staticData.module.css";
 import appraisals from "../../ai_pipeline/appraisals.json";
 import { getDisruptionDetails } from "../helpers";
+import {
+  DisruptedOrUnknownChurchEntry,
+  DisruptedOrUnknownChurchEntryProps,
+} from "./disruptedOrUnknownChurchEntry";
 
 function StaticData({ dayOfWeek }: { dayOfWeek: DayOfWeek }) {
   switch (dayOfWeek) {
@@ -254,12 +258,18 @@ function timeSlot(time: string, churches: React.JSX.Element[]) {
 function displayChurch(name: string, url: string, location: string) {
   const maybeDisruptionDetails = getDisruptionDetails(name, appraisals);
 
+  const specialNoticeChurchDetails: DisruptedOrUnknownChurchEntryProps = {
+    name: name,
+    location: location,
+    url: url,
+    disruptionReason: maybeDisruptionDetails.disruptionReason,
+    newsletterUrl: maybeDisruptionDetails.newsletterUrl,
+  };
+
   return (
     <div key={name}>
-      {maybeDisruptionDetails ? (
-        <DisplayDodgyChurchEntry
-          {...{ name, url, location, showMoreDetails: maybeDisruptionDetails }}
-        />
+      {maybeDisruptionDetails.disruptionReason !== "" ? (
+        <DisruptedOrUnknownChurchEntry {...specialNoticeChurchDetails} />
       ) : (
         <DisplayChurchEntry {...{ name, url, location }} />
       )}

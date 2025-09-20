@@ -14,6 +14,11 @@ const expectedUnknownDetails = {
     "https://www.stgeorgescathedral.org.uk/media/1060/newsletter.pdf",
 };
 
+const expectedMissingChurchDetails = {
+  disruptionReason: "",
+  newsletterUrl: "",
+};
+
 describe("The 'getDisruptionDetails' function", () => {
   it("should return the correct data for a disrupted church", () => {
     const result = getDisruptionDetails("St Patrick's", appraisals);
@@ -25,13 +30,13 @@ describe("The 'getDisruptionDetails' function", () => {
   });
   it("should not return data when the church data is missing", () => {
     const result = getDisruptionDetails("church of pastor bob", appraisals);
-    expect(result).toStrictEqual("");
+    expect(result).toStrictEqual(expectedMissingChurchDetails);
   });
-  it("should not return data when church is not disrupted", () => {
+  it("should not return empty data when church is not disrupted", () => {
     const result = getDisruptionDetails(
       "Our Lady of Mount Carmel & St Simon Stock",
       appraisals
     );
-    expect(result).toStrictEqual("");
+    expect(result).toStrictEqual(expectedMissingChurchDetails);
   });
 });
