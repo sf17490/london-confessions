@@ -316,7 +316,7 @@ export function DisplayChurchEntry({
   location,
 }: DisplayChurchEntryProps) {
   return (
-    <div>
+    <div className={styles.allGood}>
       <a
         data-testid="linkToChurchWebsite"
         href={url}
@@ -329,6 +329,7 @@ export function DisplayChurchEntry({
         <div data-testid="churchLocation" className={styles.churchLocation}>
           {location}
         </div>
+        <div className={styles.goodService}>✅ Good service</div>
       </a>
     </div>
   );

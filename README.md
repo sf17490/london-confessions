@@ -1,5 +1,9 @@
 ## Notes by Sean:
 
+Frontend options:
+
+![option 1](image.png)
+
 TODO:
 
 1. UI improvements:
