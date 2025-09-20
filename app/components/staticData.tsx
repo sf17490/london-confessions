@@ -322,13 +322,14 @@ export function DisplayChurchEntry({
         href={url}
         key={`${name}-church`}
         className={styles.churchLink}
-      />
-      <div data-testid="churchName" className={styles.churchName}>
-        {name}
-      </div>
-      <div data-testid="churchLocation" className={styles.churchLocation}>
-        {location}
-      </div>
+      >
+        <div data-testid="churchName" className={styles.churchName}>
+          {name}
+        </div>
+        <div data-testid="churchLocation" className={styles.churchLocation}>
+          {location}
+        </div>
+      </a>
     </div>
   );
 }

@@ -56,6 +56,7 @@ describe("The DisplayChurchEntry function", () => {
     expect(link).toBeInTheDocument();
     expect(link).toHaveAttribute("href", "someurl");
     expect(link).toHaveAttribute("class", styles.churchLink);
+    expect(link).toHaveTextContent("someChurchsomePlace");
   });
   it("should render the church name correctly", () => {
     render(<DisplayChurchEntry {...dummyChurchEntry} />);
