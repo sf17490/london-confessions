@@ -10,7 +10,7 @@
 
 .churchLink {
   display: block;           /* Makes the whole block clickable */
-  margin-bottom: 1rem;      /* Space between churches */
+  margin-bottom: 0.5rem;      /* Space between churches */
   text-decoration: none;    /* Remove default underline */
 }
 

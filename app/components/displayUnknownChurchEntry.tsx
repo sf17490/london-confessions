@@ -28,11 +28,9 @@ function MyDisplayUnknownChurchEntry({
 
         <div data-testid="churchLocation" className={styles.churchLocation}>
           {churchData.location}
+          <div data-testid="uncheckedWarning">❓Unknown Status</div>
         </div>
       </a>
-      <div data-testid="uncheckedWarning">
-        ❓ We were unable to verify this confession time
-      </div>
     </div>
   );
 }
