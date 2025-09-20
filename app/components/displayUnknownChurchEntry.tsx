@@ -37,21 +37,4 @@ function MyDisplayUnknownChurchEntry({
   );
 }
 
-{
-  /* <div>
-  <a
-    data-testid="linkToChurchWebsite"
-    href={url}
-    key={`${name}-church`}
-    className={styles.churchLink}
-  />
-  <div data-testid="churchName" className={styles.churchName}>
-    {name}
-  </div>
-  <div data-testid="churchLocation" className={styles.churchLocation}>
-    {location}
-  </div>
-</div>; */
-}
-
 export default MyDisplayUnknownChurchEntry;
