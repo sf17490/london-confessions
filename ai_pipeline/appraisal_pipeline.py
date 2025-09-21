@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 from assess_with_ai import get_ai_assessment
-from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, st_simon_stock_prompt
+from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, st_simon_stock_prompt, farm_street_prompt
 import json
 import time
 
@@ -79,6 +79,30 @@ st_simon_stock_newsletter_url = navigate_to_st_simon_stock_newsletter()
 st_simon_stock_assessment = get_ai_assessment(
     st_simon_stock_prompt, st_simon_stock_newsletter_url)
 
+
+def navigate_to_farm_street_newsletter():
+    driver.get("https://www.farmstreet.org.uk/newsletters")
+    time.sleep(2)
+
+    download_buttons = driver.find_elements(
+        By.PARTIAL_LINK_TEXT, "Sunday")
+
+    print("Finding Farm Street's most recent newsletter...")
+    most_recent_newsletter_webpage = download_buttons[0]
+    most_recent_newsletter_webpage.click()
+
+    download_button = driver.find_element(
+        By.PARTIAL_LINK_TEXT, "Sunday")
+
+    newsletter_pdf_url = download_button.get_attribute("href")
+    return newsletter_pdf_url
+
+
+farm_street_newsletter_url = navigate_to_farm_street_newsletter()
+farm_street_assessment = get_ai_assessment(
+    farm_street_prompt, farm_street_newsletter_url
+)
+
 # Need to replace these assessments with placeholders when they are invalid json
 print("st georges assessment is:")
 print(st_georges_assessment)
@@ -86,6 +110,8 @@ print("st pats assessment is:")
 print(st_pats_assessment)
 print("st simon stock assessment is...")
 print(st_simon_stock_assessment)
+print("farm street church assessment is...")
+print(farm_street_assessment)
 
 
 appraisals = [{
@@ -102,7 +128,14 @@ appraisals = [{
     "name": "Our Lady of Mount Carmel & St Simon Stock",
     "appraisal": json.loads(st_simon_stock_assessment),
     "newsletterUrl": st_simon_stock_newsletter_url
+},
+    {
+    "name": "Immaculate Conception",
+    "appraisal": json.loads(farm_street_assessment),
+    "newsletterUrl": farm_street_newsletter_url
+
 }
+
 ]
 
 appraisals_json = json.dumps(appraisals, indent=2, ensure_ascii=False)
