@@ -3,7 +3,7 @@
     "name": "St George's Cathedral",
     "appraisal": {
       "changed": "true",
-      "reason": "According to this newsletter, Saturday confessions are 10:00-11:00 and 17:00-17:50, not until 18:00. Your expected 17:00-18:00 slot is therefore longer than scheduled. Weekday (12:00-12:20) and Sunday (10:00-10:30 and 12:00-12:30) times are correct. Please refer to the published schedule for accuracy."
+      "reason": "According to this newsletter, weekday confessions are 12.00–12.20pm and Sunday confessions are 10.00–10.30am and 12.00–12.30pm. Saturday confessions are 10.00–11.00am and 5.00–5.50pm, not 5.00–6.00pm. Please note these times are subject to updates as indicated by the Cathedral."
     },
     "newsletterUrl": "https://www.stgeorgescathedral.org.uk/media/1060/newsletter.pdf"
   },
@@ -19,6 +19,14 @@
     "appraisal": {
       "changed": "false"
     },
-    "newsletterUrl": "https://carmelitechurch.org/wp-content/uploads/2025/09/Sunday-14th-September-2025.pdf"
+    "newsletterUrl": "https://carmelitechurch.org/wp-content/uploads/2025/09/Sunday-21st-September-2025.pdf"
+  },
+  {
+    "name": "Immaculate Conception",
+    "appraisal": {
+      "changed": "true",
+      "reason": "Please note that the Saturday midday Confessions are from 11:00 to 12:00, not 12:00 to 13:00. Weekday Confessions remain 12:00-12:55. On Sundays, Confessions are available fifteen minutes before every Mass. Confessions may also be heard by appointment."
+    },
+    "newsletterUrl": "https://www.farmstreet.org.uk/s/Twenty-Fifth-Sunday-in-Ordinary-Time.pdf"
   }
 ]
