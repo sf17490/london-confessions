@@ -4,10 +4,11 @@ I set an AI loose in the streets of London with the instruction to "Do Catholic 
 
 👉 www.londonurl.com 👈
 
+<img src="image-1.png" width=200 />
+
 Frontend options:
 
 ![option 1](image.png)
-![ai set loose](image-1.png)
 
 TODO:
 
