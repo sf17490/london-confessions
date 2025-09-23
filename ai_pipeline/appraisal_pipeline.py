@@ -2,9 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 from assess_with_ai import get_ai_assessment
-from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, st_simon_stock_prompt, farm_street_prompt
+from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, st_simon_stock_prompt, farm_street_prompt, brompton_oratory_prompt
 import json
 import time
+from ai_pipeline.assess_webpage_with_ai import get_brompton_oratory_assessment
 
 
 driver = webdriver.Chrome()
@@ -103,6 +104,9 @@ farm_street_assessment = get_ai_assessment(
     farm_street_prompt, farm_street_newsletter_url
 )
 
+brompton_oratory_newsletter_url = "https://www.bromptonoratory.co.uk/weekly-parish-newsletter"
+brompton_oratory_assessment = get_brompton_oratory_assessment()
+
 # Need to replace these assessments with placeholders when they are invalid json
 print("st georges assessment is:")
 print(st_georges_assessment)
@@ -112,7 +116,8 @@ print("st simon stock assessment is...")
 print(st_simon_stock_assessment)
 print("farm street church assessment is...")
 print(farm_street_assessment)
-
+print("brompton oratory assessment is...")
+print(brompton_oratory_assessment)
 
 appraisals = [{
     "name": "St George's Cathedral",
@@ -133,7 +138,11 @@ appraisals = [{
     "name": "Immaculate Conception",
     "appraisal": json.loads(farm_street_assessment),
     "newsletterUrl": farm_street_newsletter_url
-
+},
+    {
+    "name": "Brompton Oratory",
+    "appraisal": json.loads(brompton_oratory_assessment),
+    "newsletterUrl": brompton_oratory_newsletter_url
 }
 
 ]

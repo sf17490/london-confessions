@@ -21,7 +21,7 @@ def get_ai_assessment(prompt, pdf_url):
                 {
                         "type": "input_text",
                         "text": prompt
-                }
+                        }
             ]
         }
     ]
@@ -30,3 +30,7 @@ def get_ai_assessment(prompt, pdf_url):
         input=prompt_with_pdf_attached
     )
     return response.output_text
+
+# Example error responses:
+# If I give it a 'pdf_url' that's really a html page, such as https://www.bromptonoratory.co.uk/weekly-parish-newsletter
+# openai.BadRequestError: Error code: 400 - {'error': {'message': 'The file type you uploaded is not supported. Please try again with a pdf', 'type': 'invalid_request_error', 'param': 'input', 'code': 'unsupported_file'}}
