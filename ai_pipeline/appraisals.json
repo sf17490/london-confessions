@@ -3,16 +3,17 @@
     "name": "St George's Cathedral",
     "appraisal": {
       "changed": "true",
-      "reason": "According to this newsletter, weekday confessions are 12.00–12.20pm and Sunday confessions are 10.00–10.30am and 12.00–12.30pm. Saturday confessions are 10.00–11.00am and 5.00–5.50pm, not 5.00–6.00pm. Please note these times are subject to updates as indicated by the Cathedral."
+      "reason": "Please be advised that, per this newsletter, Saturday Confessions are 10:00–11:00 and 17:00–17:50, not until 18:00. Weekday Confessions are 12:00–12:20, and Sunday Confessions are 10:00–10:30 and 12:00–12:30. Kindly consult this schedule for planning."
     },
     "newsletterUrl": "https://www.stgeorgescathedral.org.uk/media/1060/newsletter.pdf"
   },
   {
     "name": "St Patrick's",
     "appraisal": {
-      "changed": "unknown"
+      "changed": "true",
+      "reason": "Per the newsletter, Confession is offered Monday to Friday from 12:15pm to 12:40pm, not 12:00pm to 12:40pm. On Saturdays, Confession runs from 5:30pm to 5:55pm, not until 6:00pm. No Sunday Confession is advertised."
     },
-    "newsletterUrl": "https://cdn.prod.website-files.com/604cd9b97ea6bcb8e1d06a8b/68cd4215eeada615a1268883_MUSIC%20-%20SUNDAY%2021ST%20SEPTEMBER.pdf"
+    "newsletterUrl": "https://cdn.prod.website-files.com/604cd9b97ea6bcb8e1d06a8b/68cd422d247b0dc866950612_Sunday%2021st%20September%20-%2025th%20Sunday%20in%20Ordinary%20Time.pdf"
   },
   {
     "name": "Our Lady of Mount Carmel & St Simon Stock",
@@ -24,8 +25,7 @@
   {
     "name": "Immaculate Conception",
     "appraisal": {
-      "changed": "true",
-      "reason": "Please note that the Saturday midday Confessions are from 11:00 to 12:00, not 12:00 to 13:00. Weekday Confessions remain 12:00-12:55. On Sundays, Confessions are available fifteen minutes before every Mass. Confessions may also be heard by appointment."
+      "changed": "false"
     },
     "newsletterUrl": "https://www.farmstreet.org.uk/s/Twenty-Fifth-Sunday-in-Ordinary-Time.pdf"
   }
