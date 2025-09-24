@@ -35,23 +35,23 @@ def navigate_to_st_patricks_newsletter():
         By.XPATH, '//button[text()="Allow all cookies"]')
     accept_cookies_button.click()
 
-    # Hunch that st pat's newsletter is always the second button
-    download_buttons = driver.find_elements(
-        By.PARTIAL_LINK_TEXT, "Download")
+    # Find all pdfs links
+    all_pdfs = driver.find_elements(
+        By.XPATH, '//a[contains(@href, "pdf")]')
 
-    print("downloads buttons for st pats")
-    print(download_buttons)
+    # filter out the music sheets
+    newsletter_pdfs_only = [
+        pdfLink for pdfLink in all_pdfs if "MUSIC" not in pdfLink.get_attribute("href")]
 
-    # For some reason the print statements help
-    print("Finding st pat's second download button...")
-    second = download_buttons[1]
-    print(second)
+    # select the most recent newsletter
+    most_recent_newsletter_link = newsletter_pdfs_only[0]
 
-    newsletter_pdf_url = second.get_attribute("href")
-    return newsletter_pdf_url
+    return most_recent_newsletter_link.get_attribute("href")
 
 
 st_pats_newsletter_url = navigate_to_st_patricks_newsletter()
+print("st pats newsletter url is...")
+print(st_pats_newsletter_url)
 
 st_pats_assessment = get_ai_assessment(
     st_patricks_soho_prompt, st_pats_newsletter_url)
