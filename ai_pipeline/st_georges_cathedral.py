@@ -3,7 +3,6 @@ from selenium.webdriver.common.by import By
 
 from assess_with_ai import get_ai_assessment
 from prompts import st_georges_cathedral_prompt
-# from prompts import st_georges_cathedral_prompt
 
 
 def navigate_to_st_georges_newsletter(driver: webdriver):
