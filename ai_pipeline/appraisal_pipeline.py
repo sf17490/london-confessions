@@ -1,29 +1,17 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+from st_georges_cathedral import get_st_georges_newsletter_assessment
 from assess_with_ai import get_ai_assessment
-from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, st_simon_stock_prompt, farm_street_prompt
+from prompts import st_patricks_soho_prompt, st_simon_stock_prompt, farm_street_prompt
 import json
 import time
 
 
 driver = webdriver.Chrome()
 
-
-def navigate_to_st_georges_newsletter():
-    driver.get("https://www.stgeorgescathedral.org.uk/news/")
-
-    download_button = driver.find_element(
-        By.PARTIAL_LINK_TEXT, "Sunday Newsletter")
-
-    newsletter_pdf_url = download_button.get_attribute("href")
-    return newsletter_pdf_url
-
-
-st_georges_newsletter_url = navigate_to_st_georges_newsletter()
-
-st_georges_assessment = get_ai_assessment(
-    st_georges_cathedral_prompt, st_georges_newsletter_url)
+st_georges_newsletter_and_assessment = get_st_georges_newsletter_assessment(
+    driver)
 
 
 def navigate_to_st_patricks_newsletter():
@@ -104,8 +92,12 @@ farm_street_assessment = get_ai_assessment(
 )
 
 # Need to replace these assessments with placeholders when they are invalid json
-print("st georges assessment is:")
-print(st_georges_assessment)
+print("st georges newsletter & assessment is:")
+print(st_georges_newsletter_and_assessment)
+print("zero is...")
+print(st_georges_newsletter_and_assessment[0])
+print("one is...")
+print(st_georges_newsletter_and_assessment[1])
 print("st pats assessment is:")
 print(st_pats_assessment)
 print("st simon stock assessment is...")
@@ -116,8 +108,8 @@ print(farm_street_assessment)
 
 appraisals = [{
     "name": "St George's Cathedral",
-    "appraisal": json.loads(st_georges_assessment),
-    "newsletterUrl": st_georges_newsletter_url
+    "appraisal": json.loads(st_georges_newsletter_and_assessment[0]),
+    "newsletterUrl": st_georges_newsletter_and_assessment[1]
 },
     {
     "name": "St Patrick's",

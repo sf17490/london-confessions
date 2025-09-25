@@ -21,7 +21,7 @@ def get_ai_assessment(prompt, pdf_url):
                 {
                         "type": "input_text",
                         "text": prompt
-                }
+                        }
             ]
         }
     ]
@@ -30,3 +30,6 @@ def get_ai_assessment(prompt, pdf_url):
         input=prompt_with_pdf_attached
     )
     return response.output_text
+
+# Example error:
+# openai.BadRequestError: Error code: 400 - {'error': {'message': 'Timeout while downloading https://carmelitechurch.org/wp-content/uploads/2025/09/Sunday-21st-September-2025.pdf.', 'type': 'invalid_request_error', 'param': 'url', 'code': 'invalid_value'}}
