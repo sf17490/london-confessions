@@ -1,48 +1,23 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from st_georges_cathedral import get_st_georges_newsletter_assessment
+from parish_assessment_requests import get_st_georges_newsletter_assessment, get_st_patricks_soho_newsletter_assessment, get_farm_street_newsletter_assessment
 from assess_with_ai import get_ai_assessment
-from prompts import st_patricks_soho_prompt, st_simon_stock_prompt, farm_street_prompt
+from prompts import st_simon_stock_prompt, farm_street_prompt
 import json
 import time
 
 
 driver = webdriver.Chrome()
 
-st_georges_newsletter_and_assessment = get_st_georges_newsletter_assessment(
+st_georges_assessment_and_newsletter = get_st_georges_newsletter_assessment(
     driver)
 
+st_patricks_soho_assessment_and_newsletter = get_st_patricks_soho_newsletter_assessment(
+    driver)
 
-def navigate_to_st_patricks_newsletter():
-    driver.get("https://www.stpatricksoho.org/newsletter")
-    time.sleep(2)
-
-    # give in to cookies
-    accept_cookies_button = driver.find_element(
-        By.XPATH, '//button[text()="Allow all cookies"]')
-    accept_cookies_button.click()
-
-    # Find all pdfs links
-    all_pdfs = driver.find_elements(
-        By.XPATH, '//a[contains(@href, "pdf")]')
-
-    # filter out the music sheets
-    newsletter_pdfs_only = [
-        pdfLink for pdfLink in all_pdfs if "MUSIC" not in pdfLink.get_attribute("href")]
-
-    # select the most recent newsletter
-    most_recent_newsletter_link = newsletter_pdfs_only[0]
-
-    return most_recent_newsletter_link.get_attribute("href")
-
-
-st_pats_newsletter_url = navigate_to_st_patricks_newsletter()
-print("st pats newsletter url is...")
-print(st_pats_newsletter_url)
-
-st_pats_assessment = get_ai_assessment(
-    st_patricks_soho_prompt, st_pats_newsletter_url)
+farm_street_assessment_and_newsletter = get_farm_street_newsletter_assessment(
+    driver)
 
 
 def navigate_to_st_simon_stock_newsletter():
@@ -67,54 +42,29 @@ st_simon_stock_newsletter_url = navigate_to_st_simon_stock_newsletter()
 st_simon_stock_assessment = get_ai_assessment(
     st_simon_stock_prompt, st_simon_stock_newsletter_url)
 
-
-def navigate_to_farm_street_newsletter():
-    driver.get("https://www.farmstreet.org.uk/newsletters")
-    time.sleep(2)
-
-    download_buttons = driver.find_elements(
-        By.PARTIAL_LINK_TEXT, "Sunday")
-
-    print("Finding Farm Street's most recent newsletter...")
-    most_recent_newsletter_webpage = download_buttons[0]
-    most_recent_newsletter_webpage.click()
-
-    download_button = driver.find_element(
-        By.PARTIAL_LINK_TEXT, "Sunday")
-
-    newsletter_pdf_url = download_button.get_attribute("href")
-    return newsletter_pdf_url
-
-
-farm_street_newsletter_url = navigate_to_farm_street_newsletter()
-farm_street_assessment = get_ai_assessment(
-    farm_street_prompt, farm_street_newsletter_url
-)
-
-# Need to replace these assessments with placeholders when they are invalid json
 print("st georges newsletter & assessment is:")
-print(st_georges_newsletter_and_assessment)
+print(st_georges_assessment_and_newsletter)
 print("zero is...")
-print(st_georges_newsletter_and_assessment[0])
+print(st_georges_assessment_and_newsletter[0])
 print("one is...")
-print(st_georges_newsletter_and_assessment[1])
-print("st pats assessment is:")
-print(st_pats_assessment)
+print(st_georges_assessment_and_newsletter[1])
+print("st pats assessment & newsletter is:")
+print(st_patricks_soho_assessment_and_newsletter)
 print("st simon stock assessment is...")
 print(st_simon_stock_assessment)
 print("farm street church assessment is...")
-print(farm_street_assessment)
+print(farm_street_assessment_and_newsletter)
 
 
 appraisals = [{
     "name": "St George's Cathedral",
-    "appraisal": json.loads(st_georges_newsletter_and_assessment[0]),
-    "newsletterUrl": st_georges_newsletter_and_assessment[1]
+    "appraisal": json.loads(st_georges_assessment_and_newsletter[0]),
+    "newsletterUrl": st_georges_assessment_and_newsletter[1]
 },
     {
     "name": "St Patrick's",
-    "appraisal": json.loads(st_pats_assessment),
-    "newsletterUrl": st_pats_newsletter_url
+    "appraisal": json.loads(st_patricks_soho_assessment_and_newsletter[0]),
+    "newsletterUrl": st_patricks_soho_assessment_and_newsletter[1]
 },
     {
     "name": "Our Lady of Mount Carmel & St Simon Stock",
@@ -123,8 +73,8 @@ appraisals = [{
 },
     {
     "name": "Immaculate Conception",
-    "appraisal": json.loads(farm_street_assessment),
-    "newsletterUrl": farm_street_newsletter_url
+    "appraisal": json.loads(farm_street_assessment_and_newsletter[0]),
+    "newsletterUrl": farm_street_assessment_and_newsletter[1]
 
 }
 
