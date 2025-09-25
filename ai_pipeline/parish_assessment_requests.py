@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 from assess_with_ai import get_ai_assessment
-from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, farm_street_prompt
+from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, farm_street_prompt, corpus_christi_prompt
 
 
 def navigate_to_parish_newsletter(driver: webdriver, url):
@@ -47,3 +47,11 @@ def get_farm_street_newsletter_assessment(driver: webdriver):
     farm_street_assessment = get_ai_assessment(
         farm_street_prompt, farm_street_newsletter_url)
     return [farm_street_assessment, farm_street_newsletter_url]
+
+
+def get_corpus_christi_newsletter_assessment(driver: webdriver):
+    corpus_christi_newsletter_url = navigate_to_parish_newsletter(
+        driver, "https://corpuschristimaidenlane.org.uk/news/")
+    corpus_christi_assessment = get_ai_assessment(
+        corpus_christi_prompt, corpus_christi_newsletter_url)
+    return [corpus_christi_assessment, corpus_christi_newsletter_url]

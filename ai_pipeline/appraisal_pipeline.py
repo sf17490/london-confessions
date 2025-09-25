@@ -1,9 +1,9 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from parish_assessment_requests import get_st_georges_newsletter_assessment, get_st_patricks_soho_newsletter_assessment, get_farm_street_newsletter_assessment
+from parish_assessment_requests import get_st_georges_newsletter_assessment, get_st_patricks_soho_newsletter_assessment, get_farm_street_newsletter_assessment, get_corpus_christi_newsletter_assessment
 from assess_with_ai import get_ai_assessment
-from prompts import st_simon_stock_prompt, farm_street_prompt
+from prompts import st_simon_stock_prompt
 import json
 import time
 
@@ -18,6 +18,10 @@ st_patricks_soho_assessment_and_newsletter = get_st_patricks_soho_newsletter_ass
 
 farm_street_assessment_and_newsletter = get_farm_street_newsletter_assessment(
     driver)
+
+corpus_christi_assessment_and_newsletter = get_corpus_christi_newsletter_assessment(
+    driver
+)
 
 
 def navigate_to_st_simon_stock_newsletter():
@@ -42,19 +46,6 @@ st_simon_stock_newsletter_url = navigate_to_st_simon_stock_newsletter()
 st_simon_stock_assessment = get_ai_assessment(
     st_simon_stock_prompt, st_simon_stock_newsletter_url)
 
-print("st georges newsletter & assessment is:")
-print(st_georges_assessment_and_newsletter)
-print("zero is...")
-print(st_georges_assessment_and_newsletter[0])
-print("one is...")
-print(st_georges_assessment_and_newsletter[1])
-print("st pats assessment & newsletter is:")
-print(st_patricks_soho_assessment_and_newsletter)
-print("st simon stock assessment is...")
-print(st_simon_stock_assessment)
-print("farm street church assessment is...")
-print(farm_street_assessment_and_newsletter)
-
 
 appraisals = [{
     "name": "St George's Cathedral",
@@ -75,6 +66,12 @@ appraisals = [{
     "name": "Immaculate Conception",
     "appraisal": json.loads(farm_street_assessment_and_newsletter[0]),
     "newsletterUrl": farm_street_assessment_and_newsletter[1]
+
+},
+    {
+    "name": "Corpus Christi",
+    "appraisal": json.loads(corpus_christi_assessment_and_newsletter[0]),
+    "newsletterUrl": corpus_christi_assessment_and_newsletter[1]
 
 }
 
