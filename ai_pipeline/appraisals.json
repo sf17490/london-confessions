@@ -9,15 +9,14 @@
   {
     "name": "St Patrick's",
     "appraisal": {
-      "changed": "true",
-      "reason": "According to the newsletter, weekday confessions run from 12:15pm to 12:40pm, not 12:00pm to 12:40pm. Saturday confessions are from 5:30pm to 5:55pm, not until 6:00pm. No confessions are listed for Sundays."
+      "changed": "unknown"
     },
-    "newsletterUrl": "https://cdn.prod.website-files.com/604cd9b97ea6bcb8e1d06a8b/68d66ff9faaf25207c917347_Sunday%2028th%20September%20-%2026th%20Sunday%20in%20Ordinary%20Time.pdf"
+    "newsletterUrl": ""
   },
   {
     "name": "Our Lady of Mount Carmel & St Simon Stock",
     "appraisal": {
-      "changed": "unknown"
+      "changed": "false"
     },
     "newsletterUrl": "https://carmelitechurch.org/wp-content/uploads/2025/09/Sunday-21st-September-2025.pdf"
   },
@@ -32,7 +31,7 @@
     "name": "Corpus Christi",
     "appraisal": {
       "changed": "true",
-      "reason": "According to this bulletin, Confessions are heard for half an hour before all Masses, not only Monday and Wednesday–Friday at 12:35–13:05. This includes additional times before the 6:30 pm Masses (e.g., Monday and Thursday), before all Sunday Masses, and a scheduled Confessions period at 10:00 am on Saturday. Confessions may also be arranged by appointment with the Rector."
+      "reason": "According to the bulletin, Confessions are heard for half an hour before all Masses, not only at midday. On Monday there is also a 6:30 pm Mass, so Confessions are additionally from 6:00–6:30 pm. Wednesday–Friday each have a 1:05 pm Mass, so Confessions remain 12:35–1:05 pm on those days."
     },
     "newsletterUrl": "https://corpuschristimaidenlane.org.uk/wp-content/uploads/2025/09/Newsletter-26th-Sunday-in-Ordinary-Time.pdf"
   },
@@ -40,7 +39,7 @@
     "name": "Sts Peter & Paul",
     "appraisal": {
       "changed": "true",
-      "reason": "According to the bulletin, confessions are on Monday and Friday from 12:00–12:30pm (or on request). The stated time of Mondays 11:30am–12:15pm only is incorrect. Please refer to the posted schedule for accuracy."
+      "reason": "According to the PDF, Confessions are listed as 11:30am–12:30pm (or on request). No restriction to Mondays is stated."
     },
     "newsletterUrl": "https://parish.rcdow.org.uk/clerkenwell/wp-content/uploads/sites/91/2025/09/newsletter-28th-September-2025.pdf"
   },
@@ -57,5 +56,28 @@
       "changed": "false"
     },
     "newsletterUrl": "https://parish.rcdow.org.uk/lincolnsinnfields/"
+  },
+  {
+    "name": "Brompton Oratory",
+    "appraisal": {
+      "changed": "unknown"
+    },
+    "newsletterUrl": "https://www.bromptonoratory.co.uk/weekly-parish-newsletter"
+  },
+  {
+    "name": "Our Lady, Queen of Heaven",
+    "appraisal": {
+      "changed": "true",
+      "reason": "According to the parish newsletter, the Sacrament of Reconciliation is available on Saturdays from 16:15 to 17:15, or by appointment. Therefore, the previously stated 16:15–16:45 window is incorrect. Please note the extended availability until 17:15. Thank you for your attention."
+    },
+    "newsletterUrl": "https://parish.rcdow.org.uk/queensway/wp-content/uploads/sites/177/2025/09/09-28.pdf"
+  },
+  {
+    "name": "Our Lady of the Rosary",
+    "appraisal": {
+      "changed": "true",
+      "reason": "According to the parish newsletter, the Sacrament of Reconciliation is on Saturdays from 16:15 to 17:15, not 16:15 to 16:45. Confessions are also available by appointment."
+    },
+    "newsletterUrl": "https://parish.rcdow.org.uk/queensway/wp-content/uploads/sites/177/2025/09/09-28.pdf"
   }
 ]

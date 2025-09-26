@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from parish_assessment_requests import get_st_georges_newsletter_assessment, get_st_patricks_soho_newsletter_assessment, get_farm_street_newsletter_assessment, get_corpus_christi_newsletter_assessment, get_st_peter_and_paul_newsletter_assessment, get_st_etheldreda_newsletter_assessment, get_st_anselm_and_st_caecilia_newsletter_assessment, get_brompton_oratory_newsletter_assessment, get_our_lady_queen_of_heaven_newsletter_assessment
+from parish_assessment_requests import get_st_georges_newsletter_assessment, get_st_patricks_soho_newsletter_assessment, get_farm_street_newsletter_assessment, get_corpus_christi_newsletter_assessment, get_st_peter_and_paul_newsletter_assessment, get_st_etheldreda_newsletter_assessment, get_st_anselm_and_st_caecilia_newsletter_assessment, get_brompton_oratory_newsletter_assessment, get_our_lady_queen_of_heaven_newsletter_assessment, get_our_lady_of_the_rosary_newsletter_assessment
 from assess_with_ai import get_ai_assessment
 from prompts import st_simon_stock_prompt
 import json
@@ -32,6 +32,10 @@ st_etheldreda_assessment_and_newsletter = get_st_etheldreda_newsletter_assessmen
 )
 
 our_lady_queen_of_heaven_assessment_and_newsletter = get_our_lady_queen_of_heaven_newsletter_assessment(
+    driver
+)
+
+our_lady_of_the_rosary_assessment_and_newsletter = get_our_lady_of_the_rosary_newsletter_assessment(
     driver
 )
 
@@ -122,6 +126,11 @@ appraisals = [{
     "appraisal": json.loads(our_lady_queen_of_heaven_assessment_and_newsletter[0]),
     "newsletterUrl": our_lady_queen_of_heaven_assessment_and_newsletter[1]
 
+},
+    {
+    "name": "Our Lady of the Rosary",
+    "appraisal": json.loads(our_lady_of_the_rosary_assessment_and_newsletter[0]),
+    "newsletterUrl": our_lady_of_the_rosary_assessment_and_newsletter[1]
 }
 
 ]
