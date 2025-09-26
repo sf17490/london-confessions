@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 from assess_with_ai import get_ai_assessment
-from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, farm_street_prompt, corpus_christi_prompt, st_peter_and_paul_prompt, st_etheldreda_prompt, st_anselm_and_st_caecilia_prompt, brompton_oratory_prompt
+from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, farm_street_prompt, corpus_christi_prompt, st_peter_and_paul_prompt, st_etheldreda_prompt, st_anselm_and_st_caecilia_prompt, brompton_oratory_prompt, our_lady_queen_of_heaven_prompt
 
 
 def navigate_to_parish_newsletter(driver: webdriver, url):
@@ -71,6 +71,14 @@ def get_st_etheldreda_newsletter_assessment(driver: webdriver):
     st_etheldreda_assessment = get_ai_assessment(
         st_etheldreda_prompt, st_etheldreda_newsletter_url)
     return [st_etheldreda_assessment, st_etheldreda_newsletter_url]
+
+
+def get_our_lady_queen_of_heaven_newsletter_assessment(driver: webdriver):
+    our_lady_queen_of_heaven_newsletter_url = navigate_to_parish_newsletter(
+        driver, "https://parish.rcdow.org.uk/queensway/")
+    our_lady_queen_of_heaven_assessment = get_ai_assessment(
+        our_lady_queen_of_heaven_prompt, our_lady_queen_of_heaven_newsletter_url)
+    return [our_lady_queen_of_heaven_assessment, our_lady_queen_of_heaven_newsletter_url]
 
 
 def get_html_parish_newsletter(driver: webdriver, url):
