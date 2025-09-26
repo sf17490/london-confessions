@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from parish_assessment_requests import get_st_georges_newsletter_assessment, get_st_patricks_soho_newsletter_assessment, get_farm_street_newsletter_assessment, get_corpus_christi_newsletter_assessment, get_st_peter_and_paul_newsletter_assessment
+from parish_assessment_requests import get_st_georges_newsletter_assessment, get_st_patricks_soho_newsletter_assessment, get_farm_street_newsletter_assessment, get_corpus_christi_newsletter_assessment, get_st_peter_and_paul_newsletter_assessment, get_st_etheldreda_newsletter_assessment
 from assess_with_ai import get_ai_assessment
 from prompts import st_simon_stock_prompt
 import json
@@ -24,6 +24,10 @@ corpus_christi_assessment_and_newsletter = get_corpus_christi_newsletter_assessm
 )
 
 sts_peter_and_paul_assessment_and_newsletter = get_st_peter_and_paul_newsletter_assessment(
+    driver
+)
+
+st_etheldreda_assessment_and_newsletter = get_st_etheldreda_newsletter_assessment(
     driver
 )
 
@@ -84,6 +88,12 @@ appraisals = [{
     "newsletterUrl": sts_peter_and_paul_assessment_and_newsletter[1]
 
 },
+    {
+    "name": "St Etheldreda's",
+    "appraisal": json.loads(st_etheldreda_assessment_and_newsletter[0]),
+    "newsletterUrl": st_etheldreda_assessment_and_newsletter[1]
+
+}
 
 ]
 

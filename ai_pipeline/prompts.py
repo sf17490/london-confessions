@@ -5,3 +5,15 @@ brompton_oratory_prompt = "At Brompton Oratory, I am expecting a confession time
 farm_street_prompt = "At Farm Street church, I am expecting a confession timetable as follows: Weekdays: 12-12:55, Saturdays: 11:00 - 12:00 & 17:45-17:55, Sundays: 15 minutes before every Mass. Check this is correct according to this pdf only. If I am correct, return a json response like so: { \"changed\": \"false\" } If I am incorrect, return a json response like so: { \"changed\": \"true\", \"reason\": \"insert max 4 sentences here explaining the change in confession times. Express yourself in an official, public-announcement way.\" } If there is insufficient information to determine if I am correct or not, return a json response like so: { \"changed\": \"unknown\"} Do not elaborate. Communicate entirely using a json response only."
 corpus_christi_prompt = "At Corpus Christi church, I am expecting a confession timetable as follows: Monday, Wednesday-Friday: 12:35-13:05 only. Check this is correct according to this pdf only. If I am correct, return a json response like so: { \"changed\": \"false\" } If I am incorrect, return a json response like so: { \"changed\": \"true\", \"reason\": \"insert max 4 sentences here explaining the change in confession times. Express yourself in an official, public-announcement way.\" } If there is insufficient information to determine if I am correct or not, return a json response like so: { \"changed\": \"unknown\"} Do not elaborate. Communicate entirely using a json response only."
 st_peter_and_paul_prompt = "At St Peter & Paul church, I am expecting a confession timetable as follows: Mondays 11:30am-12:15pm only. Check this is correct according to this pdf only. If I am correct, return a json response like so: { \"changed\": \"false\" } If I am incorrect, return a json response like so: { \"changed\": \"true\", \"reason\": \"insert max 4 sentences here explaining the change in confession times. Express yourself in an official, public-announcement way.\" } If there is insufficient information to determine if I am correct or not, return a json response like so: { \"changed\": \"unknown\"} Do not elaborate. Communicate entirely using a json response only."
+st_etheldreda_prompt = "At St Etheldreda church, I am expecting a confession timetable as follows: Monday to Friday, 1.20pm; and at call. Check this is correct according to this pdf only. If I am correct, return a json response like so: { \"changed\": \"false\" } If I am incorrect, return a json response like so: { \"changed\": \"true\", \"reason\": \"insert max 4 sentences here explaining the change in confession times. Express yourself in an official, public-announcement way.\" } If there is insufficient information to determine if I am correct or not, return a json response like so: { \"changed\": \"unknown\"} Do not elaborate. Communicate entirely using a json response only."
+
+# Doesn't keep an up-to-date online newsletter:
+# OUr lady of the assumption
+# St Mary Moorfields
+# St Etheldreda has a newsletter, but looks like they don't include confession times in it
+
+
+# html newsletters:
+# Westminster
+# Brompton
+# St James Spanish Place
