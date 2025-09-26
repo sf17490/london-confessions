@@ -114,9 +114,3 @@ def get_brompton_oratory_newsletter_assessment(driver: webdriver):
     ai_assessment = get_ai_assessment(
         brompton_oratory_prompt + newsletter_text)
     return [ai_assessment, newsletter_url]
-
-
-driver = webdriver.Chrome()
-brompton_oratory_text = get_html_parish_newsletter(driver,
-                                                   "https://www.bromptonoratory.co.uk/weekly-parish-newsletter")
-print(brompton_oratory_text)
