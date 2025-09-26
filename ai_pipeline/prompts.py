@@ -11,9 +11,14 @@ st_etheldreda_prompt = "At St Etheldreda church, I am expecting a confession tim
 # OUr lady of the assumption
 # St Mary Moorfields
 # St Etheldreda has a newsletter, but looks like they don't include confession times in it
+# Notre Dame De France - emails newsletters but webpage is broken - https://www.ndfchurch.org/en/news-events/
+# Ukrainian Cathedral
 
 
 # html newsletters:
-# Westminster
+st_anselm_and_st_caecilia_prompt = "At St Anselm & St Caecilia church, I am expecting a confession timetable as follows: ONDAY-FRIDAY 5.30pm-5.50pm, SATURDAY 5.00pm – 5.40pm. Check this is correct according to this newsletter only. If I am correct, return a json response like so: { \"changed\": \"false\" } If I am incorrect, return a json response like so: { \"changed\": \"true\", \"reason\": \"insert max 4 sentences here explaining the change in confession times. Express yourself in an official, public-announcement way.\" } If there is insufficient information to determine if I am correct or not, return a json response like so: { \"changed\": \"unknown\"} Do not elaborate. Communicate entirely using a json response only. Here is the newsletter text:"
+
 # Brompton
 # St James Spanish Place
+# St Anselm & Caecilia
+# Westminster
