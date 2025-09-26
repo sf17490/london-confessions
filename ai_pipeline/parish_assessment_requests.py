@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 from assess_with_ai import get_ai_assessment
-from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, farm_street_prompt, corpus_christi_prompt, st_peter_and_paul_prompt, st_etheldreda_prompt, st_anselm_and_st_caecilia_prompt
+from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, farm_street_prompt, corpus_christi_prompt, st_peter_and_paul_prompt, st_etheldreda_prompt, st_anselm_and_st_caecilia_prompt, brompton_oratory_prompt, our_lady_queen_of_heaven_prompt, our_lady_of_the_rosary_prompt
 
 
 def navigate_to_parish_newsletter(driver: webdriver, url):
@@ -73,6 +73,22 @@ def get_st_etheldreda_newsletter_assessment(driver: webdriver):
     return [st_etheldreda_assessment, st_etheldreda_newsletter_url]
 
 
+def get_our_lady_queen_of_heaven_newsletter_assessment(driver: webdriver):
+    our_lady_queen_of_heaven_newsletter_url = navigate_to_parish_newsletter(
+        driver, "https://parish.rcdow.org.uk/queensway/")
+    our_lady_queen_of_heaven_assessment = get_ai_assessment(
+        our_lady_queen_of_heaven_prompt, our_lady_queen_of_heaven_newsletter_url)
+    return [our_lady_queen_of_heaven_assessment, our_lady_queen_of_heaven_newsletter_url]
+
+
+def get_our_lady_of_the_rosary_newsletter_assessment(driver: webdriver):
+    our_lady_of_the_rosary_newsletter_url = navigate_to_parish_newsletter(
+        driver, "https://parish.rcdow.org.uk/queensway/")
+    our_lady_of_the_rosary_assessment = get_ai_assessment(
+        our_lady_of_the_rosary_prompt, our_lady_of_the_rosary_newsletter_url)
+    return [our_lady_of_the_rosary_assessment, our_lady_of_the_rosary_newsletter_url]
+
+
 def get_html_parish_newsletter(driver: webdriver, url):
     try:
         driver.get(url)
@@ -88,3 +104,19 @@ def get_st_anselm_and_st_caecilia_newsletter_assessment(driver: webdriver):
     ai_assessment = get_ai_assessment(
         st_anselm_and_st_caecilia_prompt + newsletter_text)
     return [ai_assessment, newsletter_url]
+
+# TODO: Finish this
+
+
+def get_brompton_oratory_newsletter_assessment(driver: webdriver):
+    newsletter_url = "https://www.bromptonoratory.co.uk/weekly-parish-newsletter"
+    newsletter_text = get_html_parish_newsletter(driver, newsletter_url)
+    ai_assessment = get_ai_assessment(
+        brompton_oratory_prompt + newsletter_text)
+    return [ai_assessment, newsletter_url]
+
+
+driver = webdriver.Chrome()
+brompton_oratory_text = get_html_parish_newsletter(driver,
+                                                   "https://www.bromptonoratory.co.uk/weekly-parish-newsletter")
+print(brompton_oratory_text)
