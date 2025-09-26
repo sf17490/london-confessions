@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 import time
 
 from assess_with_ai import get_ai_assessment
-from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, farm_street_prompt, corpus_christi_prompt, st_peter_and_paul_prompt, st_etheldreda_prompt, st_anselm_and_st_caecilia_prompt, brompton_oratory_prompt, our_lady_queen_of_heaven_prompt, our_lady_of_the_rosary_prompt, westminster_cathedral_prompt
+from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, farm_street_prompt, corpus_christi_prompt, st_peter_and_paul_prompt, st_etheldreda_prompt, st_anselm_and_st_caecilia_prompt, brompton_oratory_prompt, our_lady_queen_of_heaven_prompt, our_lady_of_the_rosary_prompt, westminster_cathedral_prompt, holy_apostles_prompt
 
 
 def navigate_to_parish_newsletter(driver: webdriver, url):
@@ -143,3 +143,28 @@ def get_westminster_cathedral_schedule_assessment(driver: webdriver):
     ai_assessment = get_ai_assessment(
         westminster_cathedral_prompt + confession_schedule_html)
     return [ai_assessment, confession_webpage_url]
+
+
+def navigate_to_holy_apostles_newsletter(driver: webdriver):
+    driver.get("https://parish.rcdow.org.uk/pimlico/news/category/newsletter/")
+
+    time.sleep(2)
+    newsletters = driver.find_elements(
+        By.PARTIAL_LINK_TEXT, "Sunday")
+
+    print("Finding Holy Apostles' most recent newsletter...")
+    most_recent_newsletter_webpage = newsletters[0]
+    most_recent_newsletter_webpage.click()
+
+    download_button = driver.find_element(
+        By.XPATH, '//a[contains(@href, "pdf")]')
+
+    newsletter_pdf_url = download_button.get_attribute("href")
+    return newsletter_pdf_url
+
+
+def get_holy_apostles_newsletter_assessment(driver: webdriver):
+    holy_apostles_newsletter_url = navigate_to_holy_apostles_newsletter(driver)
+    holy_apostles_assessment = get_ai_assessment(
+        holy_apostles_prompt, holy_apostles_newsletter_url)
+    return [holy_apostles_assessment, holy_apostles_newsletter_url]
