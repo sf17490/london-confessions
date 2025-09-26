@@ -10,14 +10,14 @@
     "name": "St Patrick's",
     "appraisal": {
       "changed": "true",
-      "reason": "According to this newsletter, weekday Confession is from 12:15pm to 12:40pm, not 12:00pm to 12:40pm. On Saturdays, Confession is from 5:30pm to 5:55pm, not until 6:00pm. There is no Confession scheduled on Sundays. Please refer to these official times."
+      "reason": "According to the newsletter, weekday confessions run from 12:15pm to 12:40pm, not 12:00pm to 12:40pm. Saturday confessions are from 5:30pm to 5:55pm, not until 6:00pm. No confessions are listed for Sundays."
     },
     "newsletterUrl": "https://cdn.prod.website-files.com/604cd9b97ea6bcb8e1d06a8b/68d66ff9faaf25207c917347_Sunday%2028th%20September%20-%2026th%20Sunday%20in%20Ordinary%20Time.pdf"
   },
   {
     "name": "Our Lady of Mount Carmel & St Simon Stock",
     "appraisal": {
-      "changed": "false"
+      "changed": "unknown"
     },
     "newsletterUrl": "https://carmelitechurch.org/wp-content/uploads/2025/09/Sunday-21st-September-2025.pdf"
   },
@@ -31,14 +31,16 @@
   {
     "name": "Corpus Christi",
     "appraisal": {
-      "changed": "unknown"
+      "changed": "true",
+      "reason": "According to this bulletin, Confessions are heard for half an hour before all Masses, not only Monday and Wednesday–Friday at 12:35–13:05. This includes additional times before the 6:30 pm Masses (e.g., Monday and Thursday), before all Sunday Masses, and a scheduled Confessions period at 10:00 am on Saturday. Confessions may also be arranged by appointment with the Rector."
     },
     "newsletterUrl": "https://corpuschristimaidenlane.org.uk/wp-content/uploads/2025/09/Newsletter-26th-Sunday-in-Ordinary-Time.pdf"
   },
   {
     "name": "Sts Peter & Paul",
     "appraisal": {
-      "changed": "unknown"
+      "changed": "true",
+      "reason": "According to the bulletin, confessions are on Monday and Friday from 12:00–12:30pm (or on request). The stated time of Mondays 11:30am–12:15pm only is incorrect. Please refer to the posted schedule for accuracy."
     },
     "newsletterUrl": "https://parish.rcdow.org.uk/clerkenwell/wp-content/uploads/sites/91/2025/09/newsletter-28th-September-2025.pdf"
   },
@@ -48,5 +50,12 @@
       "changed": "unknown"
     },
     "newsletterUrl": "https://www.stetheldreda.co.uk/_files/ugd/a0bc29_dae66f85333d444f9e6bf89f0001b19d.pdf"
+  },
+  {
+    "name": "St Anselm & St Cæcilia",
+    "appraisal": {
+      "changed": "false"
+    },
+    "newsletterUrl": "https://parish.rcdow.org.uk/lincolnsinnfields/"
   }
 ]
