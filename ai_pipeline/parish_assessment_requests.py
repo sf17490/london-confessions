@@ -1,8 +1,9 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+import time
 
 from assess_with_ai import get_ai_assessment
-from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, farm_street_prompt, corpus_christi_prompt, st_peter_and_paul_prompt, st_etheldreda_prompt, st_anselm_and_st_caecilia_prompt, brompton_oratory_prompt, our_lady_queen_of_heaven_prompt, our_lady_of_the_rosary_prompt
+from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, farm_street_prompt, corpus_christi_prompt, st_peter_and_paul_prompt, st_etheldreda_prompt, st_anselm_and_st_caecilia_prompt, brompton_oratory_prompt, our_lady_queen_of_heaven_prompt, our_lady_of_the_rosary_prompt, westminster_cathedral_prompt
 
 
 def navigate_to_parish_newsletter(driver: webdriver, url):
@@ -83,7 +84,7 @@ def get_our_lady_queen_of_heaven_newsletter_assessment(driver: webdriver):
 
 def get_our_lady_of_the_rosary_newsletter_assessment(driver: webdriver):
     our_lady_of_the_rosary_newsletter_url = navigate_to_parish_newsletter(
-        driver, "https://parish.rcdow.org.uk/queensway/")
+        driver, "https://parish.rcdow.org.uk/marylebone/newsletters-2023-6/")
     our_lady_of_the_rosary_assessment = get_ai_assessment(
         our_lady_of_the_rosary_prompt, our_lady_of_the_rosary_newsletter_url)
     return [our_lady_of_the_rosary_assessment, our_lady_of_the_rosary_newsletter_url]
@@ -105,8 +106,6 @@ def get_st_anselm_and_st_caecilia_newsletter_assessment(driver: webdriver):
         st_anselm_and_st_caecilia_prompt + newsletter_text)
     return [ai_assessment, newsletter_url]
 
-# TODO: Finish this
-
 
 def get_brompton_oratory_newsletter_assessment(driver: webdriver):
     newsletter_url = "https://www.bromptonoratory.co.uk/weekly-parish-newsletter"
@@ -114,3 +113,33 @@ def get_brompton_oratory_newsletter_assessment(driver: webdriver):
     ai_assessment = get_ai_assessment(
         brompton_oratory_prompt + newsletter_text)
     return [ai_assessment, newsletter_url]
+
+
+def get_westminster_cathedral_schedule_table_html(driver: webdriver):
+    confessions_page_url = "https://westminstercathedral.org.uk/reconciliation/"
+    driver.get(confessions_page_url)
+    time.sleep(3)
+    # filter out irrelevant events
+    mass_times_button = driver.find_element(
+        By.XPATH, "//label[contains(text(), 'Mass Times')]")
+    mass_times_button.click()
+    daily_office_button = driver.find_element(
+        By.XPATH, "//label[contains(text(), 'Daily Office')]")
+    daily_office_button.click()
+    exposition_button = driver.find_element(
+        By.XPATH, "//label[contains(text(), 'Exposition')]")
+    exposition_button.click()
+
+    # get the resulting table
+    events_table_html = driver.find_element(
+        By.CLASS_NAME, "ics-calendar-month-grid").get_attribute("outerHTML")
+    return events_table_html
+
+
+def get_westminster_cathedral_schedule_assessment(driver: webdriver):
+    confession_webpage_url = "https://westminstercathedral.org.uk/reconciliation/"
+    confession_schedule_html = get_westminster_cathedral_schedule_table_html(
+        driver)
+    ai_assessment = get_ai_assessment(
+        westminster_cathedral_prompt + confession_schedule_html)
+    return [ai_assessment, confession_webpage_url]
