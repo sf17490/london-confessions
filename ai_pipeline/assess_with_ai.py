@@ -16,7 +16,7 @@ def get_ai_assessment(prompt, pdf_url=None):
         response = client.responses.create(
             model="gpt-5",
             input=prompt_with_maybe_pdf_attached,
-            timeout=30
+            timeout=45
         )
         return response.output_text
     except (APIError, APITimeoutError) as e:
