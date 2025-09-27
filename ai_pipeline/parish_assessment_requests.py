@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 import time
 
 from assess_with_ai import get_ai_assessment
-from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, farm_street_prompt, corpus_christi_prompt, st_peter_and_paul_prompt, st_etheldreda_prompt, st_anselm_and_st_caecilia_prompt, brompton_oratory_prompt, our_lady_queen_of_heaven_prompt, our_lady_of_the_rosary_prompt, westminster_cathedral_prompt, holy_apostles_prompt, st_james_prompt
+from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, farm_street_prompt, corpus_christi_prompt, st_peter_and_paul_prompt, st_etheldreda_prompt, st_anselm_and_st_caecilia_prompt, brompton_oratory_prompt, our_lady_queen_of_heaven_prompt, our_lady_of_the_rosary_prompt, westminster_cathedral_prompt, holy_apostles_prompt, st_james_prompt, st_marys_cadogan_street_prompt
 
 
 def navigate_to_parish_newsletter(driver: webdriver, url):
@@ -176,3 +176,30 @@ def get_holy_apostles_newsletter_assessment(driver: webdriver):
     holy_apostles_assessment = get_ai_assessment(
         holy_apostles_prompt, holy_apostles_newsletter_url)
     return [holy_apostles_assessment, holy_apostles_newsletter_url]
+
+
+# mailchimp newsletter
+def navigate_to_st_marys_cadogan_street_newsletter(driver: webdriver):
+    driver.get("https://www.stmaryscadoganstreet.co.uk/newsletter")
+
+    time.sleep(2)
+
+    newsletters = driver.find_elements(
+        By.XPATH, '//a[contains(@href, "newsletter")]')
+
+    newsletters_with_most_recent_first = newsletters[::-1]
+
+    most_recent_newsletter_webpage_link = newsletters_with_most_recent_first[0].get_attribute(
+        "href")
+
+    return most_recent_newsletter_webpage_link
+
+
+def get_st_marys_cadogan_street_newsletter_assessment(driver: webdriver):
+    st_marys_cadogan_street_newsletter_webpage_url = navigate_to_holy_apostles_newsletter(
+        driver)
+    newsletter_text = get_html_parish_newsletter(
+        driver, st_marys_cadogan_street_newsletter_webpage_url)
+    st_marys_cadogan_street_assessment = get_ai_assessment(
+        st_marys_cadogan_street_prompt + newsletter_text)
+    return [st_marys_cadogan_street_assessment, st_marys_cadogan_street_newsletter_webpage_url]

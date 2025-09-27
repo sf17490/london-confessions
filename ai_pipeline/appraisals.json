@@ -9,9 +9,10 @@
   {
     "name": "St Patrick's",
     "appraisal": {
-      "changed": "unknown"
+      "changed": "true",
+      "reason": "Please note: Confession is Monday to Friday from 12:15pm to 12:40pm, not 12:00pm to 12:40pm. On Saturdays, confession is from 5:30pm to 5:55pm, not until 6:00pm. No Sunday confessions are listed in this newsletter."
     },
-    "newsletterUrl": ""
+    "newsletterUrl": "https://cdn.prod.website-files.com/604cd9b97ea6bcb8e1d06a8b/68d66ff9faaf25207c917347_Sunday%2028th%20September%20-%2026th%20Sunday%20in%20Ordinary%20Time.pdf"
   },
   {
     "name": "Our Lady of Mount Carmel & St Simon Stock",
@@ -31,7 +32,7 @@
     "name": "Corpus Christi",
     "appraisal": {
       "changed": "true",
-      "reason": "According to the bulletin, Confessions are heard for half an hour before all Masses. On Monday there is an additional 6:30 pm Mass, so Confessions also take place 6:00–6:30 pm, not only 12:35–13:05. Therefore your proposed timetable is incomplete."
+      "reason": "According to the parish schedule, Confessions are heard for half an hour before all Masses, not limited to 12:35–13:05. This includes Monday 6:30 pm and Thursday 6:30 pm Masses, Saturday 10:00 am Exposition & Confessions, and before all Sunday Masses. Confessions are also available by appointment or upon request."
     },
     "newsletterUrl": "https://corpuschristimaidenlane.org.uk/wp-content/uploads/2025/09/Newsletter-26th-Sunday-in-Ordinary-Time.pdf"
   },
@@ -40,7 +41,7 @@
     "appraisal": {
       "changed": "unknown"
     },
-    "newsletterUrl": ""
+    "newsletterUrl": "https://parish.rcdow.org.uk/clerkenwell/wp-content/uploads/sites/91/2025/09/newsletter-28th-September-2025.pdf"
   },
   {
     "name": "St Etheldreda's",
@@ -67,7 +68,7 @@
     "name": "Our Lady, Queen of Heaven",
     "appraisal": {
       "changed": "true",
-      "reason": "According to the parish newsletter, the Sacrament of Reconciliation is on Saturdays from 4.15 pm to 5.15 pm, or by appointment. There is no 4.15–4.45 pm limitation indicated."
+      "reason": "Per the parish bulletin, Confession is on Saturdays from 4:15 pm to 5:15 pm, not 4:15 pm to 4:45 pm. Confessions are also available by appointment."
     },
     "newsletterUrl": "https://parish.rcdow.org.uk/queensway/wp-content/uploads/sites/177/2025/09/09-28.pdf"
   },
@@ -82,7 +83,7 @@
     "name": "Westminster Cathedral",
     "appraisal": {
       "changed": "true",
-      "reason": "According to the newsletter, weekday confessions do not consistently occur at 11:30am–12:30pm and 4:30pm–5:30pm. On Tuesday 16 September only a 4:30pm–5:30pm session is listed, and on Monday 15 September no Cathedral confessions are shown. Saturday remains 11:30am–12:30pm and 5:00pm–6:00pm, and Sunday remains 10:30am–12:30pm and 5:00pm–6:45pm."
+      "reason": "Per the newsletter, on Tuesday 16 September confessions are scheduled only 4:30pm-5:30pm, with no 11:30am-12:30pm session. Monday 15 September lists no Cathedral confessions, so the stated weekday timetable does not apply to every day shown."
     },
     "newsletterUrl": "https://westminstercathedral.org.uk/reconciliation/"
   },
@@ -99,5 +100,12 @@
       "changed": "false"
     },
     "newsletterUrl": "https://www.sjrcc.org.uk/_files/ugd/ac578c_916a49af96c44b4f93e061a3a0e3acb2.pdf"
+  },
+  {
+    "name": "St Mary's Cadogan Street",
+    "appraisal": {
+      "changed": "unknown"
+    },
+    "newsletterUrl": "https://parish.rcdow.org.uk/pimlico/wp-content/uploads/sites/38/2025/09/Newsletter-28th-September-2025.pdf"
   }
 ]
