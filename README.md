@@ -6,6 +6,12 @@ I set an AI loose in the streets of London with the instruction to "Do Catholic 
 
 <img src="image-1.png" width=200 />
 
+
+## TODO (backend): 
+- Update Westminster to view the correct week (instead of last week)
+- For newsletters that normally don't mention confession times, change the prompt to default to "changed":"false". e.g. Brompton Oratory. 
+
+-(Frontend) Remove Ukrainian Cathedral and Notre Dame de France
 Frontend options:
 
 ![option 1](image.png)
