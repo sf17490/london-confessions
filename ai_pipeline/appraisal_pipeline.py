@@ -168,6 +168,16 @@ appraisals = [{
     "name": "St Mary's Cadogan Street",
     "appraisal": json.loads(st_marys_cadogan_steet_assessment_and_newsletter[0]),
     "newsletterUrl": st_marys_cadogan_steet_assessment_and_newsletter[1]
+},
+    {
+    "name": "Our Lady of the Assumption",
+    "appraisal": json.loads({"changed": "unknown"}),
+    "newsletterUrl": "https://www.warwickstreet.org.uk/"
+},
+    {
+    "name": "St Mary Moorfields",
+    "appraisal": json.loads({"changed": "unknown"}),
+    "newsletterUrl": "https://parish.rcdow.org.uk/moorfields/"
 }
 
 ]

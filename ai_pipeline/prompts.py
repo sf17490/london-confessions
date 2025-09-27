@@ -19,7 +19,9 @@ st_marys_cadogan_street_prompt = "At St Mary's Cadogan Street, I am expecting a 
 westminster_cathedral_prompt = "At Westminster Cathedral, I am expecting a confession timetable as follows: Weekdays: 11:30am-12:30pm and 4:30pm-5:30pm Saturdays: 11:30am - 12:30pm & 5pm-6pm Sundays: 10:30am-12:30pm and 5pm-6:45pm. Check this is correct according to this newsletter schedule only. If I am correct, return a json response like so: { \"changed\": \"false\" } If I am incorrect, return a json response like so: { \"changed\": \"true\", \"reason\": \"insert max 4 sentences here explaining the change in confession times. Express yourself in an official, public-announcement way.\" } If there is insufficient information to determine if I am correct or not, return a json response like so: { \"changed\": \"unknown\"} Do not elaborate. Communicate entirely using a json response only. Here is the weekly newsletter schedule as a html table:"
 
 # Doesn't keep an up-to-date online newsletter:
-# OUr lady of the assumption, Warwick street
+# Our lady of the assumption, Warwick street
 # St Mary Moorfields
+
+# Excluded as they are non-English:
 # Notre Dame De France - emails newsletters but webpage is broken - https://www.ndfchurch.org/en/news-events/
 # Ukrainian Cathedral
