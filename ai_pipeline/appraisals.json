@@ -9,17 +9,16 @@
   {
     "name": "St Patrick's",
     "appraisal": {
-      "changed": "true",
-      "reason": "According to this newsletter, Confession is Monday to Friday from 12:15pm to 12:40pm, not 12:00pm to 12:40pm. On Saturdays it is 5:30pm to 5:55pm, not 5:30pm to 6:00pm. There is no Confession listed on Sundays."
+      "changed": "unknown"
     },
-    "newsletterUrl": "https://cdn.prod.website-files.com/604cd9b97ea6bcb8e1d06a8b/68d66ff9faaf25207c917347_Sunday%2028th%20September%20-%2026th%20Sunday%20in%20Ordinary%20Time.pdf"
+    "newsletterUrl": ""
   },
   {
     "name": "Our Lady of Mount Carmel & St Simon Stock",
     "appraisal": {
       "changed": "false"
     },
-    "newsletterUrl": "https://carmelitechurch.org/wp-content/uploads/2025/09/Sunday-21st-September-2025.pdf"
+    "newsletterUrl": "https://carmelitechurch.org/wp-content/uploads/2025/09/Sunday-28th-September-2025.pdf"
   },
   {
     "name": "Immaculate Conception",
@@ -32,17 +31,16 @@
     "name": "Corpus Christi",
     "appraisal": {
       "changed": "true",
-      "reason": "According to this bulletin, Confessions are heard for half an hour before all Masses, not only Monday and Wednesday–Friday at 12:35–13:05. This includes additional times such as before the 6:30 pm Mass on Monday, the 6:00 pm Vigil Mass on Saturday, and the Sunday Masses at 9:30 am and 11:30 am. There is also Confession on Saturday at 10:00 am during Exposition. Confessions are likewise heard before the 6:30 pm Sodality Mass on Thursday."
+      "reason": "According to the bulletin, Confessions are heard for half an hour before all Masses. On Monday there is an additional 6:30 pm Mass, so Confessions also take place 6:00–6:30 pm, not only 12:35–13:05. Therefore your proposed timetable is incomplete."
     },
     "newsletterUrl": "https://corpuschristimaidenlane.org.uk/wp-content/uploads/2025/09/Newsletter-26th-Sunday-in-Ordinary-Time.pdf"
   },
   {
     "name": "Sts Peter & Paul",
     "appraisal": {
-      "changed": "true",
-      "reason": "According to the parish bulletin, confessions are held on Monday and Friday from 12:30pm to 1:00pm (or on request), not Mondays 11:30am-12:15pm only. Parishioners are kindly asked to note this schedule."
+      "changed": "unknown"
     },
-    "newsletterUrl": "https://parish.rcdow.org.uk/clerkenwell/wp-content/uploads/sites/91/2025/09/newsletter-28th-September-2025.pdf"
+    "newsletterUrl": ""
   },
   {
     "name": "St Etheldreda's",
@@ -69,7 +67,7 @@
     "name": "Our Lady, Queen of Heaven",
     "appraisal": {
       "changed": "true",
-      "reason": "According to the newsletter, the Sacrament of Reconciliation is available on Saturdays from 4:15pm to 5:15pm, or by appointment. Therefore, the 4:15–4:45pm time you expected is not correct."
+      "reason": "According to the parish newsletter, the Sacrament of Reconciliation is on Saturdays from 4.15 pm to 5.15 pm, or by appointment. There is no 4.15–4.45 pm limitation indicated."
     },
     "newsletterUrl": "https://parish.rcdow.org.uk/queensway/wp-content/uploads/sites/177/2025/09/09-28.pdf"
   },
@@ -78,12 +76,13 @@
     "appraisal": {
       "changed": "false"
     },
-    "newsletterUrl": "https://parish.rcdow.org.uk/marylebone/wp-content/uploads/sites/188/2025/09/Twenty-Fifth-Sunday-in-Ordinary-Time-Year-C.pdf"
+    "newsletterUrl": "https://parish.rcdow.org.uk/marylebone/wp-content/uploads/sites/188/2025/09/Twenty-Sixth-Sunday-in-Ordinary-Time-Year-C.pdf"
   },
   {
     "name": "Westminster Cathedral",
     "appraisal": {
-      "changed": "false"
+      "changed": "true",
+      "reason": "According to the newsletter, weekday confessions do not consistently occur at 11:30am–12:30pm and 4:30pm–5:30pm. On Tuesday 16 September only a 4:30pm–5:30pm session is listed, and on Monday 15 September no Cathedral confessions are shown. Saturday remains 11:30am–12:30pm and 5:00pm–6:00pm, and Sunday remains 10:30am–12:30pm and 5:00pm–6:45pm."
     },
     "newsletterUrl": "https://westminstercathedral.org.uk/reconciliation/"
   },
@@ -93,5 +92,12 @@
       "changed": "false"
     },
     "newsletterUrl": "https://parish.rcdow.org.uk/pimlico/wp-content/uploads/sites/38/2025/09/Newsletter-28th-September-2025.pdf"
+  },
+  {
+    "name": "St James'",
+    "appraisal": {
+      "changed": "false"
+    },
+    "newsletterUrl": "https://www.sjrcc.org.uk/_files/ugd/ac578c_916a49af96c44b4f93e061a3a0e3acb2.pdf"
   }
 ]

@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 import time
 
 from assess_with_ai import get_ai_assessment
-from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, farm_street_prompt, corpus_christi_prompt, st_peter_and_paul_prompt, st_etheldreda_prompt, st_anselm_and_st_caecilia_prompt, brompton_oratory_prompt, our_lady_queen_of_heaven_prompt, our_lady_of_the_rosary_prompt, westminster_cathedral_prompt, holy_apostles_prompt
+from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, farm_street_prompt, corpus_christi_prompt, st_peter_and_paul_prompt, st_etheldreda_prompt, st_anselm_and_st_caecilia_prompt, brompton_oratory_prompt, our_lady_queen_of_heaven_prompt, our_lady_of_the_rosary_prompt, westminster_cathedral_prompt, holy_apostles_prompt, st_james_prompt
 
 
 def navigate_to_parish_newsletter(driver: webdriver, url):
@@ -88,6 +88,14 @@ def get_our_lady_of_the_rosary_newsletter_assessment(driver: webdriver):
     our_lady_of_the_rosary_assessment = get_ai_assessment(
         our_lady_of_the_rosary_prompt, our_lady_of_the_rosary_newsletter_url)
     return [our_lady_of_the_rosary_assessment, our_lady_of_the_rosary_newsletter_url]
+
+
+def get_st_james_newsletter_assessment(driver: webdriver):
+    st_james_newsletter_url = navigate_to_parish_newsletter(
+        driver, "https://www.sjrcc.org.uk/")
+    st_james_assessment = get_ai_assessment(
+        st_james_prompt, st_james_newsletter_url)
+    return [st_james_assessment, st_james_newsletter_url]
 
 
 def get_html_parish_newsletter(driver: webdriver, url):
