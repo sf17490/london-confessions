@@ -1,9 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from parish_assessment_requests import get_st_georges_newsletter_assessment, get_st_patricks_soho_newsletter_assessment, get_farm_street_newsletter_assessment, get_corpus_christi_newsletter_assessment, get_st_peter_and_paul_newsletter_assessment, get_st_etheldreda_newsletter_assessment, get_st_anselm_and_st_caecilia_newsletter_assessment, get_brompton_oratory_newsletter_assessment, get_our_lady_queen_of_heaven_newsletter_assessment, get_our_lady_of_the_rosary_newsletter_assessment, get_westminster_cathedral_schedule_assessment, get_holy_apostles_newsletter_assessment, get_st_james_newsletter_assessment, get_st_marys_cadogan_street_newsletter_assessment
-from assess_with_ai import get_ai_assessment
-from prompts import st_simon_stock_prompt
+from parish_assessment_requests import get_st_georges_newsletter_assessment, get_st_patricks_soho_newsletter_assessment, get_farm_street_newsletter_assessment, get_corpus_christi_newsletter_assessment, get_st_peter_and_paul_newsletter_assessment, get_st_etheldreda_newsletter_assessment, get_st_anselm_and_st_caecilia_newsletter_assessment, get_brompton_oratory_newsletter_assessment, get_our_lady_queen_of_heaven_newsletter_assessment, get_our_lady_of_the_rosary_newsletter_assessment, get_westminster_cathedral_schedule_assessment, get_holy_apostles_newsletter_assessment, get_st_james_newsletter_assessment, get_st_marys_cadogan_street_newsletter_assessment, get_st_simon_stock_newsletter_assessment
 import json
 import time
 
@@ -81,9 +79,8 @@ def navigate_to_st_simon_stock_newsletter():
     return newsletter_pdf_url
 
 
-st_simon_stock_newsletter_url = navigate_to_st_simon_stock_newsletter()
-st_simon_stock_assessment = get_ai_assessment(
-    st_simon_stock_prompt, st_simon_stock_newsletter_url)
+st_simon_stock_assessment_and_newsletter = get_st_simon_stock_newsletter_assessment(
+    driver)
 
 
 appraisals = [{
@@ -98,8 +95,8 @@ appraisals = [{
 },
     {
     "name": "Our Lady of Mount Carmel & St Simon Stock",
-    "appraisal": json.loads(st_simon_stock_assessment),
-    "newsletterUrl": st_simon_stock_newsletter_url
+    "appraisal": json.loads(st_simon_stock_assessment_and_newsletter[0]),
+    "newsletterUrl": st_simon_stock_assessment_and_newsletter[1]
 },
     {
     "name": "Immaculate Conception",
@@ -171,12 +168,12 @@ appraisals = [{
 },
     {
     "name": "Our Lady of the Assumption",
-    "appraisal": json.loads({"changed": "unknown"}),
+    "appraisal": {"changed": "unknown"},
     "newsletterUrl": "https://www.warwickstreet.org.uk/"
 },
     {
     "name": "St Mary Moorfields",
-    "appraisal": json.loads({"changed": "unknown"}),
+    "appraisal": {"changed": "unknown"},
     "newsletterUrl": "https://parish.rcdow.org.uk/moorfields/"
 }
 

@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 import time
 
 from assess_with_ai import get_ai_assessment
-from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, farm_street_prompt, corpus_christi_prompt, st_peter_and_paul_prompt, st_etheldreda_prompt, st_anselm_and_st_caecilia_prompt, brompton_oratory_prompt, our_lady_queen_of_heaven_prompt, our_lady_of_the_rosary_prompt, westminster_cathedral_prompt, holy_apostles_prompt, st_james_prompt, st_marys_cadogan_street_prompt
+from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, farm_street_prompt, corpus_christi_prompt, st_peter_and_paul_prompt, st_etheldreda_prompt, st_anselm_and_st_caecilia_prompt, brompton_oratory_prompt, our_lady_queen_of_heaven_prompt, our_lady_of_the_rosary_prompt, westminster_cathedral_prompt, holy_apostles_prompt, st_james_prompt, st_marys_cadogan_street_prompt, st_simon_stock_prompt
 
 
 def navigate_to_parish_newsletter(driver: webdriver, url):
@@ -203,3 +203,29 @@ def get_st_marys_cadogan_street_newsletter_assessment(driver: webdriver):
     st_marys_cadogan_street_assessment = get_ai_assessment(
         st_marys_cadogan_street_prompt + newsletter_text)
     return [st_marys_cadogan_street_assessment, st_marys_cadogan_street_newsletter_webpage_url]
+
+
+def navigate_to_st_simon_stock_newsletter(driver: webdriver):
+    driver.get("https://carmelitechurch.org/newsletter/")
+
+    time.sleep(2)
+    download_buttons = driver.find_elements(
+        By.PARTIAL_LINK_TEXT, "Sunday")
+
+    print("Finding St Simon Stock's most recent newsletter...")
+    most_recent_newsletter_webpage = download_buttons[0]
+    most_recent_newsletter_webpage.click()
+
+    download_button = driver.find_element(
+        By.PARTIAL_LINK_TEXT, "Sunday")
+
+    newsletter_pdf_url = download_button.get_attribute("href")
+    return newsletter_pdf_url
+
+
+def get_st_simon_stock_newsletter_assessment(driver: webdriver):
+    st_simon_stock_newsletter_url = navigate_to_st_simon_stock_newsletter(
+        driver)
+    st_simon_stock_assessment = get_ai_assessment(
+        st_simon_stock_prompt, st_simon_stock_newsletter_url)
+    return [st_simon_stock_assessment, st_simon_stock_newsletter_url]
