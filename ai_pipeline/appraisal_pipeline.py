@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from parish_assessment_requests import get_st_georges_newsletter_assessment, get_st_patricks_soho_newsletter_assessment, get_farm_street_newsletter_assessment, get_corpus_christi_newsletter_assessment, get_st_peter_and_paul_newsletter_assessment, get_st_etheldreda_newsletter_assessment, get_st_anselm_and_st_caecilia_newsletter_assessment, get_brompton_oratory_newsletter_assessment, get_our_lady_queen_of_heaven_newsletter_assessment, get_our_lady_of_the_rosary_newsletter_assessment, get_westminster_cathedral_schedule_assessment, get_holy_apostles_newsletter_assessment
+from parish_assessment_requests import get_st_georges_newsletter_assessment, get_st_patricks_soho_newsletter_assessment, get_farm_street_newsletter_assessment, get_corpus_christi_newsletter_assessment, get_st_peter_and_paul_newsletter_assessment, get_st_etheldreda_newsletter_assessment, get_st_anselm_and_st_caecilia_newsletter_assessment, get_brompton_oratory_newsletter_assessment, get_our_lady_queen_of_heaven_newsletter_assessment, get_our_lady_of_the_rosary_newsletter_assessment, get_westminster_cathedral_schedule_assessment, get_holy_apostles_newsletter_assessment, get_st_james_newsletter_assessment
 from assess_with_ai import get_ai_assessment
 from prompts import st_simon_stock_prompt
 import json
@@ -45,6 +45,10 @@ holy_apostles_assessment_and_newsletter = get_holy_apostles_newsletter_assessmen
 
 st_anselm_and_st_caecilia_assessment_and_newsletter = get_st_anselm_and_st_caecilia_newsletter_assessment(
     driver)
+
+st_james_assessment_and_newsletter = get_st_james_newsletter_assessment(
+    driver
+)
 
 brompton_oratory_assessment_and_newsletter = get_brompton_oratory_newsletter_assessment(
     driver
@@ -141,6 +145,7 @@ appraisals = [{
     "newsletterUrl": our_lady_of_the_rosary_assessment_and_newsletter[1]
 },
     {
+    # TODO: Fix (it's reading last week, not this coming week)
     "name": "Westminster Cathedral",
     "appraisal": json.loads(westminster_cathedral_assessment_and_schedule[0]),
     "newsletterUrl": westminster_cathedral_assessment_and_schedule[1]
@@ -149,6 +154,11 @@ appraisals = [{
     "name": "Holy Apostles",
     "appraisal": json.loads(holy_apostles_assessment_and_newsletter[0]),
     "newsletterUrl": holy_apostles_assessment_and_newsletter[1]
+},
+    {
+    "name": "St James'",
+    "appraisal": json.loads(st_james_assessment_and_newsletter[0]),
+    "newsletterUrl": st_james_assessment_and_newsletter[1]
 }
 
 ]
