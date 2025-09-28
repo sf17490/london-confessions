@@ -293,10 +293,10 @@ export function DisplayDodgyChurchEntry({
         key={`${name}-church`}
       >
         <div data-testid="churchName" className={styles.churchName}>
-          {name}
+          {location}
         </div>
         <div data-testid="churchLocation" className={styles.churchLocation}>
-          {location}
+          {name}
         </div>
       </a>
       <ShowMore {...showMoreDetails} />
@@ -324,10 +324,10 @@ export function DisplayChurchEntry({
         className={styles.churchLink}
       >
         <div data-testid="churchName" className={styles.churchName}>
-          {name}
+          {location}
         </div>
         <div data-testid="churchLocation" className={styles.churchLocation}>
-          {location}
+          {name}
         </div>
         <div className={styles.goodService}>✅ Good service</div>
       </a>

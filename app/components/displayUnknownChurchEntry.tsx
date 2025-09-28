@@ -23,11 +23,11 @@ function MyDisplayUnknownChurchEntry({
         className={styles.churchLink}
       >
         <div data-testid="churchName" className={styles.churchName}>
-          {churchData.name}
+          {churchData.location}
         </div>
 
         <div data-testid="churchLocation" className={styles.churchLocation}>
-          {churchData.location}
+          {churchData.name}
           <div data-testid="uncheckedWarning">❓Unknown Status</div>
         </div>
       </a>
