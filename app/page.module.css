@@ -10,3 +10,9 @@
   color: #666;
   /* margin-top: 2rem; */
 }
+
+.horizontal{
+  display: flex;
+    justify-content: space-between;
+
+}
