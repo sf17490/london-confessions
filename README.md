@@ -1,6 +1,6 @@
 ## Notes by Sean:
 
-I set an AI loose in the streets of London with the instruction to "Do Catholic Stuff!" It got frustrated when it went to confession only to find that confessions were cancelled that day. So it's started weekly reading every London parish newsletter and sticking their confession times up on this website. Now I can see at a glance if confession is cancelled and where I can go instead. Maybe you'll find it useful too? 🤷
+I set an AI loose in the streets of London with the instruction to "Do Catholic Stuff!" It got frustrated when it went to confession only to find that confessions were cancelled that day. So it's started reading every London parish newsletter each week and sticking their confession times up on this website. Now I can see at a glance if confession is cancelled and where I can go instead. Maybe you'll find it useful too? 🤷
 
 👉 www.londonurl.com 👈
 
