@@ -345,15 +345,16 @@ export function ShowMore({ disruptionReason, newsletterUrl }: ShowMoreProps) {
   return (
     <div>
       <div data-testid="disruptionRow" className={styles.disruptionRow}>
-        <div data-testid="disruptionWarning">
+        {/* <div data-testid="disruptionWarning">
           {" "}
           ⚠️ Maybe disrupted this week!
-        </div>
+        </div> */}
         <button
           data-testid="showMoreButton"
           onClick={() => setShowDescription(!showDescription)}
+          className={styles.linkButton}
         >
-          Show more{" "}
+          ⚠️ Maybe disrupted this week! Show More{" "}
         </button>
       </div>
       {showDescription ? (
