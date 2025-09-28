@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from parish_assessment_requests import get_st_georges_newsletter_assessment, get_st_patricks_soho_newsletter_assessment, get_farm_street_newsletter_assessment, get_corpus_christi_newsletter_assessment, get_st_peter_and_paul_newsletter_assessment, get_st_etheldreda_newsletter_assessment, get_st_anselm_and_st_caecilia_newsletter_assessment, get_brompton_oratory_newsletter_assessment, get_our_lady_queen_of_heaven_newsletter_assessment, get_our_lady_of_the_rosary_newsletter_assessment, get_westminster_cathedral_schedule_assessment, get_holy_apostles_newsletter_assessment, get_st_james_newsletter_assessment, get_st_marys_cadogan_street_newsletter_assessment, get_st_simon_stock_newsletter_assessment
+from parish_assessment_requests import get_st_georges_newsletter_assessment, get_st_patricks_soho_newsletter_assessment, get_farm_street_newsletter_assessment, get_corpus_christi_newsletter_assessment, get_st_peter_and_paul_newsletter_assessment, get_st_etheldreda_newsletter_assessment, get_st_anselm_and_st_caecilia_newsletter_assessment, get_brompton_oratory_newsletter_assessment, get_our_lady_queen_of_heaven_newsletter_assessment, get_our_lady_of_the_rosary_newsletter_assessment, get_westminster_cathedral_schedule_assessment, get_holy_apostles_newsletter_assessment, get_st_james_newsletter_assessment, get_st_marys_cadogan_street_newsletter_assessment, get_st_simon_stock_newsletter_assessment, get_most_precious_blood_newsletter_assessment
 import json
 import time
 
@@ -45,6 +45,10 @@ st_anselm_and_st_caecilia_assessment_and_newsletter = get_st_anselm_and_st_caeci
     driver)
 
 st_james_assessment_and_newsletter = get_st_james_newsletter_assessment(
+    driver
+)
+
+most_precious_blood_assessment_and_newsletter = get_most_precious_blood_newsletter_assessment(
     driver
 )
 
@@ -165,6 +169,11 @@ appraisals = [{
     "name": "St Mary's Cadogan Street",
     "appraisal": json.loads(st_marys_cadogan_steet_assessment_and_newsletter[0]),
     "newsletterUrl": st_marys_cadogan_steet_assessment_and_newsletter[1]
+},
+    {
+    "name": "Most Precious Blood",
+    "appraisal": json.loads(most_precious_blood_assessment_and_newsletter[0]),
+    "newsletterUrl": most_precious_blood_assessment_and_newsletter[1]
 },
     {
     "name": "Our Lady of the Assumption",
