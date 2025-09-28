@@ -21,9 +21,9 @@ corpus_christi_assessment_and_newsletter = get_corpus_christi_newsletter_assessm
     driver
 )
 
-sts_peter_and_paul_assessment_and_newsletter = get_st_peter_and_paul_newsletter_assessment(
-    driver
-)
+# sts_peter_and_paul_assessment_and_newsletter = get_st_peter_and_paul_newsletter_assessment(
+#     driver
+# )
 
 st_etheldreda_assessment_and_newsletter = get_st_etheldreda_newsletter_assessment(
     driver
@@ -114,12 +114,13 @@ appraisals = [{
     "newsletterUrl": corpus_christi_assessment_and_newsletter[1]
 
 },
-    {
-    "name": "Sts Peter & Paul",
-    "appraisal": json.loads(sts_peter_and_paul_assessment_and_newsletter[0]),
-    "newsletterUrl": sts_peter_and_paul_assessment_and_newsletter[1]
+    # TODO: The AI keeps getting this pdf wrong. Fix later. Might need new model
+    #     {
+    #     "name": "Sts Peter & Paul",
+    #     "appraisal": json.loads(sts_peter_and_paul_assessment_and_newsletter[0]),
+    #     "newsletterUrl": sts_peter_and_paul_assessment_and_newsletter[1]
 
-},
+    # },
     {
     "name": "St Etheldreda's",
     "appraisal": json.loads(st_etheldreda_assessment_and_newsletter[0]),
@@ -150,7 +151,6 @@ appraisals = [{
     "newsletterUrl": our_lady_of_the_rosary_assessment_and_newsletter[1]
 },
     {
-    # TODO: Fix (it's reading last week, not this coming week)
     "name": "Westminster Cathedral",
     "appraisal": json.loads(westminster_cathedral_assessment_and_schedule[0]),
     "newsletterUrl": westminster_cathedral_assessment_and_schedule[1]
