@@ -74,7 +74,12 @@ function tuesdayChurches() {
         stCharlesBorromeo,
       ])}
       {timeSlot("12:15", [warwickStreet])}
-      {timeSlot("12:30", [stMaryMoorfields, farmStreet, stPatricksSoho])}
+      {timeSlot("12:30", [
+        stMaryMoorfields,
+        farmStreet,
+        stPatricksSoho,
+        mostPreciousBlood,
+      ])}
       {timeSlot("13:20", [stEtheldredras])}
       {timeSlot("16:30", [westminsterCathedral])}
       {timeSlot("17:00", [westminsterCathedral])}
@@ -100,7 +105,12 @@ function wednesdayChurches() {
         stCharlesBorromeo,
       ])}
       {timeSlot("12:15", [warwickStreet])}
-      {timeSlot("12:30", [stMaryMoorfields, farmStreet, stPatricksSoho])}
+      {timeSlot("12:30", [
+        stMaryMoorfields,
+        farmStreet,
+        stPatricksSoho,
+        mostPreciousBlood,
+      ])}
       {timeSlot("13:20", [stEtheldredras])}
       {timeSlot("16:30", [westminsterCathedral])}
       {timeSlot("17:00", [westminsterCathedral])}
@@ -126,7 +136,12 @@ function thursdayChurches() {
         stCharlesBorromeo,
       ])}
       {timeSlot("12:15", [warwickStreet])}
-      {timeSlot("12:30", [stMaryMoorfields, farmStreet, stPatricksSoho])}
+      {timeSlot("12:30", [
+        stMaryMoorfields,
+        farmStreet,
+        stPatricksSoho,
+        mostPreciousBlood,
+      ])}
       {timeSlot("13:20", [stEtheldredras])}
       {timeSlot("16:30", [westminsterCathedral])}
       {timeSlot("17:00", [westminsterCathedral])}
@@ -152,7 +167,12 @@ function fridayChurches() {
         stCharlesBorromeo,
       ])}
       {timeSlot("12:15", [warwickStreet])}
-      {timeSlot("12:30", [stMaryMoorfields, farmStreet, stPatricksSoho])}
+      {timeSlot("12:30", [
+        stMaryMoorfields,
+        farmStreet,
+        stPatricksSoho,
+        mostPreciousBlood,
+      ])}
       {timeSlot("13:20", [stEtheldredras])}
       {timeSlot("16:30", [westminsterCathedral])}
       {timeSlot("17:00", [westminsterCathedral])}
@@ -168,7 +188,11 @@ function saturdayChurches() {
   return (
     <div>
       {timeSlot("07:45", [ukrainianCathedral])}
-      {timeSlot("10:00", [bromptonOratory, stGeorgesCathedral])}
+      {timeSlot("10:00", [
+        bromptonOratory,
+        stGeorgesCathedral,
+        mostPreciousBlood,
+      ])}
       {timeSlot("10:30", [bromptonOratory, stGeorgesCathedral, mountCarmel])}
       {timeSlot("11:00", [bromptonOratory, farmStreet, mountCarmel])}
       {timeSlot("11:30", [
