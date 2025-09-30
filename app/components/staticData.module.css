@@ -6,7 +6,7 @@
 
 .churchName {
   font-weight: 600;         /* Semi-bold */
-  font-size: 1rem;          /* Slightly larger than body */
+  font-size: 1.3rem;          
   color: #1a3d7c;           /* Calm, readable blue */
   display:flex;
 }
@@ -16,14 +16,14 @@
 }
 
 .churchLocation {
-  font-size: 0.875rem;      /* Smaller, secondary text */
+  font-size: 1.2rem;      
   color: #666;              /* Muted gray */
   margin-left: 0.5rem;      /* Small indent for readability */
 }
 
 .goodService {
   font-weight:100;
-  font-size: 0.875rem;      /* Smaller, secondary text */
+  font-size: 1.2rem;      
   color: #666;              /* Muted gray */
   margin-left: 0.5rem;      /* Small indent for readability */
   
@@ -35,6 +35,7 @@
   padding: 0rem 0.5rem ;
   margin-top: 0.25rem;
   font-weight: 500;
+  font-size: 1.3rem; 
   color: #6d4c41; /* dark brown text */
   border-radius: 4px;
 }
@@ -44,6 +45,7 @@
   padding: 0.25rem 0.5rem;
   margin-top: 0.25rem;
   font-weight: 500;
+  font-size: 1.3rem; 
   color: #6d4c41; /* dark brown text */
   border-radius: 4px;
 }
