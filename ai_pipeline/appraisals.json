@@ -10,7 +10,7 @@
     "name": "St Patrick's",
     "appraisal": {
       "changed": "true",
-      "reason": "According to this newsletter, weekday confessions are Monday to Friday, 12.15pm to 12.40pm (not 12.00pm to 12.40pm). Saturday confessions are 5.30pm to 5.55pm, and no Sunday confessions are listed. Please refer to the published schedule for the most accurate times."
+      "reason": "According to this newsletter, weekday Confession is from 12:15pm to 12:40pm, not 12:00pm to 12:40pm. Saturday Confession remains 5:30pm to 5:55pm. No Confession is listed on Sundays. Please update your timetable accordingly."
     },
     "newsletterUrl": "https://cdn.prod.website-files.com/604cd9b97ea6bcb8e1d06a8b/68d66ff9faaf25207c917347_Sunday%2028th%20September%20-%2026th%20Sunday%20in%20Ordinary%20Time.pdf"
   },
@@ -32,17 +32,9 @@
     "name": "Corpus Christi",
     "appraisal": {
       "changed": "true",
-      "reason": "According to the parish bulletin, confessions are heard for half an hour before all Masses, not limited to Monday and Wednesday–Friday at 12:35–13:05. Additionally, there is Exposition & Confessions at 10:00 am on Saturdays, and confessions may be arranged by appointment or upon request."
+      "reason": "According to this notice, Confessions are heard for half an hour before all Masses, not limited to Monday and Wednesday–Friday at 12:35–13:05. There is also Exposition & Confessions on Saturdays at 10:00 am. Confessions may additionally be arranged by appointment with the Rector. Therefore, the timetable you cite is incomplete."
     },
     "newsletterUrl": "https://corpuschristimaidenlane.org.uk/wp-content/uploads/2025/09/Newsletter-26th-Sunday-in-Ordinary-Time.pdf"
-  },
-  {
-    "name": "Sts Peter & Paul",
-    "appraisal": {
-      "changed": "true",
-      "reason": "According to the parish bulletin, confessions are from 11:30am to 12:30pm (or on request), not restricted to Mondays. Your expectation of Mondays 11:30am–12:15pm only does not match the published schedule."
-    },
-    "newsletterUrl": "https://parish.rcdow.org.uk/clerkenwell/wp-content/uploads/sites/91/2025/09/newsletter-28th-September-2025.pdf"
   },
   {
     "name": "St Etheldreda's",
@@ -68,9 +60,10 @@
   {
     "name": "Our Lady, Queen of Heaven",
     "appraisal": {
-      "changed": "unknown"
+      "changed": "true",
+      "reason": "According to the PDF, Confessions are on Saturdays from 4:15 pm to 5:15 pm, or by appointment. The previously stated 4:15–4:45 pm window is incorrect."
     },
-    "newsletterUrl": ""
+    "newsletterUrl": "https://parish.rcdow.org.uk/queensway/wp-content/uploads/sites/177/2025/09/10-05.pdf"
   },
   {
     "name": "Our Lady of the Rosary",
@@ -110,9 +103,9 @@
   {
     "name": "Most Precious Blood",
     "appraisal": {
-      "changed": "unknown"
+      "changed": "false"
     },
-    "newsletterUrl": ""
+    "newsletterUrl": "https://www.preciousblood.org.uk/uploads/1/7/5/4/17544525/newsthisweek.pdf"
   },
   {
     "name": "Our Lady of the Assumption",
