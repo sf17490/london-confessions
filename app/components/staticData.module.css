@@ -8,6 +8,7 @@
   font-weight: 600;         /* Semi-bold */
   font-size: 1rem;          /* Slightly larger than body */
   color: #1a3d7c;           /* Calm, readable blue */
+  display:flex;
 }
 
 .churchName:hover {
@@ -20,8 +21,25 @@
   margin-left: 0.5rem;      /* Small indent for readability */
 }
 
+.goodService {
+  font-weight:100;
+  font-size: 0.875rem;      /* Smaller, secondary text */
+  color: #666;              /* Muted gray */
+  margin-left: 0.5rem;      /* Small indent for readability */
+  
+}
+
+.allGood {
+  background: white; 
+  border-left: 4px solid green; 
+  padding: 0rem 0.5rem ;
+  margin-top: 0.25rem;
+  font-weight: 500;
+  color: #6d4c41; /* dark brown text */
+  border-radius: 4px;
+}
+
 .disruptedNotice {
-  background: #fff8e1; /* soft yellow */
   border-left: 4px solid #ff9800; /* orange accent */
   padding: 0.25rem 0.5rem;
   margin-top: 0.25rem;
@@ -32,7 +50,7 @@
 
 .disruptionRow {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 0.25rem;
   gap: 1rem; /* keeps a little breathing room */
@@ -41,4 +59,21 @@
 .disruptionRow div {
   color: #b45309; /* warm orange/brown text */
   font-weight: 500;
+}
+
+.linkButton {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: #b45309; /* or your brand link color */
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem; /* space between text and arrow */
+}
+
+.linkButton::after {
+  content: "▼";
+  font-size: 0.8em;
 }

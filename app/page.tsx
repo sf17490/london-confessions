@@ -26,7 +26,16 @@ export default function Home() {
           </a>
           .
         </p>
-        <p>Last human review: 26/08/25 </p>
+        <div className={styles.horizontal}>
+          <p>
+            {" "}
+            <a href="CHANGEME">Feedback.</a>
+          </p>
+
+          <p>Last human review: 26/08/25 </p>
+
+          <p> </p>
+        </div>
       </div>
     </>
   );

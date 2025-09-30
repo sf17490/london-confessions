@@ -37,9 +37,7 @@ describe("The DisplayUnknownChurchEntry component", () => {
     render(<MyDisplayUnknownChurchEntry churchData={dummyData} />);
     const warning = screen.getByTestId("uncheckedWarning");
     expect(warning).toBeInTheDocument();
-    expect(warning).toHaveTextContent(
-      "❓ We were unable to verify this confession time"
-    );
+    expect(warning).toHaveTextContent("❓Unknown Status");
   });
   it("should give the entry the correct styling (grey)", () => {
     render(<MyDisplayUnknownChurchEntry churchData={dummyData} />);

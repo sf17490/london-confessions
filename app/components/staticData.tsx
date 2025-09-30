@@ -293,10 +293,10 @@ export function DisplayDodgyChurchEntry({
         key={`${name}-church`}
       >
         <div data-testid="churchName" className={styles.churchName}>
-          {name}
+          {location}
         </div>
         <div data-testid="churchLocation" className={styles.churchLocation}>
-          {location}
+          {name}
         </div>
       </a>
       <ShowMore {...showMoreDetails} />
@@ -316,7 +316,7 @@ export function DisplayChurchEntry({
   location,
 }: DisplayChurchEntryProps) {
   return (
-    <div>
+    <div className={styles.allGood}>
       <a
         data-testid="linkToChurchWebsite"
         href={url}
@@ -324,11 +324,12 @@ export function DisplayChurchEntry({
         className={styles.churchLink}
       >
         <div data-testid="churchName" className={styles.churchName}>
-          {name}
-        </div>
-        <div data-testid="churchLocation" className={styles.churchLocation}>
           {location}
         </div>
+        <div data-testid="churchLocation" className={styles.churchLocation}>
+          {name}
+        </div>
+        <div className={styles.goodService}>✅ Good service</div>
       </a>
     </div>
   );
@@ -344,15 +345,16 @@ export function ShowMore({ disruptionReason, newsletterUrl }: ShowMoreProps) {
   return (
     <div>
       <div data-testid="disruptionRow" className={styles.disruptionRow}>
-        <div data-testid="disruptionWarning">
+        {/* <div data-testid="disruptionWarning">
           {" "}
           ⚠️ Maybe disrupted this week!
-        </div>
+        </div> */}
         <button
           data-testid="showMoreButton"
           onClick={() => setShowDescription(!showDescription)}
+          className={styles.linkButton}
         >
-          Show more{" "}
+          ⚠️ Maybe disrupted this week! Show More{" "}
         </button>
       </div>
       {showDescription ? (
