@@ -8,13 +8,17 @@
 }
 
 .heading1{
-  font-size: 1.75rem;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 
 .heading2{
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #444;
+}
+
+.date{
+  font-size: 1.2rem;
 }
 
 .smallprint{

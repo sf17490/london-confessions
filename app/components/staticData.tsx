@@ -267,7 +267,7 @@ function sundayChurches() {
 function timeSlot(time: string, churches: React.JSX.Element[]) {
   return (
     <div id={time}>
-      <h2>{time}</h2>
+      <h2 className={styles.timeHeading}>{time}</h2>
       {churches}
       <hr />
     </div>
