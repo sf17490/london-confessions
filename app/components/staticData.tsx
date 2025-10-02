@@ -32,28 +32,29 @@ export default StaticData;
 function mondayChurches() {
   return (
     <div className={styles.black}>
-      {timeSlot("11:30", [westminsterCathedral, stsPeterAndPaul])}
+      {timeSlot("11:30", [stsPeterAndPaul, westminsterCathedral])}
       {timeSlot("12:00", [
-        bromptonOratory,
-        stGeorgesCathedral,
-        stPatricksSoho,
         stsPeterAndPaul,
+        bromptonOratory,
         farmStreet,
-        westminsterCathedral,
+        stPatricksSoho,
+        stGeorgesCathedral,
         spanishPlace,
+        westminsterCathedral,
       ])}
       {timeSlot("12:15", [warwickStreet])}
       {timeSlot("12:30", [
-        spanishPlace,
         stMaryMoorfields,
-        stPatricksSoho,
         farmStreet,
+
+        stPatricksSoho,
+        spanishPlace,
       ])}
       {timeSlot("12:35", [corpusChristi])}
       {timeSlot("13:20", [stEtheldredras])}
       {timeSlot("16:30", [westminsterCathedral])}
       {timeSlot("17:00", [westminsterCathedral])}
-      {timeSlot("17:30", [bromptonOratory, notreDame, stAnselmAndStCecilia])}
+      {timeSlot("17:30", [stAnselmAndStCecilia, bromptonOratory, notreDame])}
       {timeSlot("17:40", [mountCarmel])}
       {timeSlot("17:45", [ukrainianCathedral])}
     </div>
