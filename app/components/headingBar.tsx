@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { DayOfWeek } from "../types";
-import styles from "../headingBar.module.css";
+import styles from "./headingBar.module.css";
 
 type HeadingBarProps = {
   selectedDayOfWeek: DayOfWeek;
@@ -26,7 +26,7 @@ function HeadingBar({ selectedDayOfWeek, setDayOfWeek }: HeadingBarProps) {
         Confessionals open in Central London (Zone 1)
       </h3>
       <p className={styles.smallprint}>Updated weekly by AI</p>
-      <b data-testid="date">28 Sept 2025 - 5 Oct 2025</b>
+      <b data-testid="date" className={styles.date}>28 Sept 2025 - 5 Oct 2025</b>
       <p data-testid="dayOfWeekSelectorContainer">
         <b data-testid="dayOfWeekSelector">
           {days.map((day) => (
