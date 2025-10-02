@@ -4,6 +4,8 @@ export const metadata = {
   description: "Find Catholic confession times in Central London (Zone 1).",
 };
 
+import "./globals.css";
+
 export default function RootLayout({
   children,
 }: {

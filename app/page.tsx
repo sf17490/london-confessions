@@ -9,7 +9,7 @@ export default function Home() {
   const [dayOfWeek, setDayOfWeek] = useState<DayOfWeek>("Monday");
 
   return (
-    <>
+    <div className={styles.black}>
       <div data-testid="headingContainer" className={styles.stickyBar}>
         <HeadingBar selectedDayOfWeek={dayOfWeek} setDayOfWeek={setDayOfWeek} />
         <hr />
@@ -37,6 +37,6 @@ export default function Home() {
           <p> </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
