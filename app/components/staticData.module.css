@@ -29,7 +29,6 @@
 }
 
 .allGood {
-  background: white; 
   border-left: 4px solid green; 
   padding: 0rem 0.5rem ;
   margin-top: 0.25rem;
@@ -81,4 +80,9 @@
 
 .timeHeading {
   font-size: 1.65em;
+  color:white
+}
+
+.black{
+  background-color: black;
 }

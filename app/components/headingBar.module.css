@@ -1,6 +1,6 @@
 .mainDiv{
   text-align: center ;
-  background-color: white;
+  color: white
 }
 
 .selected {
@@ -23,6 +23,8 @@
 
 .smallprint{
   font-size: 0.9rem;
-  padding: 0
+  padding: 0;
+    color: #444;
+
 }
 
