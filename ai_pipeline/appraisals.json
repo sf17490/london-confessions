@@ -10,7 +10,7 @@
     "name": "St Patrick's",
     "appraisal": {
       "changed": "true",
-      "reason": "According to this newsletter, weekday Confession is from 12:15pm to 12:40pm, not 12:00pm to 12:40pm. Saturday Confession remains 5:30pm to 5:55pm. No Confession is listed on Sundays. Please update your timetable accordingly."
+      "reason": "According to this newsletter, Confession is Monday to Friday from 12:15pm to 12:40pm and Saturday from 5:30pm to 5:55pm, with no Confession times listed for Sunday. Therefore, the weekday start time is 12:15pm, not 12:00pm."
     },
     "newsletterUrl": "https://cdn.prod.website-files.com/604cd9b97ea6bcb8e1d06a8b/68d66ff9faaf25207c917347_Sunday%2028th%20September%20-%2026th%20Sunday%20in%20Ordinary%20Time.pdf"
   },
@@ -31,10 +31,9 @@
   {
     "name": "Corpus Christi",
     "appraisal": {
-      "changed": "true",
-      "reason": "According to this notice, Confessions are heard for half an hour before all Masses, not limited to Monday and Wednesday–Friday at 12:35–13:05. There is also Exposition & Confessions on Saturdays at 10:00 am. Confessions may additionally be arranged by appointment with the Rector. Therefore, the timetable you cite is incomplete."
+      "changed": "unknown"
     },
-    "newsletterUrl": "https://corpuschristimaidenlane.org.uk/wp-content/uploads/2025/09/Newsletter-26th-Sunday-in-Ordinary-Time.pdf"
+    "newsletterUrl": ""
   },
   {
     "name": "St Etheldreda's",
@@ -60,10 +59,9 @@
   {
     "name": "Our Lady, Queen of Heaven",
     "appraisal": {
-      "changed": "true",
-      "reason": "According to the PDF, Confessions are on Saturdays from 4:15 pm to 5:15 pm, or by appointment. The previously stated 4:15–4:45 pm window is incorrect."
+      "changed": "unknown"
     },
-    "newsletterUrl": "https://parish.rcdow.org.uk/queensway/wp-content/uploads/sites/177/2025/09/10-05.pdf"
+    "newsletterUrl": ""
   },
   {
     "name": "Our Lady of the Rosary",
@@ -120,5 +118,12 @@
       "changed": "unknown"
     },
     "newsletterUrl": "https://parish.rcdow.org.uk/moorfields/"
+  },
+  {
+    "name": "Sts Peter & Paul",
+    "appraisal": {
+      "changed": "unknown"
+    },
+    "newsletterUrl": "https://parish.rcdow.org.uk/clerkenwell/"
   }
 ]
