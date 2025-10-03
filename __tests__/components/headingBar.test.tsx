@@ -2,10 +2,12 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { describe, it, vi, expect } from "vitest";
 import React from "react";
-import HeadingBar from "../../app/components/headingBar";
+import HeadingBar, {
+  generateSundayWeekRange,
+} from "../../app/components/headingBar";
 import { DayOfWeek } from "@/app/types";
 
-import styles from "../../app/headingBar.module.css";
+import styles from "../../app/components/headingBar.module.css";
 
 describe("The HeadingBar component", () => {
   const mockSetDayOfWeek = vi.fn<(day: DayOfWeek) => void>();
@@ -81,4 +83,26 @@ describe("The HeadingBar component", () => {
       expect(mockSetDayOfWeekCall).toHaveBeenCalledWith(dayOfWeek);
     }
   );
+});
+
+describe("The generate Dates function", () => {
+  beforeAll(() => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date("2025-08-31T00:00:00Z"));
+  });
+  afterAll(() => {
+    vi.useRealTimers();
+  });
+  it("should return today's date and a date 6 days in the future", () => {
+    const result = generateSundayWeekRange();
+
+    expect(result[0]).toBe("31 August 2025");
+    expect(result[1]).toBe("06 September 2025");
+  });
+  it("should not return a date if today is not Sunday", () => {
+    vi.setSystemTime(new Date("2025-09-02T00:00:00Z")); //Tues 2nd Sept
+    const result = generateSundayWeekRange();
+
+    expect(result[0]).toBe("");
+  });
 });

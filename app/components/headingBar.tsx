@@ -17,6 +17,7 @@ function HeadingBar({ selectedDayOfWeek, setDayOfWeek }: HeadingBarProps) {
     "Saturday",
     "Sunday",
   ];
+  const dates = generateSundayWeekRange();
   return (
     <div data-testid="centreTextContainer" className={styles.mainDiv}>
       <h1 data-testid="chiefHeading" className={styles.heading1}>
@@ -26,12 +27,14 @@ function HeadingBar({ selectedDayOfWeek, setDayOfWeek }: HeadingBarProps) {
         Confessionals open in Central London (Zone 1)
       </h3>
       <p className={styles.smallprint}>Updated weekly by AI</p>
-      <b data-testid="date" className={styles.date}>28 Sept 2025 - 5 Oct 2025</b>
+      <b data-testid="date" className={styles.date}>
+        {dates[0]} - {dates[1]}
+      </b>
       <p data-testid="dayOfWeekSelectorContainer">
         <b data-testid="dayOfWeekSelector">
           {days.map((day) => (
             <button
-              className={`${day === selectedDayOfWeek ? styles.selected : ""}`}
+              className={day === selectedDayOfWeek ? styles.selected : ""}
               role="button"
               key={day}
               onClick={() => {
@@ -48,3 +51,31 @@ function HeadingBar({ selectedDayOfWeek, setDayOfWeek }: HeadingBarProps) {
   );
 }
 export default HeadingBar;
+
+export function generateSundayWeekRange() {
+  const today = new Date();
+
+  if (thisDayIsSunday(today)) {
+    const followingSaturday = addDays(today, 6);
+
+    return [formatDate(today), formatDate(followingSaturday)];
+  } else {
+    return ["", ""];
+  }
+}
+
+function thisDayIsSunday(date: Date) {
+  return date.getDay() === 0;
+}
+
+function addDays(date: Date, days: number): Date {
+  return new Date(date.getTime() + days * 24 * 60 * 60 * 1000);
+}
+
+function formatDate(date: Date) {
+  return date.toLocaleString("en-GB", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  });
+}
