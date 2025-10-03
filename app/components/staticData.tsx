@@ -361,7 +361,7 @@ export function DisplayChurchEntry({
 }
 
 export type ShowMoreProps = {
-  disruptionReason: string;
+  disruptionReason: string | undefined;
   newsletterUrl: string;
 };
 

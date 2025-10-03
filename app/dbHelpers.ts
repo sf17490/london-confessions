@@ -11,7 +11,7 @@ function getApiUrl(path: string) {
   }
 }
 
-export async function matchChurchesToConfessionTimes(dayOfWeek: String) {
+export async function matchChurchesToConfessionTimes(dayOfWeek: string) {
   const confessionTimes = await fetch(
     getApiUrl(`/api/confessionTimes?dayOfWeek=${dayOfWeek}`)
   );
