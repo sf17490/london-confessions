@@ -10,16 +10,16 @@
     "name": "St Patrick's",
     "appraisal": {
       "changed": "true",
-      "reason": "According to this newsletter, Confession is Monday to Friday from 12:15pm to 12:40pm and Saturday from 5:30pm to 5:55pm, with no Confession times listed for Sunday. Therefore, the weekday start time is 12:15pm, not 12:00pm."
+      "reason": "According to this newsletter, weekday confessions are from 12:15pm to 12:40pm, not 12:00pm to 12:40pm. Saturday confessions remain 5:30pm to 5:55pm. No Sunday confessions are listed."
     },
-    "newsletterUrl": "https://cdn.prod.website-files.com/604cd9b97ea6bcb8e1d06a8b/68d66ff9faaf25207c917347_Sunday%2028th%20September%20-%2026th%20Sunday%20in%20Ordinary%20Time.pdf"
+    "newsletterUrl": "https://cdn.prod.website-files.com/604cd9b97ea6bcb8e1d06a8b/68dfef2cf806c4c5d85c45d0_Sunday%205th%20October%20-%2027th%20Sunday.pdf"
   },
   {
     "name": "Our Lady of Mount Carmel & St Simon Stock",
     "appraisal": {
       "changed": "false"
     },
-    "newsletterUrl": "https://carmelitechurch.org/wp-content/uploads/2025/09/Sunday-28th-September-2025.pdf"
+    "newsletterUrl": "https://carmelitechurch.org/wp-content/uploads/2025/10/Sunday-5th-October-2025.pdf"
   },
   {
     "name": "Immaculate Conception",
@@ -31,16 +31,17 @@
   {
     "name": "Corpus Christi",
     "appraisal": {
-      "changed": "unknown"
+      "changed": "true",
+      "reason": "According to this newsletter, confessions are heard for half an hour before all Masses, not limited to Monday and Wednesday–Friday 12:35-13:05. This includes before weekday, Saturday Vigil, Sunday, and evening Masses. Confessions may also be arranged by appointment with the Rector."
     },
-    "newsletterUrl": ""
+    "newsletterUrl": "https://corpuschristimaidenlane.org.uk/wp-content/uploads/2025/10/Newsletter-27th-Sunday-in-Ordinary-Time.pdf"
   },
   {
     "name": "St Etheldreda's",
     "appraisal": {
       "changed": "false"
     },
-    "newsletterUrl": "https://www.stetheldreda.co.uk/_files/ugd/a0bc29_dae66f85333d444f9e6bf89f0001b19d.pdf"
+    "newsletterUrl": "https://www.stetheldreda.co.uk/_files/ugd/a0bc29_3a9e4d6d527141f89452764b142ebb19.pdf"
   },
   {
     "name": "St Anselm & St Cæcilia",
@@ -66,9 +67,9 @@
   {
     "name": "Our Lady of the Rosary",
     "appraisal": {
-      "changed": "false"
+      "changed": "unknown"
     },
-    "newsletterUrl": "https://parish.rcdow.org.uk/marylebone/wp-content/uploads/sites/188/2025/09/Twenty-Sixth-Sunday-in-Ordinary-Time-Year-C.pdf"
+    "newsletterUrl": ""
   },
   {
     "name": "Westminster Cathedral",
@@ -82,7 +83,7 @@
     "appraisal": {
       "changed": "false"
     },
-    "newsletterUrl": "https://parish.rcdow.org.uk/pimlico/wp-content/uploads/sites/38/2025/09/Newsletter-28th-September-2025.pdf"
+    "newsletterUrl": "https://parish.rcdow.org.uk/pimlico/wp-content/uploads/sites/38/2025/10/Newsletter-5th-October-2025.pdf"
   },
   {
     "name": "St James'",
@@ -96,7 +97,7 @@
     "appraisal": {
       "changed": "unknown"
     },
-    "newsletterUrl": "https://parish.rcdow.org.uk/pimlico/wp-content/uploads/sites/38/2025/09/Newsletter-28th-September-2025.pdf"
+    "newsletterUrl": "https://parish.rcdow.org.uk/pimlico/wp-content/uploads/sites/38/2025/10/Newsletter-5th-October-2025.pdf"
   },
   {
     "name": "Most Precious Blood",
