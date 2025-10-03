@@ -1,0 +1,22 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - echo "Ora pro nobis, Carlo"
+        - apt-get update && apt-get install -y python3 python3-pip
+        - apt-get install -y chromium-browser chromium-chromedriver
+        - python3 --version
+        - pip3 install -r python_requirements.txt
+        - python3 ai_pipeline/appraisal_pipeline.py
+    build:
+      commands:
+        - npm i
+        - npm run build
+    artifacts:
+      baseDirectory: .next
+      files:
+        - "**/*"
+    cache:
+      paths:
+        - node_modules/**/*
