@@ -10,7 +10,7 @@
     "name": "St Patrick's",
     "appraisal": {
       "changed": "true",
-      "reason": "BRO! According to this newsletter, weekday confessions are from 12:15pm to 12:40pm, not 12:00pm to 12:40pm. Saturday confessions remain 5:30pm to 5:55pm. No Sunday confessions are listed."
+      "reason": "According to this newsletter, Confession is Monday to Friday from 12:15pm to 12:40pm, not from 12:00pm. Saturday Confession is from 5:30pm to 5:55pm as stated. There is no Confession listed for Sundays. Please refer to the published schedule for accuracy."
     },
     "newsletterUrl": "https://cdn.prod.website-files.com/604cd9b97ea6bcb8e1d06a8b/68dfef2cf806c4c5d85c45d0_Sunday%205th%20October%20-%2027th%20Sunday.pdf"
   },
@@ -32,7 +32,7 @@
     "name": "Corpus Christi",
     "appraisal": {
       "changed": "true",
-      "reason": "According to this newsletter, confessions are heard for half an hour before all Masses, not limited to Monday and Wednesday–Friday 12:35-13:05. This includes before weekday, Saturday Vigil, Sunday, and evening Masses. Confessions may also be arranged by appointment with the Rector."
+      "reason": "According to the parish notice, Confessions are heard for half an hour before all Masses. Therefore, in addition to 12:35–13:05, Confessions are also available on Monday and Friday from 18:00–18:30 before the 6:30 pm Mass. On Wednesday and Thursday they remain 12:35–13:05 only. Please consult the current weekly schedule for any changes."
     },
     "newsletterUrl": "https://corpuschristimaidenlane.org.uk/wp-content/uploads/2025/10/Newsletter-27th-Sunday-in-Ordinary-Time.pdf"
   },
@@ -67,9 +67,9 @@
   {
     "name": "Our Lady of the Rosary",
     "appraisal": {
-      "changed": "unknown"
+      "changed": "false"
     },
-    "newsletterUrl": ""
+    "newsletterUrl": "https://parish.rcdow.org.uk/marylebone/wp-content/uploads/sites/188/2025/10/Twenty-Seventh-Sunday-in-Ordinary-Time-Year-C.pdf"
   },
   {
     "name": "Westminster Cathedral",
