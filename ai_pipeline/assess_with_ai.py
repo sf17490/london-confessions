@@ -1,11 +1,9 @@
 from openai import OpenAI, APIError, APITimeoutError
 import os
-from dotenv import load_dotenv
 
-load_dotenv()
 
 client = OpenAI(
-    api_key=os.getenv("OPENAI_API_KEY")
+    api_key=os.getenv("OPENAPI_API_KEY")
 )
 
 
