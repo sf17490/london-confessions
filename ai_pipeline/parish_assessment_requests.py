@@ -164,7 +164,7 @@ def get_westminster_cathedral_schedule_assessment(driver: webdriver):
 def navigate_to_holy_apostles_newsletter(driver: webdriver):
     driver.get("https://parish.rcdow.org.uk/pimlico/news/category/newsletter/")
 
-    time.sleep(2)
+    time.sleep(4)
     newsletters = driver.find_elements(
         By.PARTIAL_LINK_TEXT, "Sunday")
 
