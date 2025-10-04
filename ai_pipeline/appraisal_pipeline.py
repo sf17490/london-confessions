@@ -7,6 +7,7 @@ import json
 
 chrome_options = Options()
 chrome_options.add_argument("--headless=new")
+chrome_options.add_argument("--window-size=1920,1080")
 driver = webdriver.Chrome(options=chrome_options)
 
 
