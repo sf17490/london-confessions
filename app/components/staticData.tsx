@@ -32,7 +32,7 @@ export default StaticData;
 function mondayChurches() {
   return (
     <div className={styles.black}>
-      {timeSlot("11:30", [stsPeterAndPaul, westminsterCathedral])}
+      {timeSlot("11:30", [westminsterCathedral])}
       {timeSlot("12:00", [
         stsPeterAndPaul,
         bromptonOratory,
