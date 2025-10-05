@@ -59,6 +59,16 @@ describe("The HeadingBar component", () => {
     await screen.findByTestId("dayOfWeekSelector");
   });
 
+  it('has Sunday as the first dayOfWeek button"', async () => {
+    render(
+      <HeadingBar
+        selectedDayOfWeek={"Monday"}
+        setDayOfWeek={mockSetDayOfWeek}
+      />
+    );
+    expect(screen.getByTestId("Sunday0")).toBeInTheDocument();
+  });
+
   it.each([
     ["Monday", "Mon"],
     ["Tuesday", "Tue"],

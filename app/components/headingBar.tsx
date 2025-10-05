@@ -9,13 +9,13 @@ type HeadingBarProps = {
 
 function HeadingBar({ selectedDayOfWeek, setDayOfWeek }: HeadingBarProps) {
   const days: DayOfWeek[] = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
-    "Sunday",
   ];
   const dates = generateSundayWeekRange();
   return (
@@ -32,11 +32,12 @@ function HeadingBar({ selectedDayOfWeek, setDayOfWeek }: HeadingBarProps) {
       </b>
       <p data-testid="dayOfWeekSelectorContainer">
         <b data-testid="dayOfWeekSelector">
-          {days.map((day) => (
+          {days.map((day, index) => (
             <button
               className={day === selectedDayOfWeek ? styles.selected : ""}
               role="button"
-              key={day}
+              key={index}
+              data-testid={day + index}
               onClick={() => {
                 setDayOfWeek(day);
               }}
