@@ -67,6 +67,20 @@ describe("Home page", () => {
     );
     const codeLink = await screen.findByTestId("codeLink");
     expect(codeLink).toHaveTextContent("(Proof)");
-    expect(codeLink).toHaveAttribute("href", "CHANGEME");
+    expect(codeLink).toHaveAttribute(
+      "href",
+      "https://github.com/sf17490/london-confessions"
+    );
+  });
+
+  it("has a link to a feedback form", async () => {
+    render(<Home />);
+    const feedbackLink = await screen.findByTestId("feedbackLink");
+    expect(feedbackLink).toHaveTextContent("Feedback");
+
+    expect(feedbackLink).toHaveAttribute(
+      "href",
+      "https://docs.google.com/forms/d/e/1FAIpQLSchXTNNNdH2gp1m4oRwMnZ9kZ95-Rx7hZh3ygH-pNJRREyEPg/viewform?usp=header"
+    );
   });
 });
