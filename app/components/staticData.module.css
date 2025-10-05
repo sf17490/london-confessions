@@ -7,7 +7,7 @@
 .churchName {
   font-weight: 600;         /* Semi-bold */
   font-size: 1.1rem;          
-  color: #2d6697;           
+  color: #2d6697;          
   display:flex;
 }
 
@@ -17,7 +17,7 @@
 
 .churchLocation {
   font-size: 1rem;      
-  color: #8c8a8a;              
+  color: #8c8a8a;             
   margin-left: 0.5rem;      /* Small indent for readability */
 }
 
@@ -44,7 +44,7 @@
   margin-top: 0.25rem;
   font-weight: 500;
   font-size: 1.1rem; 
-  color: #b45309; 
+  color: #6d4c41; /* dark brown text */
   border-radius: 4px;
 }
 

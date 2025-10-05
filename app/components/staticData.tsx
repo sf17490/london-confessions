@@ -32,7 +32,7 @@ export default StaticData;
 function mondayChurches() {
   return (
     <div className={styles.black}>
-      {timeSlot("11:30", [stsPeterAndPaul, westminsterCathedral])}
+      {timeSlot("11:30", [westminsterCathedral])}
       {timeSlot("12:00", [
         stsPeterAndPaul,
         bromptonOratory,
@@ -54,9 +54,8 @@ function mondayChurches() {
       {timeSlot("13:20", [stEtheldredras])}
       {timeSlot("16:30", [westminsterCathedral])}
       {timeSlot("17:00", [westminsterCathedral])}
-      {timeSlot("17:30", [stAnselmAndStCecilia, bromptonOratory, notreDame])}
+      {timeSlot("17:30", [stAnselmAndStCecilia, bromptonOratory])}
       {timeSlot("17:40", [mountCarmel])}
-      {timeSlot("17:45", [ukrainianCathedral])}
     </div>
   );
 }
@@ -64,7 +63,6 @@ function mondayChurches() {
 function tuesdayChurches() {
   return (
     <div>
-      {timeSlot("06:45", [ukrainianCathedral])}
       {timeSlot("11:30", [westminsterCathedral])}
       {timeSlot("12:00", [
         bromptonOratory,
@@ -87,7 +85,6 @@ function tuesdayChurches() {
       {timeSlot("17:30", [bromptonOratory, stAnselmAndStCecilia])}
       {/*Can't find notre dame */}
       {timeSlot("17:40", [mountCarmel])}
-      {timeSlot("18:00", [ukrainianCathedral])}
     </div>
   );
 }
@@ -95,7 +92,6 @@ function tuesdayChurches() {
 function wednesdayChurches() {
   return (
     <div>
-      {timeSlot("06:45", [ukrainianCathedral])}
       {timeSlot("11:30", [westminsterCathedral])}
       {timeSlot("12:00", [
         bromptonOratory,
@@ -118,7 +114,6 @@ function wednesdayChurches() {
       {timeSlot("17:30", [bromptonOratory, stAnselmAndStCecilia])}
       {/*Can't find notre dame */}
       {timeSlot("17:40", [mountCarmel])}
-      {timeSlot("18:00", [ukrainianCathedral])}
     </div>
   );
 }
@@ -126,7 +121,6 @@ function wednesdayChurches() {
 function thursdayChurches() {
   return (
     <div>
-      {timeSlot("06:45", [ukrainianCathedral])}
       {timeSlot("11:30", [westminsterCathedral])}
       {timeSlot("12:00", [
         bromptonOratory,
@@ -149,7 +143,6 @@ function thursdayChurches() {
       {timeSlot("17:30", [bromptonOratory, stAnselmAndStCecilia])}
       {/*Can't find notre dame */}
       {timeSlot("17:40", [mountCarmel])}
-      {timeSlot("18:00", [ukrainianCathedral])}
     </div>
   );
 }
@@ -157,7 +150,6 @@ function thursdayChurches() {
 function fridayChurches() {
   return (
     <div>
-      {timeSlot("06:45", [ukrainianCathedral])}
       {timeSlot("11:30", [westminsterCathedral])}
       {timeSlot("12:00", [
         bromptonOratory,
@@ -180,7 +172,6 @@ function fridayChurches() {
       {timeSlot("17:30", [bromptonOratory, stAnselmAndStCecilia])}
       {/*Can't find notre dame */}
       {timeSlot("17:40", [mountCarmel])}
-      {timeSlot("18:00", [ukrainianCathedral])}
     </div>
   );
 }
@@ -188,7 +179,6 @@ function fridayChurches() {
 function saturdayChurches() {
   return (
     <div>
-      {timeSlot("07:45", [ukrainianCathedral])}
       {timeSlot("10:00", [
         bromptonOratory,
         stGeorgesCathedral,
@@ -228,7 +218,7 @@ function saturdayChurches() {
         mountCarmel,
       ])}
       {timeSlot("17:45", [farmStreet, stMarysCadoganStreet])}
-      {timeSlot("18:00", [ukrainianCathedral, stMarysCadoganStreet])}
+      {timeSlot("18:00", [stMarysCadoganStreet])}
     </div>
   );
 }
@@ -236,17 +226,15 @@ function saturdayChurches() {
 function sundayChurches() {
   return (
     <div>
-      {timeSlot("07:45", [farmStreet, ukrainianCathedral])}
+      {timeSlot("07:45", [farmStreet])}
       {timeSlot("08:30", [bromptonOratory])}
       {timeSlot("09:15", [farmStreet])}
       {timeSlot("09:30", [bromptonOratory])}
-      {timeSlot("09:45", [ukrainianCathedral])}
       {timeSlot("10:00", [stGeorgesCathedral])}
       {timeSlot("10:30", [bromptonOratory])}
       {timeSlot("10:45", [farmStreet, westminsterCathedral])}
       {timeSlot("11:00", [westminsterCathedral])}
       {timeSlot("11:30", [westminsterCathedral])}
-      {timeSlot("11:45", [ukrainianCathedral])}
 
       {timeSlot("12:00", [
         bromptonOratory,
@@ -254,7 +242,6 @@ function sundayChurches() {
         westminsterCathedral,
       ])}
       {timeSlot("12:45", [farmStreet])}
-      {timeSlot("16:45", [ukrainianCathedral])}
       {timeSlot("17:00", [westminsterCathedral])}
       {timeSlot("17:15", [farmStreet])}
       {timeSlot("17:30", [westminsterCathedral])}
@@ -468,12 +455,6 @@ const stEtheldredras = displayChurch(
   "Farringdon EC1N 6RY"
 );
 
-const notreDame = displayChurch(
-  "Notre Dame de France (French)",
-  "https://www.ndfchurch.org/en/",
-  "Leicester Square WC2H 7BX"
-);
-
 const stAnselmAndStCecilia = displayChurch(
   "St Anselm & St Cæcilia",
   "https://parish.rcdow.org.uk/lincolnsinnfields/",
@@ -484,12 +465,6 @@ const mountCarmel = displayChurch(
   "Our Lady of Mount Carmel & St Simon Stock",
   "https://carmelitechurch.org/",
   "High Street Kensington W8 4BB"
-);
-
-const ukrainianCathedral = displayChurch(
-  "Ukrainian Catholic Cathedral",
-  "https://www.ucc-gb.com/cathedral",
-  "Mayfair W1K 5BQ"
 );
 
 const queenOfHeaven = displayChurch(
@@ -522,12 +497,25 @@ const stCharlesBorromeo = displayChurch(
   "Fitzrovia W1W 6HS "
 );
 
-//Excluded (and why):
-//https://ssjc.uk/st-theodore/ - Eastern Rite, really close to Westminster Cathedral, not much info
-
-//Suspended over summer
 const mostPreciousBlood = displayChurch(
   "Most Precious Blood",
   "https://www.preciousblood.org.uk/",
   "Borough Market SE1 1TD"
 );
+
+//Excluded (and why):
+//https://ssjc.uk/st-theodore/ - Eastern Rite, really close to Westminster Cathedral, not much info
+
+//Foreign churches:
+
+// const ukrainianCathedral = displayChurch(
+//   "Ukrainian Catholic Cathedral",
+//   "https://www.ucc-gb.com/cathedral",
+//   "Mayfair W1K 5BQ"
+// );
+
+// const notreDame = displayChurch(
+//   "Notre Dame de France (French)",
+//   "https://www.ndfchurch.org/en/",
+//   "Leicester Square WC2H 7BX"
+// );
