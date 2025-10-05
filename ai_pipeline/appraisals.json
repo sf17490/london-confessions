@@ -2,58 +2,56 @@
   {
     "name": "St George's Cathedral",
     "appraisal": {
-      "changed": "false"
+      "changed": "unknown"
     },
     "newsletterUrl": "https://www.stgeorgescathedral.org.uk/media/1060/newsletter.pdf"
   },
   {
     "name": "St Patrick's",
     "appraisal": {
-      "changed": "true",
-      "reason": "According to this newsletter, Confession is Monday to Friday from 12:15pm to 12:40pm, not from 12:00pm. Saturday Confession is from 5:30pm to 5:55pm as stated. There is no Confession listed for Sundays. Please refer to the published schedule for accuracy."
+      "changed": "unknown"
     },
     "newsletterUrl": "https://cdn.prod.website-files.com/604cd9b97ea6bcb8e1d06a8b/68dfef2cf806c4c5d85c45d0_Sunday%205th%20October%20-%2027th%20Sunday.pdf"
   },
   {
     "name": "Our Lady of Mount Carmel & St Simon Stock",
     "appraisal": {
-      "changed": "false"
+      "changed": "unknown"
     },
     "newsletterUrl": "https://carmelitechurch.org/wp-content/uploads/2025/10/Sunday-5th-October-2025.pdf"
   },
   {
     "name": "Immaculate Conception",
     "appraisal": {
-      "changed": "false"
+      "changed": "unknown"
     },
     "newsletterUrl": "https://www.farmstreet.org.uk/s/Twenty-Sixth-Sunday-in-Ordinary-Time.pdf"
   },
   {
     "name": "Corpus Christi",
     "appraisal": {
-      "changed": "true",
-      "reason": "According to the parish notice, Confessions are heard for half an hour before all Masses. Therefore, in addition to 12:35–13:05, Confessions are also available on Monday and Friday from 18:00–18:30 before the 6:30 pm Mass. On Wednesday and Thursday they remain 12:35–13:05 only. Please consult the current weekly schedule for any changes."
+      "changed": "unknown"
     },
     "newsletterUrl": "https://corpuschristimaidenlane.org.uk/wp-content/uploads/2025/10/Newsletter-27th-Sunday-in-Ordinary-Time.pdf"
   },
   {
     "name": "St Etheldreda's",
     "appraisal": {
-      "changed": "false"
+      "changed": "unknown"
     },
     "newsletterUrl": "https://www.stetheldreda.co.uk/_files/ugd/a0bc29_3a9e4d6d527141f89452764b142ebb19.pdf"
   },
   {
     "name": "St Anselm & St Cæcilia",
     "appraisal": {
-      "changed": "false"
+      "changed": "unknown"
     },
     "newsletterUrl": "https://parish.rcdow.org.uk/lincolnsinnfields/"
   },
   {
     "name": "Brompton Oratory",
     "appraisal": {
-      "changed": "false"
+      "changed": "unknown"
     },
     "newsletterUrl": "https://www.bromptonoratory.co.uk/weekly-parish-newsletter"
   },
@@ -62,35 +60,35 @@
     "appraisal": {
       "changed": "unknown"
     },
-    "newsletterUrl": ""
+    "newsletterUrl": "https://parish.rcdow.org.uk/queensway/wp-content/uploads/sites/177/2025/09/10-05.pdf"
   },
   {
     "name": "Our Lady of the Rosary",
     "appraisal": {
-      "changed": "false"
+      "changed": "unknown"
     },
     "newsletterUrl": "https://parish.rcdow.org.uk/marylebone/wp-content/uploads/sites/188/2025/10/Twenty-Seventh-Sunday-in-Ordinary-Time-Year-C.pdf"
   },
   {
     "name": "Westminster Cathedral",
     "appraisal": {
-      "changed": "false"
+      "changed": "unknown"
     },
     "newsletterUrl": "https://westminstercathedral.org.uk/reconciliation/"
   },
   {
     "name": "Holy Apostles",
     "appraisal": {
-      "changed": "false"
+      "changed": "unknown"
     },
     "newsletterUrl": "https://parish.rcdow.org.uk/pimlico/wp-content/uploads/sites/38/2025/10/Newsletter-5th-October-2025.pdf"
   },
   {
     "name": "St James'",
     "appraisal": {
-      "changed": "false"
+      "changed": "unknown"
     },
-    "newsletterUrl": "https://www.sjrcc.org.uk/_files/ugd/ac578c_916a49af96c44b4f93e061a3a0e3acb2.pdf"
+    "newsletterUrl": "https://www.sjrcc.org.uk/_files/ugd/ac578c_ef8bbd9ee4c5490fa61db9966c50ca96.pdf"
   },
   {
     "name": "St Mary's Cadogan Street",
@@ -102,7 +100,7 @@
   {
     "name": "Most Precious Blood",
     "appraisal": {
-      "changed": "false"
+      "changed": "unknown"
     },
     "newsletterUrl": "https://www.preciousblood.org.uk/uploads/1/7/5/4/17544525/newsthisweek.pdf"
   },
