@@ -21,7 +21,10 @@ export default function Home() {
         <hr data-testid="footingDivider" />
         <p data-testid="aiInfo">
           THIS WEBSITE IS RUN BY ARTIFICIAL INTELLIGENCE{" "}
-          <a href="CHANGEME" data-testid="codeLink">
+          <a
+            href="https://github.com/sf17490/london-confessions"
+            data-testid="codeLink"
+          >
             (Proof)
           </a>
           .
@@ -29,7 +32,12 @@ export default function Home() {
         <div className={styles.horizontal}>
           <p>
             {" "}
-            <a href="CHANGEME">Feedback.</a>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSchXTNNNdH2gp1m4oRwMnZ9kZ95-Rx7hZh3ygH-pNJRREyEPg/viewform?usp=header"
+              data-testid="feedbackLink"
+            >
+              Feedback.
+            </a>
           </p>
 
           <p>Last human review: 26/08/25 </p>
