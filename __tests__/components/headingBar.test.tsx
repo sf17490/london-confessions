@@ -96,23 +96,15 @@ describe("The HeadingBar component", () => {
 });
 
 describe("The generate Dates function", () => {
-  beforeAll(() => {
-    vi.useFakeTimers();
-    vi.setSystemTime(new Date("2025-08-31T00:00:00Z"));
-  });
-  afterAll(() => {
-    vi.useRealTimers();
-  });
-  it("should return today's date and a date 6 days in the future", () => {
-    const result = generateSundayWeekRange();
-
-    expect(result[0]).toBe("31 August 2025");
-    expect(result[1]).toBe("06 September 2025");
-  });
-  it("should not return a date if today is not Sunday", () => {
+  it("should return the preceeding Sunday's date", () => {
     vi.setSystemTime(new Date("2025-09-02T00:00:00Z")); //Tues 2nd Sept
     const result = generateSundayWeekRange();
+    expect(result[0]).toBe("31 Aug 2025");
+  });
 
-    expect(result[0]).toBe("");
+  it("should return the following Saturday's date", () => {
+    vi.setSystemTime(new Date("2025-09-02T00:00:00Z")); //Tues 2nd Sept
+    const result = generateSundayWeekRange();
+    expect(result[1]).toBe("6 Sept 2025");
   });
 });

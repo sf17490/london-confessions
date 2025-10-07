@@ -56,27 +56,21 @@ export default HeadingBar;
 export function generateSundayWeekRange() {
   const today = new Date();
 
-  if (thisDayIsSunday(today)) {
-    const followingSaturday = addDays(today, 6);
+  const dayOfWeek = today.getUTCDay();
 
-    return [formatDate(today), formatDate(followingSaturday)];
-  } else {
-    return ["", ""];
-  }
-}
+  const sunday = new Date(today);
+  sunday.setUTCDate(today.getUTCDate() - dayOfWeek);
 
-function thisDayIsSunday(date: Date) {
-  return date.getDay() === 0;
-}
+  const saturday = new Date(sunday);
+  saturday.setUTCDate(sunday.getUTCDate() + 6);
 
-function addDays(date: Date, days: number): Date {
-  return new Date(date.getTime() + days * 24 * 60 * 60 * 1000);
+  return [formatDate(sunday), formatDate(saturday)];
 }
 
 function formatDate(date: Date) {
   return date.toLocaleString("en-GB", {
-    day: "2-digit",
-    month: "long",
+    day: "numeric",
+    month: "short",
     year: "numeric",
   });
 }
