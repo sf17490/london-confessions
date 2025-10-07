@@ -18,7 +18,6 @@ export default function Home() {
         <StaticData dayOfWeek={dayOfWeek} />
       </div>
       <div data-testid="footing" className={styles.footer}>
-        <hr data-testid="footingDivider" />
         <p data-testid="aiInfo">
           THIS WEBSITE IS RUN BY ARTIFICIAL INTELLIGENCE{" "}
           <a
