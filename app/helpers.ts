@@ -1,3 +1,5 @@
+import { parse } from "date-fns";
+
 export type appraisal = {
   name: string;
   appraisal: {
@@ -7,11 +9,18 @@ export type appraisal = {
   newsletterUrl: string;
 };
 
+type pipelineData = {
+  date: string;
+  appraisals: appraisal[];
+};
+
 export function getDisruptionDetails(
   churchName: string,
-  appraisalsJson: appraisal[]
+  appraisalsJson: pipelineData
 ) {
-  const maybeChurchDisruptedDetails = appraisalsJson.find(
+  const appraisalsData = appraisalsJson.appraisals;
+
+  const maybeChurchDisruptedDetails = appraisalsData.find(
     (entry) => entry.name === churchName && entry.appraisal.changed !== "false"
   );
 
@@ -26,4 +35,8 @@ export function getDisruptionDetails(
       newsletterUrl: "",
     };
   }
+}
+
+export function getDateOfPipelineRun(appraisalsJson: pipelineData) {
+  return parse(appraisalsJson.date, "dd/MM/yyyy", new Date());
 }
