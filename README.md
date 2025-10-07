@@ -28,34 +28,6 @@ Some churches are marked as "Unknown status". This can happen for a few reasons,
 
 This is a Next.js project with a Typescript frontend and a Python backend. Inside the `ai_pipeline` folder, newsletters are scraped from parish websites using Selenium. These newsletters are posted to the chatGPT API with the relevant prompt (see `prompts.py`) and are then written to json (`appraisals.json`). That json file is used to configure the frontend.
 
-## TODO
--(Frontend) Remove Ukrainian Cathedral and Notre Dame de France
-
-TODO:
-
-1. UI improvements:
-
-- Dark mode
--       🍔🍔🍔🍔🍔🍔🍔🍔Lunchtime shift 🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔 etc
-- Further styling of each card (Good service, unknown, disrupted). Can we lean into the "tube" theme even more?
-- Add link to code (once open-sourced)
-
-2. AI improvements:
-
-- Work out how to get an AI to read any parish newsletter reliably.
-  Candidates:
-  Brompton oratory (html) - https://www.bromptonoratory.co.uk/weekly-parish-newsletter
-  St George's Cathedral (pdf) - https://www.stgeorgescathedral.org.uk/media/1060/newsletter.pdf
-  St Patrick's Soho (pdf) - https://www.stpatricksoho.org/newsletter
-
-  You need these commands to run ai_pipeline stuff:
-
-  pip install python-dotenv
-
-  pip install openai
-
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
