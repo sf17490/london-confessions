@@ -1,4 +1,6 @@
-[
+{
+  "date": "date-goes-here",
+  "appraisals":[
   {
     "name": "St George's Cathedral",
     "appraisal": {
@@ -126,3 +128,5 @@
     "newsletterUrl": "https://parish.rcdow.org.uk/clerkenwell/"
   }
 ]
+}
+

@@ -107,4 +107,6 @@ describe("The generate Dates function", () => {
     const result = generateSundayWeekRange();
     expect(result[1]).toBe("6 Sept 2025");
   });
+
+  it("should base its date calculations from the date that the ai_pipeline was last run", () => {});
 });
