@@ -1,6 +1,8 @@
 import React from "react";
 import { DayOfWeek } from "../types";
 import styles from "./headingBar.module.css";
+import pipelineData from "../../ai_pipeline/appraisals.json";
+import { getDateOfPipelineRun } from "../helpers";
 
 type HeadingBarProps = {
   selectedDayOfWeek: DayOfWeek;
@@ -9,15 +11,17 @@ type HeadingBarProps = {
 
 function HeadingBar({ selectedDayOfWeek, setDayOfWeek }: HeadingBarProps) {
   const days: DayOfWeek[] = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
-    "Sunday",
   ];
-  const dates = generateSundayWeekRange();
+  const lastPipelineRun = getDateOfPipelineRun(pipelineData);
+  console.log(lastPipelineRun);
+  const dates = generateSundayWeekRange(lastPipelineRun);
   return (
     <div data-testid="centreTextContainer" className={styles.mainDiv}>
       <h1 data-testid="chiefHeading" className={styles.heading1}>
@@ -32,11 +36,12 @@ function HeadingBar({ selectedDayOfWeek, setDayOfWeek }: HeadingBarProps) {
       </b>
       <p data-testid="dayOfWeekSelectorContainer">
         <b data-testid="dayOfWeekSelector">
-          {days.map((day) => (
+          {days.map((day, index) => (
             <button
               className={day === selectedDayOfWeek ? styles.selected : ""}
               role="button"
-              key={day}
+              key={index}
+              data-testid={day + index}
               onClick={() => {
                 setDayOfWeek(day);
               }}
@@ -52,30 +57,24 @@ function HeadingBar({ selectedDayOfWeek, setDayOfWeek }: HeadingBarProps) {
 }
 export default HeadingBar;
 
-export function generateSundayWeekRange() {
-  const today = new Date();
+export function generateSundayWeekRange(pipelineRunDate: Date) {
+  const today = pipelineRunDate;
 
-  if (thisDayIsSunday(today)) {
-    const followingSaturday = addDays(today, 6);
+  const dayOfWeek = today.getUTCDay();
 
-    return [formatDate(today), formatDate(followingSaturday)];
-  } else {
-    return ["", ""];
-  }
-}
+  const sunday = new Date(today);
+  sunday.setUTCDate(today.getUTCDate() - dayOfWeek);
 
-function thisDayIsSunday(date: Date) {
-  return date.getDay() === 0;
-}
+  const saturday = new Date(sunday);
+  saturday.setUTCDate(sunday.getUTCDate() + 6);
 
-function addDays(date: Date, days: number): Date {
-  return new Date(date.getTime() + days * 24 * 60 * 60 * 1000);
+  return [formatDate(sunday), formatDate(saturday)];
 }
 
 function formatDate(date: Date) {
   return date.toLocaleString("en-GB", {
-    day: "2-digit",
-    month: "long",
+    day: "numeric",
+    month: "short",
     year: "numeric",
   });
 }

@@ -7,7 +7,7 @@ import {
   DisplayChurchEntry,
   DisplayDodgyChurchEntry,
 } from "../../app/components/staticData";
-import styles from "../../app/components/staticData.module.css";
+import styles from "../../app/components/churchEntry.module.css";
 
 const dummyShowMoreProps = {
   disruptionReason: "someReason",
@@ -24,7 +24,9 @@ describe("The showMore function", () => {
     render(<ShowMore {...dummyShowMoreProps} />);
 
     const showMoreButton = screen.getByTestId("showMoreButton");
-    expect(showMoreButton).toHaveTextContent(/^Show more$/);
+    expect(showMoreButton).toHaveTextContent(
+      "⚠️ Maybe disrupted this week! Show More"
+    );
   });
 
   it("should display a description paragraph & newsletter url when I click 'Show more'", () => {
@@ -51,10 +53,9 @@ describe("The DisplayChurchEntry function", () => {
     render(<DisplayChurchEntry {...dummyChurchEntry} />);
 
     const link = screen.getByTestId("linkToChurchWebsite");
-    expect(link).toBeInTheDocument();
     expect(link).toHaveAttribute("href", "someurl");
     expect(link).toHaveAttribute("class", styles.churchLink);
-    expect(link).toHaveTextContent("someChurchsomePlace");
+    expect(link).toHaveTextContent("somePlacesomeChurch");
   });
   it("should render the church name correctly", () => {
     render(<DisplayChurchEntry {...dummyChurchEntry} />);
@@ -123,9 +124,11 @@ describe("The DisplayDodgyChurchEntry function", () => {
     const disruptionContainer = screen.getByTestId("disruptionContainer");
     expect(disruptionContainer).toHaveClass(styles.disruptedNotice);
   });
-  it("should include a ⚠️  disruption warning", () => {
+
+  it("should include a show more button", () => {
     render(<DisplayDodgyChurchEntry {...dummyChurchEntry} />);
-    const disruptionWarning = screen.queryByTestId("disruptionWarning");
-    expect(disruptionWarning).toBeInTheDocument();
+    const showMoreButton = screen.queryByTestId("showMoreButton");
+    const disruptionWarning = "⚠️ Maybe disrupted this week! Show More";
+    expect(showMoreButton).toHaveTextContent(disruptionWarning);
   });
 });

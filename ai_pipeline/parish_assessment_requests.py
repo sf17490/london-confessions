@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 import time
 
 from assess_with_ai import get_ai_assessment
-from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, farm_street_prompt, corpus_christi_prompt, st_peter_and_paul_prompt, st_etheldreda_prompt, st_anselm_and_st_caecilia_prompt, brompton_oratory_prompt, our_lady_queen_of_heaven_prompt, our_lady_of_the_rosary_prompt, westminster_cathedral_prompt, holy_apostles_prompt, st_james_prompt, st_marys_cadogan_street_prompt, st_simon_stock_prompt, most_precious_blood_prompt
+from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, farm_street_prompt, corpus_christi_prompt, st_peter_and_paul_prompt, st_etheldreda_prompt, st_anselm_and_st_caecilia_prompt, brompton_oratory_prompt, our_lady_queen_of_heaven_prompt, our_lady_of_the_rosary_prompt, westminster_cathedral_prompt, holy_apostles_prompt, st_james_prompt, st_marys_cadogan_street_prompt, st_simon_stock_prompt, most_precious_blood_prompt, st_charles_borromeo_prompt
 
 
 def navigate_to_parish_newsletter(driver: webdriver, url):
@@ -104,6 +104,14 @@ def get_most_precious_blood_newsletter_assessment(driver: webdriver):
     most_precious_blood_assessment = get_ai_assessment(
         most_precious_blood_prompt, most_precious_blood_newsletter_url)
     return [most_precious_blood_assessment, most_precious_blood_newsletter_url]
+
+
+def get_st_charles_borromeo_schedule_assessment(driver: webdriver):
+    st_charles_borromeo_newsletter_url = navigate_to_parish_newsletter(
+        driver, "https://parish.rcdow.org.uk/oglestreet/")
+    st_charles_borromeo_assessment = get_ai_assessment(
+        st_charles_borromeo_prompt, st_charles_borromeo_newsletter_url)
+    return [st_charles_borromeo_assessment, st_charles_borromeo_newsletter_url]
 
 
 def get_html_parish_newsletter(driver: webdriver, url):

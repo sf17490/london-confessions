@@ -4,7 +4,7 @@
   text-decoration: none;    /* Remove default underline */
 }
 
-.churchName {
+.churchLocation {
   font-weight: 600;         /* Semi-bold */
   font-size: 1.1rem;          
   color: #2d6697;          
@@ -15,7 +15,7 @@
   text-decoration: underline; /* Subtle feedback on hover */
 }
 
-.churchLocation {
+.churchName {
   font-size: 1rem;      
   color: #8c8a8a;             
   margin-left: 0.5rem;      /* Small indent for readability */
@@ -53,7 +53,7 @@
   justify-content: flex-start;
   align-items: center;
   margin-top: 0.25rem;
-  gap: 1rem; /* keeps a little breathing room */
+  gap: 1rem; 
 }
 
 .disruptionRow div {
@@ -66,7 +66,7 @@
   border: none;
   padding: 0;
   font: inherit;
-  color: #b45309; /* or your brand link color */
+  color: #b45309; 
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -83,6 +83,10 @@
   color:white
 }
 
-.black{
-  background-color: black;
+.uncheckedChurch {
+  border-left: 4px solid gray; 
+  padding: 0.25rem 0.5rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+  border-radius: 4px;
 }

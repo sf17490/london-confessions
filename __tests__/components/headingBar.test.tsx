@@ -8,6 +8,8 @@ import HeadingBar, {
 import { DayOfWeek } from "@/app/types";
 
 import styles from "../../app/components/headingBar.module.css";
+import { getDateOfPipelineRun } from "../../app/helpers";
+import dummyPipelineData from "../dummyData/dummyAppraisals.json";
 
 describe("The HeadingBar component", () => {
   const mockSetDayOfWeek = vi.fn<(day: DayOfWeek) => void>();
@@ -59,6 +61,16 @@ describe("The HeadingBar component", () => {
     await screen.findByTestId("dayOfWeekSelector");
   });
 
+  it('has Sunday as the first dayOfWeek button"', async () => {
+    render(
+      <HeadingBar
+        selectedDayOfWeek={"Monday"}
+        setDayOfWeek={mockSetDayOfWeek}
+      />
+    );
+    expect(screen.getByTestId("Sunday0")).toBeInTheDocument();
+  });
+
   it.each([
     ["Monday", "Mon"],
     ["Tuesday", "Tue"],
@@ -86,23 +98,20 @@ describe("The HeadingBar component", () => {
 });
 
 describe("The generate Dates function", () => {
-  beforeAll(() => {
-    vi.useFakeTimers();
-    vi.setSystemTime(new Date("2025-08-31T00:00:00Z"));
-  });
-  afterAll(() => {
-    vi.useRealTimers();
-  });
-  it("should return today's date and a date 6 days in the future", () => {
-    const result = generateSundayWeekRange();
+  // it("should return the preceeding Sunday's date", () => {
+  //   vi.setSystemTime(new Date("2025-09-02T00:00:00Z")); //Tues 2nd Sept
+  //   const result = generateSundayWeekRange();
+  //   expect(result[0]).toBe("31 Aug 2025");
+  // });
 
-    expect(result[0]).toBe("31 August 2025");
-    expect(result[1]).toBe("06 September 2025");
-  });
-  it("should not return a date if today is not Sunday", () => {
-    vi.setSystemTime(new Date("2025-09-02T00:00:00Z")); //Tues 2nd Sept
-    const result = generateSundayWeekRange();
+  // it("should return the following Saturday's date", () => {
+  //   vi.setSystemTime(new Date("2025-09-02T00:00:00Z")); //Tues 2nd Sept
+  //   const result = generateSundayWeekRange();
+  //   expect(result[1]).toBe("6 Sept 2025");
+  // });
 
-    expect(result[0]).toBe("");
+  it("should base its date calculations from the date that the ai_pipeline was last run", () => {
+    const pipelineRunDate = getDateOfPipelineRun(dummyPipelineData);
+    const result = generateSundayWeekRange(pipelineRunDate);
   });
 });

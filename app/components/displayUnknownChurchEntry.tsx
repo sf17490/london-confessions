@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "./displayUnknownChurchEntry.module.css";
+//import styles from "./displayUnknownChurchEntry.module.css";
+import styles from "./churchEntry.module.css";
 
 export type DisplayUnknownChurchEntryProps = {
   name: string;
@@ -22,11 +23,11 @@ function MyDisplayUnknownChurchEntry({
         href={churchData.url}
         className={styles.churchLink}
       >
-        <div data-testid="churchName" className={styles.churchName}>
+        <div data-testid="churchLocation" className={styles.churchLocation}>
           {churchData.location}
         </div>
 
-        <div data-testid="churchLocation" className={styles.churchLocation}>
+        <div data-testid="churchName" className={styles.churchName}>
           {churchData.name}
           <div data-testid="uncheckedWarning">❓Unknown Status</div>
         </div>

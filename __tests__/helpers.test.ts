@@ -1,4 +1,4 @@
-import { getDisruptionDetails } from "../app/helpers";
+import { getDisruptionDetails, getDateOfPipelineRun } from "../app/helpers";
 import appraisals from "./dummyData/dummyAppraisals.json";
 
 const expectedDisruptionDetails = {
@@ -38,5 +38,12 @@ describe("The 'getDisruptionDetails' function", () => {
       appraisals
     );
     expect(result).toStrictEqual(expectedMissingChurchDetails);
+  });
+});
+
+describe("The getDateOfPipelineRun function", () => {
+  it("should correctly find the date", () => {
+    const result = getDateOfPipelineRun(appraisals);
+    expect(result).toEqual(new Date(2025, 9, 7)); //Months are zero-indexed
   });
 });
