@@ -38,5 +38,5 @@ export function getDisruptionDetails(
 }
 
 export function getDateOfPipelineRun(appraisalsJson: pipelineData) {
-  return parse(appraisalsJson.date, "dd/MM/yyyy", new Date());
+  return parse(appraisalsJson.date, "dd-MM-yyyy", new Date());
 }
