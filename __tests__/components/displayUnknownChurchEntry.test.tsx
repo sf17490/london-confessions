@@ -6,7 +6,7 @@ import MyDisplayUnknownChurchEntry, {
   DisplayUnknownChurchEntryProps,
 } from "../../app/components/displayUnknownChurchEntry";
 
-import styles from "../../app/components/displayUnknownChurchEntry.module.css";
+import styles from "../../app/components/churchEntry.module.css";
 
 const dummyData: DisplayUnknownChurchEntryProps = {
   name: "some church",

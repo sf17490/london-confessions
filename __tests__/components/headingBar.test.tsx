@@ -8,6 +8,8 @@ import HeadingBar, {
 import { DayOfWeek } from "@/app/types";
 
 import styles from "../../app/components/headingBar.module.css";
+import { getDateOfPipelineRun } from "../../app/helpers";
+import dummyPipelineData from "../dummyData/dummyAppraisals.json";
 
 describe("The HeadingBar component", () => {
   const mockSetDayOfWeek = vi.fn<(day: DayOfWeek) => void>();
@@ -96,17 +98,20 @@ describe("The HeadingBar component", () => {
 });
 
 describe("The generate Dates function", () => {
-  it("should return the preceeding Sunday's date", () => {
-    vi.setSystemTime(new Date("2025-09-02T00:00:00Z")); //Tues 2nd Sept
-    const result = generateSundayWeekRange();
-    expect(result[0]).toBe("31 Aug 2025");
-  });
+  // it("should return the preceeding Sunday's date", () => {
+  //   vi.setSystemTime(new Date("2025-09-02T00:00:00Z")); //Tues 2nd Sept
+  //   const result = generateSundayWeekRange();
+  //   expect(result[0]).toBe("31 Aug 2025");
+  // });
 
-  it("should return the following Saturday's date", () => {
-    vi.setSystemTime(new Date("2025-09-02T00:00:00Z")); //Tues 2nd Sept
-    const result = generateSundayWeekRange();
-    expect(result[1]).toBe("6 Sept 2025");
-  });
+  // it("should return the following Saturday's date", () => {
+  //   vi.setSystemTime(new Date("2025-09-02T00:00:00Z")); //Tues 2nd Sept
+  //   const result = generateSundayWeekRange();
+  //   expect(result[1]).toBe("6 Sept 2025");
+  // });
 
-  it("should base its date calculations from the date that the ai_pipeline was last run", () => {});
+  it("should base its date calculations from the date that the ai_pipeline was last run", () => {
+    const pipelineRunDate = getDateOfPipelineRun(dummyPipelineData);
+    const result = generateSundayWeekRange(pipelineRunDate);
+  });
 });

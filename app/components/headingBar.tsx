@@ -1,6 +1,8 @@
 import React from "react";
 import { DayOfWeek } from "../types";
 import styles from "./headingBar.module.css";
+import pipelineData from "../../ai_pipeline/appraisals.json";
+import { getDateOfPipelineRun } from "../helpers";
 
 type HeadingBarProps = {
   selectedDayOfWeek: DayOfWeek;
@@ -17,7 +19,9 @@ function HeadingBar({ selectedDayOfWeek, setDayOfWeek }: HeadingBarProps) {
     "Friday",
     "Saturday",
   ];
-  const dates = generateSundayWeekRange();
+  const lastPipelineRun = getDateOfPipelineRun(pipelineData);
+  console.log(lastPipelineRun);
+  const dates = generateSundayWeekRange(lastPipelineRun);
   return (
     <div data-testid="centreTextContainer" className={styles.mainDiv}>
       <h1 data-testid="chiefHeading" className={styles.heading1}>
@@ -53,8 +57,8 @@ function HeadingBar({ selectedDayOfWeek, setDayOfWeek }: HeadingBarProps) {
 }
 export default HeadingBar;
 
-export function generateSundayWeekRange() {
-  const today = new Date();
+export function generateSundayWeekRange(pipelineRunDate: Date) {
+  const today = pipelineRunDate;
 
   const dayOfWeek = today.getUTCDay();
 
