@@ -284,6 +284,37 @@ function displayChurch(name: string, url: string, location: string) {
   );
 }
 
+export type DisplayChurchEntryProps = {
+  name: string;
+  url: string;
+  location: string;
+};
+
+export function DisplayChurchEntry({
+  name,
+  url,
+  location,
+}: DisplayChurchEntryProps) {
+  return (
+    <div className={styles.allGood}>
+      <a
+        data-testid="linkToChurchWebsite"
+        href={url}
+        key={`${name}-church`}
+        className={styles.churchLink}
+      >
+        <div data-testid="churchLocation" className={styles.churchLocation}>
+          {location}
+        </div>
+        <div data-testid="churchName" className={styles.churchName}>
+          {name}
+        </div>
+        <div className={styles.goodService}>✅ Good service</div>
+      </a>
+    </div>
+  );
+}
+
 export type DisplayDodgyChurchEntryProps = {
   name: string;
   url: string;
@@ -304,45 +335,14 @@ export function DisplayDodgyChurchEntry({
         className={styles.churchLink}
         key={`${name}-church`}
       >
-        <div data-testid="churchName" className={styles.churchName}>
+        <div data-testid="churchLocation" className={styles.churchLocation}>
           {location}
         </div>
-        <div data-testid="churchLocation" className={styles.churchLocation}>
+        <div data-testid="churchName" className={styles.churchName}>
           {name}
         </div>
       </a>
       <ShowMore {...showMoreDetails} />
-    </div>
-  );
-}
-
-export type DisplayChurchEntryProps = {
-  name: string;
-  url: string;
-  location: string;
-};
-
-export function DisplayChurchEntry({
-  name,
-  url,
-  location,
-}: DisplayChurchEntryProps) {
-  return (
-    <div className={styles.allGood}>
-      <a
-        data-testid="linkToChurchWebsite"
-        href={url}
-        key={`${name}-church`}
-        className={styles.churchLink}
-      >
-        <div data-testid="churchName" className={styles.churchName}>
-          {location}
-        </div>
-        <div data-testid="churchLocation" className={styles.churchLocation}>
-          {name}
-        </div>
-        <div className={styles.goodService}>✅ Good service</div>
-      </a>
     </div>
   );
 }

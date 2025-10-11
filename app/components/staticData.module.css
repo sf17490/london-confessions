@@ -4,7 +4,7 @@
   text-decoration: none;    /* Remove default underline */
 }
 
-.churchName {
+.churchLocation {
   font-weight: 600;         /* Semi-bold */
   font-size: 1.1rem;          
   color: #2d6697;          
@@ -15,7 +15,7 @@
   text-decoration: underline; /* Subtle feedback on hover */
 }
 
-.churchLocation {
+.churchName {
   font-size: 1rem;      
   color: #8c8a8a;             
   margin-left: 0.5rem;      /* Small indent for readability */
