@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { DayOfWeek } from "../types";
-import styles from "./staticData.module.css";
+import styles from "./churchEntry.module.css";
 import appraisals from "../../ai_pipeline/appraisals.json";
 import { getDisruptionDetails } from "../helpers";
 import {

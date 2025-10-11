@@ -7,7 +7,7 @@ import {
   DisplayChurchEntry,
   DisplayDodgyChurchEntry,
 } from "../../app/components/staticData";
-import styles from "../../app/components/staticData.module.css";
+import styles from "../../app/components/churchEntry.module.css";
 
 const dummyShowMoreProps = {
   disruptionReason: "someReason",
