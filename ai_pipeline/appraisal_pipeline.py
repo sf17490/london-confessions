@@ -79,9 +79,10 @@ st_simon_stock_assessment_and_newsletter = get_st_simon_stock_newsletter_assessm
     driver)
 
 today = date.today()
+formatted_date = today.strftime("%d-%m-%Y")
 
 appraisals = {
-    "date": today,
+    "date": formatted_date,
     "appraisals":
     [{
         "name": "St George's Cathedral",
@@ -195,6 +196,9 @@ appraisals = {
 
     ]
 }
+
+print("appraisals is...")
+print(appraisals)
 
 appraisals_json = json.dumps(appraisals, indent=2, ensure_ascii=False)
 
