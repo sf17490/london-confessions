@@ -1,5 +1,5 @@
 {
-  "date": "11-10-2025",
+  "date": "12-10-2025",
   "appraisals": [
     {
       "name": "St George's Cathedral",
@@ -12,7 +12,7 @@
       "name": "St Patrick's",
       "appraisal": {
         "changed": "true",
-        "reason": "Please note: Weekday Confessions are held from 12:15pm to 12:40pm (Monday to Friday), not from 12:00pm. Saturday Confessions remain from 5:30pm to 5:55pm. No Sunday Confessions are scheduled."
+        "reason": "According to this newsletter, Confessions are Monday to Friday from 12.15pm to 12.40pm, not 12.00pm to 12.40pm. Saturday Confessions remain 5.30pm to 5.55pm, with none scheduled on Sundays."
       },
       "newsletterUrl": "https://cdn.prod.website-files.com/604cd9b97ea6bcb8e1d06a8b/68e8eb56af3bdb0390432ab7_Sunday%2012th%20October%20-%2028th%20Sunday%20in%20Ordinary%20Time.pdf"
     },
@@ -34,7 +34,7 @@
       "name": "Corpus Christi",
       "appraisal": {
         "changed": "true",
-        "reason": "According to this newsletter, Confessions are heard for half an hour before all Masses. On Monday there is also a 6:30 pm Mass, so Confessions are additionally 6:00-6:30 pm. Therefore Monday is not limited to 12:35-1:05. Confessions may also be arranged by appointment."
+        "reason": "According to the bulletin, confessions are heard for half an hour before all Masses, or by appointment. This includes additional times such as 6:00–6:30 pm on Mondays before the 6:30 pm Mass, as well as before the Saturday Vigil and Sunday Masses. Therefore, the schedule is not limited to Monday and Wednesday–Friday 12:35–13:05. Please refer to the Mass timetable to identify the corresponding confession times."
       },
       "newsletterUrl": "https://corpuschristimaidenlane.org.uk/wp-content/uploads/2025/10/Newsletter-28th-Sunday-in-Ordinary-Time.pdf"
     },
@@ -63,7 +63,7 @@
       "name": "Our Lady, Queen of Heaven",
       "appraisal": {
         "changed": "true",
-        "reason": "According to the parish notice, the Sacrament of Reconciliation is available on Saturdays from 4:15 pm to 5:15 pm, or by appointment. The previously stated 4:15–4:45 pm window is not correct."
+        "reason": "According to the parish newsletter, the Sacrament of Reconciliation is available on Saturdays from 16:15 to 17:15. Confessions are also available by appointment."
       },
       "newsletterUrl": "https://parish.rcdow.org.uk/queensway/wp-content/uploads/sites/177/2025/10/10-12.pdf"
     },
