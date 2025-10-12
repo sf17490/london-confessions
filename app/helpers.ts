@@ -38,5 +38,9 @@ export function getDisruptionDetails(
 }
 
 export function getDateOfPipelineRun(appraisalsJson: pipelineData) {
-  return parse(appraisalsJson.date, "dd-MM-yyyy", new Date());
+  const result = parse(appraisalsJson.date, "dd-MM-yyyy", new Date());
+  const utcDate = new Date( //Forces UTC so we don't get caught out by BST
+    Date.UTC(result.getFullYear(), result.getMonth(), result.getDate())
+  );
+  return utcDate;
 }

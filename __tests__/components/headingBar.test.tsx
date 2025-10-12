@@ -98,20 +98,30 @@ describe("The HeadingBar component", () => {
 });
 
 describe("The generate Dates function", () => {
-  // it("should return the preceeding Sunday's date", () => {
-  //   vi.setSystemTime(new Date("2025-09-02T00:00:00Z")); //Tues 2nd Sept
-  //   const result = generateSundayWeekRange();
-  //   expect(result[0]).toBe("31 Aug 2025");
-  // });
-
-  // it("should return the following Saturday's date", () => {
-  //   vi.setSystemTime(new Date("2025-09-02T00:00:00Z")); //Tues 2nd Sept
-  //   const result = generateSundayWeekRange();
-  //   expect(result[1]).toBe("6 Sept 2025");
-  // });
-
   it("should base its date calculations from the date that the ai_pipeline was last run", () => {
     const pipelineRunDate = getDateOfPipelineRun(dummyPipelineData);
     const result = generateSundayWeekRange(pipelineRunDate);
+    expect(result[0]).toBe("5 Oct 2025");
+    expect(result[1]).toBe("11 Oct 2025");
+  });
+
+  const dummyAppraisals2 = {
+    date: "05-10-2025",
+    appraisals: [
+      {
+        name: "ignored",
+        appraisal: {
+          changed: "unknown",
+        },
+        newsletterUrl: "ignored",
+      },
+    ],
+  };
+
+  it("should return dates for the forthcoming week if pipeline was run on a Sunday", () => {
+    const pipelineRunDate = getDateOfPipelineRun(dummyAppraisals2);
+    const result = generateSundayWeekRange(pipelineRunDate);
+    expect(result[0]).toBe("5 Oct 2025");
+    expect(result[1]).toBe("11 Oct 2025");
   });
 });

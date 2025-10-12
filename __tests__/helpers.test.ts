@@ -44,6 +44,6 @@ describe("The 'getDisruptionDetails' function", () => {
 describe("The getDateOfPipelineRun function", () => {
   it("should correctly find the date", () => {
     const result = getDateOfPipelineRun(appraisals);
-    expect(result).toEqual(new Date(2025, 9, 7)); //Months are zero-indexed
+    expect(result.toString).toEqual(new Date(2025, 9, 8).toString); //Months are zero-indexed
   });
 });

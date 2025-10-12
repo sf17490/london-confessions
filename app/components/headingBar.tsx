@@ -59,14 +59,22 @@ export default HeadingBar;
 
 export function generateSundayWeekRange(pipelineRunDate: Date) {
   const today = pipelineRunDate;
+  console.log("today:");
+  console.log(today);
 
   const dayOfWeek = today.getUTCDay();
+  console.log("dayOfWeek:");
+  console.log(dayOfWeek);
 
   const sunday = new Date(today);
   sunday.setUTCDate(today.getUTCDate() - dayOfWeek);
+  console.log("sunday:");
+  console.log(sunday);
 
   const saturday = new Date(sunday);
   saturday.setUTCDate(sunday.getUTCDate() + 6);
+  console.log("saturday:");
+  console.log(saturday);
 
   return [formatDate(sunday), formatDate(saturday)];
 }
