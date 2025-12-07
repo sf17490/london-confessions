@@ -10,8 +10,6 @@ I set an AI loose in the streets of London with the instruction to "Do Catholic 
 
 The confession times of every church in Central London (inside Zone 1 on the [tube map](https://upload.wikimedia.org/wikipedia/commons/4/44/London_Underground_Zone_1_Highlighted.svg)) are listed on this website.\*
 
-<!-- <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/London_Underground_Zone_1.png" alt="from wikipedia"> -->
-
 For each church, we give chatGPT a copy of this week's parish newsletter and ask it "Are these confession times accurate according to this newsletter?" If the times are inaccurate, chatGPT gives us a brief assessment highlighting the difference. This is where the "disruption" notices come from:
 
 ![Example of disruption notice](image-2.png)
