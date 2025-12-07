@@ -8,7 +8,7 @@ I set an AI loose in the streets of London with the instruction to "Do Catholic 
 
 ## How it works: Non-Technical Explanation
 
-The confession times of every church in Central London (Zone 1) are listed on this website.(\*)
+The confession times of every church in Central London (inside Zone 1 on the [tube map](https://upload.wikimedia.org/wikipedia/commons/4/44/London_Underground_Zone_1_Highlighted.svg)) are listed on this website.\*
 
 For each church, we give chatGPT a copy of this week's parish newsletter and ask it "Are these confession times accurate according to this newsletter?" If the times are inaccurate, chatGPT gives us a brief assessment highlighting the difference. This is where the "disruption" notices come from:
 
@@ -22,7 +22,7 @@ Some churches are marked as "Unknown status". This can happen for a few reasons,
 - The AI took too long to understand the newsletter so we gave up.
 - The AI has gone on strike until I put more money into my openAI account.
 
-(\*) Only English-speaking, Catholic churches that maintain a publically accessible newsletter are included. So churches like the Ukrainian Catholic Cathedral in Mayfair are excluded from this website. I don't want to send American tourists to confess their sins in Ukrainian at 6:45AM!
+\* Only English-speaking, Catholic churches that maintain a publicly accessible newsletter are included. So churches like the Ukrainian Catholic Cathedral in Mayfair are excluded from this website.
 
 ## How it works: "Carlo Acutis" Level explanation
 

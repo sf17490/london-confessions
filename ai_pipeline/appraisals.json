@@ -1,5 +1,5 @@
 {
-  "date": "12-10-2025",
+  "date": "14-10-2025",
   "appraisals": [
     {
       "name": "St George's Cathedral",
@@ -12,7 +12,7 @@
       "name": "St Patrick's",
       "appraisal": {
         "changed": "true",
-        "reason": "According to this newsletter, Confessions are Monday to Friday from 12.15pm to 12.40pm, not 12.00pm to 12.40pm. Saturday Confessions remain 5.30pm to 5.55pm, with none scheduled on Sundays."
+        "reason": "According to this newsletter, weekday confessions are 12:15pm–12:40pm, not 12:00pm–12:40pm. Saturday confessions remain 5:30pm–5:55pm. No Sunday confession times are listed."
       },
       "newsletterUrl": "https://cdn.prod.website-files.com/604cd9b97ea6bcb8e1d06a8b/68e8eb56af3bdb0390432ab7_Sunday%2012th%20October%20-%2028th%20Sunday%20in%20Ordinary%20Time.pdf"
     },
@@ -34,7 +34,7 @@
       "name": "Corpus Christi",
       "appraisal": {
         "changed": "true",
-        "reason": "According to the bulletin, confessions are heard for half an hour before all Masses, or by appointment. This includes additional times such as 6:00–6:30 pm on Mondays before the 6:30 pm Mass, as well as before the Saturday Vigil and Sunday Masses. Therefore, the schedule is not limited to Monday and Wednesday–Friday 12:35–13:05. Please refer to the Mass timetable to identify the corresponding confession times."
+        "reason": "According to the bulletin, Confessions are heard for half an hour before all Masses, not only Monday and Wednesday–Friday at 12:35–13:05. This includes weekend Masses and the Monday 6:30 pm Mass. Confessions are also available by appointment/upon request."
       },
       "newsletterUrl": "https://corpuschristimaidenlane.org.uk/wp-content/uploads/2025/10/Newsletter-28th-Sunday-in-Ordinary-Time.pdf"
     },
@@ -62,8 +62,7 @@
     {
       "name": "Our Lady, Queen of Heaven",
       "appraisal": {
-        "changed": "true",
-        "reason": "According to the parish newsletter, the Sacrament of Reconciliation is available on Saturdays from 16:15 to 17:15. Confessions are also available by appointment."
+        "changed": "unknown"
       },
       "newsletterUrl": "https://parish.rcdow.org.uk/queensway/wp-content/uploads/sites/177/2025/10/10-12.pdf"
     },
@@ -77,7 +76,8 @@
     {
       "name": "Westminster Cathedral",
       "appraisal": {
-        "changed": "false"
+        "changed": "true",
+        "reason": "Please note that, for this week, Wednesday 15 October does not have 11:30am-12:30pm confessions; only 4:30pm-5:30pm is scheduled. All other weekday, Saturday, and Sunday confession times remain unchanged."
       },
       "newsletterUrl": "https://westminstercathedral.org.uk/reconciliation/"
     },
@@ -93,7 +93,7 @@
       "appraisal": {
         "changed": "false"
       },
-      "newsletterUrl": "https://www.sjrcc.org.uk/_files/ugd/ac578c_ef8bbd9ee4c5490fa61db9966c50ca96.pdf"
+      "newsletterUrl": "https://www.sjrcc.org.uk/_files/ugd/ac578c_8fbaeca94fc34b4cb8624c3a5ad7b3cd.pdf"
     },
     {
       "name": "St Mary's Cadogan Street",
