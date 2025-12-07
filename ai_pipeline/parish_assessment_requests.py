@@ -142,7 +142,7 @@ def get_brompton_oratory_newsletter_assessment(driver: webdriver):
 def get_westminster_cathedral_schedule_table_html(driver: webdriver):
     confessions_page_url = "https://westminstercathedral.org.uk/reconciliation/"
     driver.get(confessions_page_url)
-    time.sleep(3)
+    time.sleep(5)
     # filter out irrelevant events
     mass_times_button = driver.find_element(
         By.XPATH, "//label[contains(text(), 'Mass Times')]")
