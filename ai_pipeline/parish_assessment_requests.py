@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
+import urllib3.exceptions
 
 from assess_with_ai import get_ai_assessment
 from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, farm_street_prompt, corpus_christi_prompt, st_peter_and_paul_prompt, st_etheldreda_prompt, st_anselm_and_st_caecilia_prompt, brompton_oratory_prompt, our_lady_queen_of_heaven_prompt, our_lady_of_the_rosary_prompt, westminster_cathedral_prompt, holy_apostles_prompt, st_james_prompt, st_marys_cadogan_street_prompt, st_simon_stock_prompt, most_precious_blood_prompt, st_charles_borromeo_prompt
@@ -169,7 +170,7 @@ def get_westminster_cathedral_schedule_assessment(driver: webdriver):
         ai_assessment = get_ai_assessment(
             westminster_cathedral_prompt + confession_schedule_html)
         return [ai_assessment, confession_webpage_url]
-    except (TimeoutError) as e:
+    except (TimeoutError, urllib3.exceptions.ReadTimeoutError) as e:
         print(e)
     return ["{\"changed\": \"unknown\"}", "https://westminstercathedral.org.uk/reconciliation/"]
 
