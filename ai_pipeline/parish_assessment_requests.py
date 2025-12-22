@@ -160,13 +160,18 @@ def get_westminster_cathedral_schedule_table_html(driver: webdriver):
     return events_table_html
 
 
+# This function is flaky in AWS. I've added a try/catch as a "temporary" fix:
 def get_westminster_cathedral_schedule_assessment(driver: webdriver):
-    confession_webpage_url = "https://westminstercathedral.org.uk/reconciliation/"
-    confession_schedule_html = get_westminster_cathedral_schedule_table_html(
-        driver)
-    ai_assessment = get_ai_assessment(
-        westminster_cathedral_prompt + confession_schedule_html)
-    return [ai_assessment, confession_webpage_url]
+    try:
+        confession_webpage_url = "https://westminstercathedral.org.uk/reconciliation/"
+        confession_schedule_html = get_westminster_cathedral_schedule_table_html(
+            driver)
+        ai_assessment = get_ai_assessment(
+            westminster_cathedral_prompt + confession_schedule_html)
+        return [ai_assessment, confession_webpage_url]
+    except (TimeoutError) as e:
+        print(e)
+    return ["{\"changed\": \"unknown\"}", "https://westminstercathedral.org.uk/reconciliation/"]
 
 
 def navigate_to_holy_apostles_newsletter(driver: webdriver):
