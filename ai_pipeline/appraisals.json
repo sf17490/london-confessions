@@ -1,10 +1,10 @@
 {
-  "date": "14-10-2025",
+  "date": "22-12-2025",
   "appraisals": [
     {
       "name": "St George's Cathedral",
       "appraisal": {
-        "changed": "false"
+        "changed": "unknown"
       },
       "newsletterUrl": "https://www.stgeorgescathedral.org.uk/media/1060/newsletter.pdf"
     },
@@ -12,31 +12,32 @@
       "name": "St Patrick's",
       "appraisal": {
         "changed": "true",
-        "reason": "According to this newsletter, weekday confessions are 12:15pm–12:40pm, not 12:00pm–12:40pm. Saturday confessions remain 5:30pm–5:55pm. No Sunday confession times are listed."
+        "reason": "Per this newsletter, weekday confessions are Monday to Friday from 12.15pm to 12.40pm, not 12.00pm to 12.40pm. Saturday confessions remain 5.30pm to 5.55pm. No Sunday confessions are listed."
       },
-      "newsletterUrl": "https://cdn.prod.website-files.com/604cd9b97ea6bcb8e1d06a8b/68e8eb56af3bdb0390432ab7_Sunday%2012th%20October%20-%2028th%20Sunday%20in%20Ordinary%20Time.pdf"
+      "newsletterUrl": "https://cdn.prod.website-files.com/604cd9b97ea6bcb8e1d06a8b/69451dfb52831fa8f0dcfe6b_Sunday%2021st%20December%20-%204th%20Sunday%20of%20Advent.pdf"
     },
     {
       "name": "Our Lady of Mount Carmel & St Simon Stock",
       "appraisal": {
-        "changed": "unknown"
+        "changed": "true",
+        "reason": "Please note that from Christmas Day (25 Dec) to Epiphany Sunday (6 Jan) there will be no usual confessions or Exposition of the Blessed Sacrament. A Special New Year Vigil Adoration will take place as announced. Outside this period, the regular schedule is Mon–Fri 17:40–18:00 and Saturdays 11:30–12:15 & 17:00–17:50, with no Sunday confessions."
       },
-      "newsletterUrl": "https://carmelitechurch.org/wp-content/uploads/2025/10/Readings-28th-Sunday-Ordinary-Time-12th-October-2025.pdf"
+      "newsletterUrl": "https://carmelitechurch.org/wp-content/uploads/2025/12/Sunday-21st-December-2025.pdf"
     },
     {
       "name": "Immaculate Conception",
       "appraisal": {
         "changed": "false"
       },
-      "newsletterUrl": "https://www.farmstreet.org.uk/s/Twenty-Sixth-Sunday-in-Ordinary-Time.pdf"
+      "newsletterUrl": "https://www.farmstreet.org.uk/s/Third-Sunday-of-Advent-3mwp.pdf"
     },
     {
       "name": "Corpus Christi",
       "appraisal": {
         "changed": "true",
-        "reason": "According to the bulletin, Confessions are heard for half an hour before all Masses, not only Monday and Wednesday–Friday at 12:35–13:05. This includes weekend Masses and the Monday 6:30 pm Mass. Confessions are also available by appointment/upon request."
+        "reason": "According to the bulletin, Confessions are heard for half an hour before all Masses, not only Monday and Wednesday–Friday at 12:35–13:05. Confessions may also be arranged by appointment with the Rector. Please refer to the current Mass schedule for applicable times each day."
       },
-      "newsletterUrl": "https://corpuschristimaidenlane.org.uk/wp-content/uploads/2025/10/Newsletter-28th-Sunday-in-Ordinary-Time.pdf"
+      "newsletterUrl": "https://corpuschristimaidenlane.org.uk/wp-content/uploads/2025/12/Newsletter-Fourth-Sunday-in-Advent-2025-1.pdf"
     },
     {
       "name": "St Etheldreda's",
@@ -62,22 +63,22 @@
     {
       "name": "Our Lady, Queen of Heaven",
       "appraisal": {
-        "changed": "unknown"
+        "changed": "true",
+        "reason": "According to the PDF, the Sacrament of Reconciliation is available on Saturdays from 4.15pm to 5.15pm, not until 4.45pm. Confessions are also available by appointment. Please note the extended Saturday time window as stated."
       },
-      "newsletterUrl": "https://parish.rcdow.org.uk/queensway/wp-content/uploads/sites/177/2025/10/10-12.pdf"
+      "newsletterUrl": "https://parish.rcdow.org.uk/queensway/wp-content/uploads/sites/177/2025/12/12-14.pdf"
     },
     {
       "name": "Our Lady of the Rosary",
       "appraisal": {
-        "changed": "false"
+        "changed": "unknown"
       },
-      "newsletterUrl": "https://parish.rcdow.org.uk/marylebone/wp-content/uploads/sites/188/2025/10/Twenty-Eighth-Sunday-in-Ordinary-Time-Year-C.pdf"
+      "newsletterUrl": "https://parish.rcdow.org.uk/marylebone/wp-content/uploads/sites/188/2025/12/Fourth-Sunday-of-Advent-Year-A.pdf"
     },
     {
       "name": "Westminster Cathedral",
       "appraisal": {
-        "changed": "true",
-        "reason": "Please note that, for this week, Wednesday 15 October does not have 11:30am-12:30pm confessions; only 4:30pm-5:30pm is scheduled. All other weekday, Saturday, and Sunday confession times remain unchanged."
+        "changed": "false"
       },
       "newsletterUrl": "https://westminstercathedral.org.uk/reconciliation/"
     },
@@ -86,21 +87,22 @@
       "appraisal": {
         "changed": "false"
       },
-      "newsletterUrl": "https://parish.rcdow.org.uk/pimlico/wp-content/uploads/sites/38/2025/10/Newsletter-12th-October-2025.pdf"
+      "newsletterUrl": "https://parish.rcdow.org.uk/pimlico/wp-content/uploads/sites/38/2025/12/Newsletter-21st-December-2025-1.pdf"
     },
     {
       "name": "St James'",
       "appraisal": {
-        "changed": "false"
+        "changed": "true",
+        "reason": "While the usual timetable is weekdays 12 noon–1 pm and Saturdays 4.45–5.30 pm, this newsletter announces a temporary change. During the Christmas Octave there will be no weekday Confessions, and on Bank Holidays the church closes after the 10 am Mass. Christmas Day and New Year’s Day are exceptions."
       },
-      "newsletterUrl": "https://www.sjrcc.org.uk/_files/ugd/ac578c_8fbaeca94fc34b4cb8624c3a5ad7b3cd.pdf"
+      "newsletterUrl": "https://www.sjrcc.org.uk/_files/ugd/ac578c_45e6513547cd49e089740c2d0dcf4aae.pdf"
     },
     {
       "name": "St Mary's Cadogan Street",
       "appraisal": {
         "changed": "unknown"
       },
-      "newsletterUrl": "https://parish.rcdow.org.uk/pimlico/wp-content/uploads/sites/38/2025/10/Newsletter-12th-October-2025.pdf"
+      "newsletterUrl": "https://parish.rcdow.org.uk/pimlico/wp-content/uploads/sites/38/2025/12/Newsletter-21st-December-2025-1.pdf"
     },
     {
       "name": "Most Precious Blood",
@@ -112,9 +114,9 @@
     {
       "name": "St Charles Borromeo",
       "appraisal": {
-        "changed": "false"
+        "changed": "unknown"
       },
-      "newsletterUrl": "https://parish.rcdow.org.uk/oglestreet/wp-content/uploads/sites/169/2025/10/28th-Sunday-in-Ordinary-Time-2025.pdf"
+      "newsletterUrl": "https://parish.rcdow.org.uk/oglestreet/wp-content/uploads/sites/169/2025/10/Novena-to-St-Charles-Borromeo.pdf"
     },
     {
       "name": "Our Lady of the Assumption",
