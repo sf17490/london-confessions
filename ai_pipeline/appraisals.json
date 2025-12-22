@@ -12,7 +12,7 @@
       "name": "St Patrick's",
       "appraisal": {
         "changed": "true",
-        "reason": "Per this newsletter, weekday confessions are Monday to Friday from 12.15pm to 12.40pm, not 12.00pm to 12.40pm. Saturday confessions remain 5.30pm to 5.55pm. No Sunday confessions are listed."
+        "reason": "Per the newsletter, Confessions are Monday to Friday from 12.15pm to 12.40pm, not from 12.00pm. Saturday Confessions are from 5.30pm to 5.55pm as stated. No Confessions are listed for Sundays."
       },
       "newsletterUrl": "https://cdn.prod.website-files.com/604cd9b97ea6bcb8e1d06a8b/69451dfb52831fa8f0dcfe6b_Sunday%2021st%20December%20-%204th%20Sunday%20of%20Advent.pdf"
     },
@@ -20,7 +20,7 @@
       "name": "Our Lady of Mount Carmel & St Simon Stock",
       "appraisal": {
         "changed": "true",
-        "reason": "Please note that from Christmas Day (25 Dec) to Epiphany Sunday (6 Jan) there will be no usual confessions or Exposition of the Blessed Sacrament. A Special New Year Vigil Adoration will take place as announced. Outside this period, the regular schedule is Mon–Fri 17:40–18:00 and Saturdays 11:30–12:15 & 17:00–17:50, with no Sunday confessions."
+        "reason": "As announced, there will be no usual confessions from Christmas Day (25 Dec) to Epiphany Sunday (6 Jan), except during the Special New Year Vigil Adoration. Regular weekday (17:40–18:00) and Saturday (11:30–12:15 and 17:00–17:50) confessions apply outside this period; there are no Sunday confessions."
       },
       "newsletterUrl": "https://carmelitechurch.org/wp-content/uploads/2025/12/Sunday-21st-December-2025.pdf"
     },
@@ -29,13 +29,13 @@
       "appraisal": {
         "changed": "false"
       },
-      "newsletterUrl": "https://www.farmstreet.org.uk/s/Third-Sunday-of-Advent-3mwp.pdf"
+      "newsletterUrl": "https://www.farmstreet.org.uk/s/Fourth-Sunday-of-Advent-y8l3.pdf"
     },
     {
       "name": "Corpus Christi",
       "appraisal": {
         "changed": "true",
-        "reason": "According to the bulletin, Confessions are heard for half an hour before all Masses, not only Monday and Wednesday–Friday at 12:35–13:05. Confessions may also be arranged by appointment with the Rector. Please refer to the current Mass schedule for applicable times each day."
+        "reason": "Per this bulletin, Confessions are heard for half an hour before all Masses, not limited to Monday and Wednesday–Friday at 12:35–13:05. This includes additional confession times before evening and weekend Masses, as well as on solemnities. Please refer to the published Mass schedule to determine the applicable half-hour before each Mass. Confessions may also be arranged by appointment with the Rector."
       },
       "newsletterUrl": "https://corpuschristimaidenlane.org.uk/wp-content/uploads/2025/12/Newsletter-Fourth-Sunday-in-Advent-2025-1.pdf"
     },
@@ -44,7 +44,7 @@
       "appraisal": {
         "changed": "false"
       },
-      "newsletterUrl": "https://www.stetheldreda.co.uk/_files/ugd/a0bc29_3b88313b50084fe7a41f74e9b68878d7.pdf"
+      "newsletterUrl": ""
     },
     {
       "name": "St Anselm & St Cæcilia",
@@ -64,7 +64,7 @@
       "name": "Our Lady, Queen of Heaven",
       "appraisal": {
         "changed": "true",
-        "reason": "According to the PDF, the Sacrament of Reconciliation is available on Saturdays from 4.15pm to 5.15pm, not until 4.45pm. Confessions are also available by appointment. Please note the extended Saturday time window as stated."
+        "reason": "According to the parish notice, the Sacrament of Reconciliation is available on Saturdays from 4.15 pm to 5.15 pm, or by appointment. The 4.15–4.45 pm time you cited is therefore not correct."
       },
       "newsletterUrl": "https://parish.rcdow.org.uk/queensway/wp-content/uploads/sites/177/2025/12/12-14.pdf"
     },
@@ -78,7 +78,8 @@
     {
       "name": "Westminster Cathedral",
       "appraisal": {
-        "changed": "false"
+        "changed": "true",
+        "reason": "For the current week, weekday confessions are 11:00am–1:00pm (Mon–Wed), with an additional 4:00pm–6:00pm on Mon–Tue; Thursday has no confessions; Friday is 11:00am–12:30pm only. Saturday confessions are 10:30am–12:30pm and 5:00pm–6:00pm. Sunday confessions remain 10:30am–12:30pm and 5:00pm–6:45pm. Please refer to the current newsletter for exact times."
       },
       "newsletterUrl": "https://westminstercathedral.org.uk/reconciliation/"
     },
@@ -93,7 +94,7 @@
       "name": "St James'",
       "appraisal": {
         "changed": "true",
-        "reason": "While the usual timetable is weekdays 12 noon–1 pm and Saturdays 4.45–5.30 pm, this newsletter announces a temporary change. During the Christmas Octave there will be no weekday Confessions, and on Bank Holidays the church closes after the 10 am Mass. Christmas Day and New Year’s Day are exceptions."
+        "reason": "Weekday Confessions (12 noon–1 pm) are suspended during the Christmas Octave, as stated in the newsletter. Saturday Confessions (4:45–5:30 pm) continue as usual."
       },
       "newsletterUrl": "https://www.sjrcc.org.uk/_files/ugd/ac578c_45e6513547cd49e089740c2d0dcf4aae.pdf"
     },
