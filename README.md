@@ -26,4 +26,4 @@ Some churches are marked as "Unknown status". This can happen for a few reasons,
 
 ## How it works: "Carlo Acutis" Level explanation
 
-This is a Next.js project with a Typescript frontend and a Python backend. Inside the `ai_pipeline` folder, newsletters are scraped from parish websites using Selenium. These newsletters are posted to the chatGPT API with the relevant prompt (see `prompts.py`) and are then written to json (`appraisals.json`). That json file is used to configure the frontend.
+This is a Next.js project with a Typescript frontend and a Python backend. Inside the `ai_pipeline` folder, newsletters are scraped from parish websites using Selenium. These newsletters are posted to the chatGPT API with the relevant prompt (see `prompts.py`) and are then written to json (`appraisals.json`). That json file is used to configure the frontend. 
