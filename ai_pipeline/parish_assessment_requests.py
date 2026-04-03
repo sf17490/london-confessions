@@ -1,4 +1,8 @@
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+
 from selenium.webdriver.common.by import By
 import time
 import urllib3.exceptions
@@ -132,9 +136,24 @@ def get_st_anselm_and_st_caecilia_newsletter_assessment(driver: webdriver):
     return [ai_assessment, newsletter_url]
 
 
+def get_brompton_oratory_newsletter_text(driver: webdriver):
+    newsletters_here = "https://www.bromptonoratory.co.uk/news#Weekly"
+    driver.get(newsletters_here)
+    link_to_latest_newsletter = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable(
+            (By.XPATH, "(//a[contains(@href, 'blog/sunday')])[1]"))
+    )
+
+    link_to_latest_newsletter.click()
+
+    time.sleep(2)
+    newsletter_text = driver.find_element("tag name", "body").text
+    return newsletter_text
+
+
 def get_brompton_oratory_newsletter_assessment(driver: webdriver):
     newsletter_url = "https://www.bromptonoratory.co.uk/weekly-parish-newsletter"
-    newsletter_text = get_html_parish_newsletter(driver, newsletter_url)
+    newsletter_text = get_brompton_oratory_newsletter_text(driver)
     ai_assessment = get_ai_assessment(
         brompton_oratory_prompt + newsletter_text)
     return [ai_assessment, newsletter_url]
