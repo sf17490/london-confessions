@@ -46,14 +46,6 @@ def get_st_georges_newsletter_assessment(driver: webdriver):
     return [st_georges_assessment, st_georges_newsletter_url]
 
 
-def get_st_patricks_soho_newsletter_assessment(driver: webdriver):
-    st_patricks_soho_newsletter_url = navigate_to_parish_newsletter(
-        driver, "https://www.stpatricksoho.org/newsletter")
-    st_patricks_soho_assessment = get_ai_assessment(
-        st_patricks_soho_prompt, st_patricks_soho_newsletter_url)
-    return [st_patricks_soho_assessment, st_patricks_soho_newsletter_url]
-
-
 def get_farm_street_newsletter_assessment(driver: webdriver):
     farm_street_newsletter_url = navigate_to_parish_newsletter(
         driver, "https://www.farmstreet.org.uk/newsletters")
@@ -223,6 +215,27 @@ def get_holy_apostles_newsletter_assessment(driver: webdriver):
     holy_apostles_assessment = get_ai_assessment(
         holy_apostles_prompt, holy_apostles_newsletter_url)
     return [holy_apostles_assessment, holy_apostles_newsletter_url]
+
+
+def navigate_to_st_patricks_soho_newsletter_url(driver: webdriver):
+    newsletters_here = "https://www.stpatricksoho.org/newsletter"
+    driver.get(newsletters_here)
+
+    latest_newsletter_link = driver.find_element(  # We look for the first <h2> element containing "Newsletter" and then find the first <a> element with the same parent
+        "xpath",
+        "(//h2[contains(text(),'Newsletter')])[1]/ancestor::div[contains(@class,'content-strap')]//a"
+    )
+    link_to_use = latest_newsletter_link.get_attribute("href")
+    print(link_to_use)
+    return latest_newsletter_link.get_attribute("href")
+
+
+def get_st_patricks_soho_newsletter_assessment(driver: webdriver):
+    st_patricks_soho_newsletter_url = navigate_to_st_patricks_soho_newsletter_url(
+        driver)
+    st_patricks_soho_assessment = get_ai_assessment(
+        st_patricks_soho_prompt, st_patricks_soho_newsletter_url)
+    return [st_patricks_soho_assessment, st_patricks_soho_newsletter_url]
 
 
 # mailchimp newsletter
