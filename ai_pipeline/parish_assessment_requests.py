@@ -61,7 +61,7 @@ def get_corpus_christi_newsletter_assessment(driver: webdriver):
 
 def get_st_peter_and_paul_newsletter_assessment(driver: webdriver):
     st_peter_and_paul_newsletter_url = navigate_to_parish_newsletter(
-        driver, "https://parish.rcdow.org.uk/clerkenwell/__homepage/parish-newsletters-2025/")  # TODO: Will break in 2026
+        driver, "https://parish.rcdow.org.uk/clerkenwell/__homepage/parish-newsletters-2025/")  # Not a typo, this links to the 2026 (six) newsletter
     st_peter_and_paul_assessment = get_ai_assessment(
         st_peter_and_paul_prompt, st_peter_and_paul_newsletter_url)
     return [st_peter_and_paul_assessment, st_peter_and_paul_newsletter_url]
