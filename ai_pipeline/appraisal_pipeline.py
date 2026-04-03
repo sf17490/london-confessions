@@ -1,8 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-# from selenium.webdriver.chrome.service import Service
-# from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 
 from parish_assessment_requests import get_st_georges_newsletter_assessment, get_st_patricks_soho_newsletter_assessment, get_farm_street_newsletter_assessment, get_corpus_christi_newsletter_assessment, get_st_peter_and_paul_newsletter_assessment, get_st_etheldreda_newsletter_assessment, get_st_anselm_and_st_caecilia_newsletter_assessment, get_brompton_oratory_newsletter_assessment, get_our_lady_queen_of_heaven_newsletter_assessment, get_our_lady_of_the_rosary_newsletter_assessment, get_westminster_cathedral_schedule_assessment, get_holy_apostles_newsletter_assessment, get_st_james_newsletter_assessment, get_st_marys_cadogan_street_newsletter_assessment, get_st_simon_stock_newsletter_assessment, get_most_precious_blood_newsletter_assessment, get_st_charles_borromeo_schedule_assessment, get_assumption_warwick_street_newsletter_assessment
 import json
@@ -15,7 +15,7 @@ chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--disable-gpu")
 driver = webdriver.Chrome(
-    # service=Service(ChromeDriverManager().install()),
+    service=Service(ChromeDriverManager().install()),
     options=chrome_options)
 
 assumption_warwick_street_assessment_and_newsletter = get_assumption_warwick_street_newsletter_assessment(

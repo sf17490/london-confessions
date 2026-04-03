@@ -168,9 +168,14 @@ function fridayChurches() {
       {timeSlot("13:20", [stEtheldredras])}
       {timeSlot("16:30", [westminsterCathedral])}
       {timeSlot("17:00", [westminsterCathedral])}
-      {timeSlot("17:30", [bromptonOratory, stAnselmAndStCecilia])}
+      {timeSlot("17:30", [
+        bromptonOratory,
+        stAnselmAndStCecilia,
+        ourLadyOfTheRosary,
+      ])}
       {/*Can't find notre dame */}
       {timeSlot("17:40", [mountCarmel])}
+      {timeSlot("18:00", [ourLadyOfTheRosary])}
     </div>
   );
 }
@@ -207,7 +212,7 @@ function saturdayChurches() {
         mountCarmel,
         holyApostles,
       ])}
-      {timeSlot("17:15", [warwickStreet, ourLadyOfTheRosary])}
+      {timeSlot("17:15", [warwickStreet])}
       {timeSlot("17:30", [
         bromptonOratory,
         westminsterCathedral,
