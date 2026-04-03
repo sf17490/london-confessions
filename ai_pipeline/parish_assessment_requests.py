@@ -1,14 +1,12 @@
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
-
 from selenium.webdriver.common.by import By
 import time
 import urllib3.exceptions
 
 from assess_with_ai import get_ai_assessment
-from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, farm_street_prompt, corpus_christi_prompt, st_peter_and_paul_prompt, st_etheldreda_prompt, st_anselm_and_st_caecilia_prompt, brompton_oratory_prompt, our_lady_queen_of_heaven_prompt, our_lady_of_the_rosary_prompt, westminster_cathedral_prompt, holy_apostles_prompt, st_james_prompt, st_marys_cadogan_street_prompt, st_simon_stock_prompt, most_precious_blood_prompt, st_charles_borromeo_prompt
+from prompts import st_georges_cathedral_prompt, st_patricks_soho_prompt, farm_street_prompt, corpus_christi_prompt, st_peter_and_paul_prompt, st_etheldreda_prompt, st_anselm_and_st_caecilia_prompt, brompton_oratory_prompt, our_lady_queen_of_heaven_prompt, our_lady_of_the_rosary_prompt, westminster_cathedral_prompt, holy_apostles_prompt, st_james_prompt, st_marys_cadogan_street_prompt, st_simon_stock_prompt, most_precious_blood_prompt, st_charles_borromeo_prompt, assumption_warwick_street_prompt
 
 
 def navigate_to_parish_newsletter(driver: webdriver, url):
@@ -29,6 +27,15 @@ def navigate_to_parish_newsletter(driver: webdriver, url):
         return most_recent_newsletter_link.get_attribute("href")
     except:
         return ""
+
+
+def get_assumption_warwick_street_newsletter_assessment(driver: webdriver):
+    assumption_newsletter_url = navigate_to_parish_newsletter(
+        driver, "https://warwickstreet.org.uk/newsletters/#weekly-bulletin")
+    assumption_warwick_street_assessment = get_ai_assessment(
+        assumption_warwick_street_prompt, assumption_newsletter_url
+    )
+    return [assumption_warwick_street_assessment, assumption_newsletter_url]
 
 
 def get_st_georges_newsletter_assessment(driver: webdriver):
