@@ -42,7 +42,6 @@ function mondayChurches() {
         spanishPlace,
         westminsterCathedral,
       ])}
-      {timeSlot("12:15", [warwickStreet])}
       {timeSlot("12:30", [
         stMaryMoorfields,
         farmStreet,
@@ -392,115 +391,115 @@ function displayNewsletter(newsletterUrl: string) {
 const westminsterCathedral = displayChurch(
   "Westminster Cathedral",
   "https://westminstercathedral.org.uk/",
-  "Victoria SW1P 1LT"
+  "Victoria SW1P 1LT",
 );
 
 const stsPeterAndPaul = displayChurch(
   "Sts Peter & Paul",
   "https://parish.rcdow.org.uk/clerkenwell/",
-  "Clerkenwell EC1R 1UL"
+  "Clerkenwell EC1R 1UL",
 );
 
 const bromptonOratory = displayChurch(
   "Brompton Oratory",
   "https://www.bromptonoratory.co.uk/#about",
-  "Knightsbridge SW7 2RP"
+  "Knightsbridge SW7 2RP",
 );
 
 const farmStreet = displayChurch(
   "Immaculate Conception",
   "https://www.farmstreet.org.uk/",
-  "Mayfair W1K 3AH"
+  "Mayfair W1K 3AH",
 );
 
 const stGeorgesCathedral = displayChurch(
   "St George's Cathedral",
   "https://www.stgeorgescathedral.org.uk/",
-  "Southwark SE1 7HY"
+  "Southwark SE1 7HY",
 );
 
 const spanishPlace = displayChurch(
   "St James'",
   "https://www.sjrcc.org.uk/",
-  "Spanish Place W1U 3QY"
+  "Spanish Place W1U 3QY",
 );
 
 const stPatricksSoho = displayChurch(
   "St Patrick's",
   "https://www.stpatricksoho.org/",
-  "Soho W1D 4NR"
+  "Soho W1D 4NR",
 );
 
 const warwickStreet = displayChurch(
   "Our Lady of the Assumption",
   "https://www.warwickstreet.org.uk/",
-  "Piccadilly W1B 5LZ"
+  "Piccadilly W1B 5LZ",
 );
 
 const stMaryMoorfields = displayChurch(
   "St Mary Moorfields",
   "https://parish.rcdow.org.uk/moorfields/",
-  "Liverpool Street EC2M 7LS"
+  "Liverpool Street EC2M 7LS",
 );
 
 const corpusChristi = displayChurch(
   "Corpus Christi",
   "https://corpuschristimaidenlane.org.uk/",
-  "Covent Garden  WC2E 7NB"
+  "Covent Garden  WC2E 7NB",
 );
 
 const stEtheldredras = displayChurch(
   "St Etheldreda's",
   "https://www.stetheldreda.co.uk/",
-  "Farringdon EC1N 6RY"
+  "Farringdon EC1N 6RY",
 );
 
 const stAnselmAndStCecilia = displayChurch(
   "St Anselm & St Cæcilia",
   "https://parish.rcdow.org.uk/lincolnsinnfields/",
-  "Holborn WC2B 6DX"
+  "Holborn WC2B 6DX",
 );
 
 const mountCarmel = displayChurch(
   "Our Lady of Mount Carmel & St Simon Stock",
   "https://carmelitechurch.org/",
-  "High Street Kensington W8 4BB"
+  "High Street Kensington W8 4BB",
 );
 
 const queenOfHeaven = displayChurch(
   "Our Lady, Queen of Heaven",
   "https://parish.rcdow.org.uk/queensway/",
-  "Queensway W2 6LT"
+  "Queensway W2 6LT",
 );
 
 const ourLadyOfTheRosary = displayChurch(
   "Our Lady of the Rosary",
   "https://parish.rcdow.org.uk/marylebone/mass-times/",
-  "Marylebone NW1 5QT"
+  "Marylebone NW1 5QT",
 );
 
 const stMarysCadoganStreet = displayChurch(
   "St Mary's Cadogan Street",
   "https://www.stmaryscadoganstreet.co.uk/",
-  "Sloane Square SW3 2QP"
+  "Sloane Square SW3 2QP",
 );
 
 const holyApostles = displayChurch(
   "Holy Apostles",
   "https://parish.rcdow.org.uk/pimlico/",
-  "Pimlico SW1V 4LY"
+  "Pimlico SW1V 4LY",
 );
 
 const stCharlesBorromeo = displayChurch(
   "St Charles Borromeo",
   "https://parish.rcdow.org.uk/oglestreet/",
-  "Fitzrovia W1W 6HS "
+  "Fitzrovia W1W 6HS ",
 );
 
 const mostPreciousBlood = displayChurch(
   "Most Precious Blood",
   "https://www.preciousblood.org.uk/",
-  "Borough Market SE1 1TD"
+  "Borough Market SE1 1TD",
 );
 
 //Excluded (and why):
