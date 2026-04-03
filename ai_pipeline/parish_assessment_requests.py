@@ -226,6 +226,7 @@ def navigate_to_st_patricks_soho_newsletter_url(driver: webdriver):
         "(//h2[contains(text(),'Newsletter')])[1]/ancestor::div[contains(@class,'content-strap')]//a"
     )
     link_to_use = latest_newsletter_link.get_attribute("href")
+    print("St patrick's soho link...")
     print(link_to_use)
     return latest_newsletter_link.get_attribute("href")
 
