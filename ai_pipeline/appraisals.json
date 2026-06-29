@@ -1,50 +1,49 @@
 {
-  "date": "22-12-2025",
+  "date": "29-06-2026",
   "appraisals": [
     {
       "name": "St George's Cathedral",
       "appraisal": {
-        "changed": "unknown"
+        "changed": "false"
       },
       "newsletterUrl": "https://www.stgeorgescathedral.org.uk/media/1060/newsletter.pdf"
     },
     {
       "name": "St Patrick's",
       "appraisal": {
-        "changed": "true",
-        "reason": "Per the newsletter, Confessions are Monday to Friday from 12.15pm to 12.40pm, not from 12.00pm. Saturday Confessions are from 5.30pm to 5.55pm as stated. No Confessions are listed for Sundays."
+        "changed": "unknown"
       },
-      "newsletterUrl": "https://cdn.prod.website-files.com/604cd9b97ea6bcb8e1d06a8b/69451dfb52831fa8f0dcfe6b_Sunday%2021st%20December%20-%204th%20Sunday%20of%20Advent.pdf"
+      "newsletterUrl": "some st pats newsletter url"
     },
     {
       "name": "Our Lady of Mount Carmel & St Simon Stock",
       "appraisal": {
-        "changed": "true",
-        "reason": "As announced, there will be no usual confessions from Christmas Day (25 Dec) to Epiphany Sunday (6 Jan), except during the Special New Year Vigil Adoration. Regular weekday (17:40–18:00) and Saturday (11:30–12:15 and 17:00–17:50) confessions apply outside this period; there are no Sunday confessions."
+        "changed": "false"
       },
-      "newsletterUrl": "https://carmelitechurch.org/wp-content/uploads/2025/12/Sunday-21st-December-2025.pdf"
+      "newsletterUrl": "https://carmelitechurch.org/wp-content/uploads/2026/06/Sunday-28th-June-2026.pdf"
     },
     {
       "name": "Immaculate Conception",
       "appraisal": {
-        "changed": "false"
+        "changed": "true",
+        "reason": "According to this bulletin, Confessions are available Monday–Friday from 12:00 to 12:55 and on Sundays 15 minutes before each Mass. No Saturday confession times are published. Therefore the times of 11:00–12:00 and 17:45–17:55 on Saturdays are not reflected in this document."
       },
-      "newsletterUrl": "https://www.farmstreet.org.uk/s/Fourth-Sunday-of-Advent-y8l3.pdf"
+      "newsletterUrl": "https://www.farmstreet.org.uk/s/12th-Sunday-in-Ordinary-Time-Farm-Street-Church-Newsletter.pdf"
     },
     {
       "name": "Corpus Christi",
       "appraisal": {
         "changed": "true",
-        "reason": "Per this bulletin, Confessions are heard for half an hour before all Masses, not limited to Monday and Wednesday–Friday at 12:35–13:05. This includes additional confession times before evening and weekend Masses, as well as on solemnities. Please refer to the published Mass schedule to determine the applicable half-hour before each Mass. Confessions may also be arranged by appointment with the Rector."
+        "reason": "According to the bulletin, confessions are heard for half an hour before all Masses, or by appointment/upon request. This includes not only Monday and Wednesday–Friday at 12:35–13:05, but also before the Monday 6:30 pm Mass, the Thursday 6:30 pm Mass, the Saturday 6:00 pm Vigil, and the Sunday Masses. On days with no public Mass (e.g., Tuesday lunchtime), there is no scheduled confession. Please consult the posted Mass schedule for applicable confession times."
       },
-      "newsletterUrl": "https://corpuschristimaidenlane.org.uk/wp-content/uploads/2025/12/Newsletter-Fourth-Sunday-in-Advent-2025-1.pdf"
+      "newsletterUrl": "https://corpuschristimaidenlane.org.uk/wp-content/uploads/2026/06/Newsletter-Ss-Peter-Paul-2026-1.pdf"
     },
     {
       "name": "St Etheldreda's",
       "appraisal": {
         "changed": "false"
       },
-      "newsletterUrl": ""
+      "newsletterUrl": "https://www.stetheldreda.co.uk/_files/ugd/a0bc29_3b88313b50084fe7a41f74e9b68878d7.pdf"
     },
     {
       "name": "St Anselm & St Cæcilia",
@@ -63,23 +62,21 @@
     {
       "name": "Our Lady, Queen of Heaven",
       "appraisal": {
-        "changed": "true",
-        "reason": "According to the parish notice, the Sacrament of Reconciliation is available on Saturdays from 4.15 pm to 5.15 pm, or by appointment. The 4.15–4.45 pm time you cited is therefore not correct."
+        "changed": "false"
       },
-      "newsletterUrl": "https://parish.rcdow.org.uk/queensway/wp-content/uploads/sites/177/2025/12/12-14.pdf"
+      "newsletterUrl": "https://parish.rcdow.org.uk/queensway/wp-content/uploads/sites/177/2026/06/06-28.pdf"
     },
     {
       "name": "Our Lady of the Rosary",
       "appraisal": {
-        "changed": "unknown"
+        "changed": "false"
       },
-      "newsletterUrl": "https://parish.rcdow.org.uk/marylebone/wp-content/uploads/sites/188/2025/12/Fourth-Sunday-of-Advent-Year-A.pdf"
+      "newsletterUrl": "https://parish.rcdow.org.uk/marylebone/wp-content/uploads/sites/188/2026/06/St-Peter-and-St-Paul.pdf"
     },
     {
       "name": "Westminster Cathedral",
       "appraisal": {
-        "changed": "true",
-        "reason": "For the current week, weekday confessions are 11:00am–1:00pm (Mon–Wed), with an additional 4:00pm–6:00pm on Mon–Tue; Thursday has no confessions; Friday is 11:00am–12:30pm only. Saturday confessions are 10:30am–12:30pm and 5:00pm–6:00pm. Sunday confessions remain 10:30am–12:30pm and 5:00pm–6:45pm. Please refer to the current newsletter for exact times."
+        "changed": "false"
       },
       "newsletterUrl": "https://westminstercathedral.org.uk/reconciliation/"
     },
@@ -88,22 +85,21 @@
       "appraisal": {
         "changed": "false"
       },
-      "newsletterUrl": "https://parish.rcdow.org.uk/pimlico/wp-content/uploads/sites/38/2025/12/Newsletter-21st-December-2025-1.pdf"
+      "newsletterUrl": "https://parish.rcdow.org.uk/pimlico/wp-content/uploads/sites/38/2026/06/Newsletter-28th-June-2026.pdf"
     },
     {
       "name": "St James'",
       "appraisal": {
-        "changed": "true",
-        "reason": "Weekday Confessions (12 noon–1 pm) are suspended during the Christmas Octave, as stated in the newsletter. Saturday Confessions (4:45–5:30 pm) continue as usual."
+        "changed": "false"
       },
-      "newsletterUrl": "https://www.sjrcc.org.uk/_files/ugd/ac578c_45e6513547cd49e089740c2d0dcf4aae.pdf"
+      "newsletterUrl": "https://www.sjrcc.org.uk/_files/ugd/ac578c_e36229bbfe4b485182d5e3a3de17f92f.pdf"
     },
     {
       "name": "St Mary's Cadogan Street",
       "appraisal": {
         "changed": "unknown"
       },
-      "newsletterUrl": "https://parish.rcdow.org.uk/pimlico/wp-content/uploads/sites/38/2025/12/Newsletter-21st-December-2025-1.pdf"
+      "newsletterUrl": "https://parish.rcdow.org.uk/pimlico/wp-content/uploads/sites/38/2026/06/Newsletter-28th-June-2026.pdf"
     },
     {
       "name": "Most Precious Blood",
@@ -122,9 +118,10 @@
     {
       "name": "Our Lady of the Assumption",
       "appraisal": {
-        "changed": "unknown"
+        "changed": "true",
+        "reason": "According to this newsletter, Confessions are advertised only on Saturdays from 5:15–5:45pm. No weekday (Tuesday–Friday) confession times are listed."
       },
-      "newsletterUrl": "https://www.warwickstreet.org.uk/"
+      "newsletterUrl": "https://warwickstreet.org.uk/wp-content/uploads/2026/06/Warwick-Street-Bulletin-Peter-Paul-C-2026-4.pdf"
     },
     {
       "name": "St Mary Moorfields",
@@ -141,4 +138,4 @@
       "newsletterUrl": "https://parish.rcdow.org.uk/clerkenwell/"
     }
   ]
-} 
+}
