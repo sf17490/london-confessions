@@ -64,7 +64,8 @@ def get_corpus_christi_newsletter_assessment(driver: webdriver):
 
 def get_st_peter_and_paul_newsletter_assessment(driver: webdriver):
     st_peter_and_paul_newsletter_url = navigate_to_parish_newsletter(
-        driver, "https://parish.rcdow.org.uk/clerkenwell/__homepage/parish-newsletters-2025/")  # Not a typo, this links to the 2026 (six) newsletter
+        # Not a typo, this links to the 2026 (six) newsletter
+        driver, "https://parish.rcdow.org.uk/clerkenwell/__homepage/parish-newsletters-2025/")
     st_peter_and_paul_assessment = get_ai_assessment(
         st_peter_and_paul_prompt, st_peter_and_paul_newsletter_url)
     return [st_peter_and_paul_assessment, st_peter_and_paul_newsletter_url]
@@ -231,12 +232,14 @@ def navigate_to_st_patricks_soho_newsletter_url(driver: webdriver):
     return latest_newsletter_link.get_attribute("href")
 
 
+# TODO: Fix this to adapt to new website layout
 def get_st_patricks_soho_newsletter_assessment(driver: webdriver):
-    st_patricks_soho_newsletter_url = navigate_to_st_patricks_soho_newsletter_url(
-        driver)
-    st_patricks_soho_assessment = get_ai_assessment(
-        st_patricks_soho_prompt, st_patricks_soho_newsletter_url)
-    return [st_patricks_soho_assessment, st_patricks_soho_newsletter_url]
+    # st_patricks_soho_newsletter_url = navigate_to_st_patricks_soho_newsletter_url(
+    #     driver)
+    # st_patricks_soho_assessment = get_ai_assessment(
+    #     st_patricks_soho_prompt, st_patricks_soho_newsletter_url)
+    # return [st_patricks_soho_assessment, st_patricks_soho_newsletter_url]
+    return ["{ \"changed\": \"unknown\"}", "some st pats newsletter url"]
 
 
 # mailchimp newsletter
