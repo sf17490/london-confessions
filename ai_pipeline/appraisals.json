@@ -1,5 +1,5 @@
 {
-  "date": "29-06-2026",
+  "date": "02-08-2026",
   "appraisals": [
     {
       "name": "St George's Cathedral",
@@ -20,23 +20,23 @@
       "appraisal": {
         "changed": "false"
       },
-      "newsletterUrl": "https://carmelitechurch.org/wp-content/uploads/2026/06/Sunday-28th-June-2026.pdf"
+      "newsletterUrl": "https://carmelitechurch.org/wp-content/uploads/2026/08/Sunday-2nd-August-2026.pdf"
     },
     {
       "name": "Immaculate Conception",
       "appraisal": {
         "changed": "true",
-        "reason": "According to this bulletin, Confessions are available Monday–Friday from 12:00 to 12:55 and on Sundays 15 minutes before each Mass. No Saturday confession times are published. Therefore the times of 11:00–12:00 and 17:45–17:55 on Saturdays are not reflected in this document."
+        "reason": "Per the parish bulletin, Confessions and Exposition are available Monday–Friday, 12:00–12:55. On Sundays, Confessions are heard 15 minutes before each Mass. No Saturday Confession times are stated in this document. Accordingly, the Saturday times you cite are not reflected here."
       },
-      "newsletterUrl": "https://www.farmstreet.org.uk/s/12th-Sunday-in-Ordinary-Time-Farm-Street-Church-Newsletter.pdf"
+      "newsletterUrl": "https://www.farmstreet.org.uk/s/18th-Sunday-in-Ordinary-Time-Farm-Street-Church-Newsletter-1.pdf"
     },
     {
       "name": "Corpus Christi",
       "appraisal": {
         "changed": "true",
-        "reason": "According to the bulletin, confessions are heard for half an hour before all Masses, or by appointment/upon request. This includes not only Monday and Wednesday–Friday at 12:35–13:05, but also before the Monday 6:30 pm Mass, the Thursday 6:30 pm Mass, the Saturday 6:00 pm Vigil, and the Sunday Masses. On days with no public Mass (e.g., Tuesday lunchtime), there is no scheduled confession. Please consult the posted Mass schedule for applicable confession times."
+        "reason": "According to the bulletin, Confessions are heard for half an hour before all Masses, not limited to Monday and Wednesday–Friday at 12:35–13:05. This includes Sundays and evening Masses as scheduled. Confessions may also be arranged by appointment with the Rector."
       },
-      "newsletterUrl": "https://corpuschristimaidenlane.org.uk/wp-content/uploads/2026/06/Newsletter-Ss-Peter-Paul-2026-1.pdf"
+      "newsletterUrl": "https://corpuschristimaidenlane.org.uk/wp-content/uploads/2026/07/Newsletter-18th-Sunday-in-Ordinary-Time-2026-1.pdf"
     },
     {
       "name": "St Etheldreda's",
@@ -62,21 +62,22 @@
     {
       "name": "Our Lady, Queen of Heaven",
       "appraisal": {
-        "changed": "false"
+        "changed": "true",
+        "reason": "Per the parish bulletin, the Sacrament of Reconciliation is scheduled on Saturdays from 4.15-5.15 pm. No provision for confessions 'by appointment' is indicated in this document."
       },
-      "newsletterUrl": "https://parish.rcdow.org.uk/queensway/wp-content/uploads/sites/177/2026/06/06-28.pdf"
+      "newsletterUrl": "https://parish.rcdow.org.uk/queensway/wp-content/uploads/sites/177/2026/07/Summer-2026.pdf"
     },
     {
       "name": "Our Lady of the Rosary",
       "appraisal": {
         "changed": "false"
       },
-      "newsletterUrl": "https://parish.rcdow.org.uk/marylebone/wp-content/uploads/sites/188/2026/06/St-Peter-and-St-Paul.pdf"
+      "newsletterUrl": "https://parish.rcdow.org.uk/marylebone/wp-content/uploads/sites/188/2026/07/Sixteenth-Sunday-in-Ordinary-Time-and-Summer-2026.pdf"
     },
     {
       "name": "Westminster Cathedral",
       "appraisal": {
-        "changed": "false"
+        "changed": "unknown"
       },
       "newsletterUrl": "https://westminstercathedral.org.uk/reconciliation/"
     },
@@ -85,26 +86,27 @@
       "appraisal": {
         "changed": "false"
       },
-      "newsletterUrl": "https://parish.rcdow.org.uk/pimlico/wp-content/uploads/sites/38/2026/06/Newsletter-28th-June-2026.pdf"
+      "newsletterUrl": "https://parish.rcdow.org.uk/pimlico/wp-content/uploads/sites/38/2026/07/Newsletter-2nd-August-2026.pdf"
     },
     {
       "name": "St James'",
       "appraisal": {
         "changed": "false"
       },
-      "newsletterUrl": "https://www.sjrcc.org.uk/_files/ugd/ac578c_e36229bbfe4b485182d5e3a3de17f92f.pdf"
+      "newsletterUrl": "https://www.sjrcc.org.uk/_files/ugd/ac578c_b49b112a3a514feaa382b03254bd72c1.pdf"
     },
     {
       "name": "St Mary's Cadogan Street",
       "appraisal": {
         "changed": "unknown"
       },
-      "newsletterUrl": "https://parish.rcdow.org.uk/pimlico/wp-content/uploads/sites/38/2026/06/Newsletter-28th-June-2026.pdf"
+      "newsletterUrl": "https://parish.rcdow.org.uk/pimlico/wp-content/uploads/sites/38/2026/07/Newsletter-2nd-August-2026.pdf"
     },
     {
       "name": "Most Precious Blood",
       "appraisal": {
-        "changed": "false"
+        "changed": "true",
+        "reason": "In August, there is no priest available for confessions. The Sacrament of Confession is available only on request before or after Mass. The stated weekday and Saturday times are therefore suspended for this month. Please check parish notices for the resumption of regular times in September."
       },
       "newsletterUrl": "https://www.preciousblood.org.uk/uploads/1/7/5/4/17544525/newsthisweek.pdf"
     },
@@ -119,9 +121,9 @@
       "name": "Our Lady of the Assumption",
       "appraisal": {
         "changed": "true",
-        "reason": "According to this newsletter, Confessions are advertised only on Saturdays from 5:15–5:45pm. No weekday (Tuesday–Friday) confession times are listed."
+        "reason": "According to this newsletter, Confessions are listed only on Saturday from 5:15pm to 5:45pm. No weekday (Tuesday–Friday) confession times are provided."
       },
-      "newsletterUrl": "https://warwickstreet.org.uk/wp-content/uploads/2026/06/Warwick-Street-Bulletin-Peter-Paul-C-2026-4.pdf"
+      "newsletterUrl": "https://warwickstreet.org.uk/wp-content/uploads/2026/07/Warwick-Street-Bulletin-Ordinary-17-Trinity-8-A-2026.pdf"
     },
     {
       "name": "St Mary Moorfields",
