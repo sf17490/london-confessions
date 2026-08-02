@@ -214,7 +214,6 @@ function saturdayChurches() {
       ])}
       {timeSlot("17:15", [warwickStreet])}
       {timeSlot("17:30", [
-        bromptonOratory,
         westminsterCathedral,
         stGeorgesCathedral,
         stPatricksSoho,
