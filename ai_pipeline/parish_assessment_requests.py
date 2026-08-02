@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -189,7 +190,7 @@ def get_westminster_cathedral_schedule_assessment(driver: webdriver):
         ai_assessment = get_ai_assessment(
             westminster_cathedral_prompt + confession_schedule_html)
         return [ai_assessment, confession_webpage_url]
-    except (TimeoutError, urllib3.exceptions.ReadTimeoutError) as e:
+    except (TimeoutError, urllib3.exceptions.ReadTimeoutError,  NoSuchElementException) as e:
         print(e)
     return ["{\"changed\": \"unknown\"}", "https://westminstercathedral.org.uk/reconciliation/"]
 
